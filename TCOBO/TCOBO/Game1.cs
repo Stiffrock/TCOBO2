@@ -21,16 +21,18 @@ namespace TCOBO
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            main = new Main(this);
+            
             
         }
         protected override void Initialize()
         {
             base.Initialize();
+            IsMouseVisible = true;
         }
 
         protected override void LoadContent()
         {
+            main = new Main(this);          
             spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
@@ -50,8 +52,11 @@ namespace TCOBO
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            spriteBatch.Begin();
             base.Draw(gameTime);
+            main.Draw(spriteBatch);
+            spriteBatch.End();
+          
         }
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.csprojResolveAssemblyReference.cache
+C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb
+C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.exe
+C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.pdb
+C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
+C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
