@@ -17,6 +17,8 @@ namespace TCOBO
         SpriteBatch spriteBatch;
         Main main;
 
+        Texture2D testandring;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);

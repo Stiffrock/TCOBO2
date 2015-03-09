@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
-      <Time>2015-03-06T09:22:45.8673344+01:00</Time>
+      <Output>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
+      <Time>2015-03-09T13:30:32.1949716+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -17,39 +17,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+02:00</Value>
+        <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2011-09-01T17:22:30+02:00</Value>
+        <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+02:00</Value>
+        <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+02:00</Value>
+        <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+02:00</Value>
+        <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2011-09-01T17:22:30+02:00</Value>
+        <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-11-01T22:23:15.6817358+01:00</Value>
+        <Value>2014-08-18T15:31:39.322524+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
