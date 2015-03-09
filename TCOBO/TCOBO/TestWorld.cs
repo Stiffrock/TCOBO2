@@ -37,7 +37,7 @@ namespace TCOBO
 			{
 			    for (int j = 0; j < tileArray.GetLength(1); j++)
 			    {
-                    pos.X = j * 64;
+                    pos.X = j * 64; //64 är ett tal.
                     pos.Y = i * 64;
                     spriteBatch.Draw(grassTile, pos, Color.White);
 			    }
