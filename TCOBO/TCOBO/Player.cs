@@ -23,9 +23,13 @@ namespace TCOBO
         private enum Direction {Up, Down, Left, Right, Default}
         private Direction CurrentDirection;
 
-        public Vector2 getPos()
+        public Vector2 GetPos()
         {
             return pos;
+        }
+        public Texture2D GetPlayerTex()
+        {
+            return playerTex;
         }
         public int GetSpeed()
         {
@@ -35,12 +39,10 @@ namespace TCOBO
         public Player(ContentManager content)
         {
             this.content = content;
-            pos = new Vector2(0, 0);
+            pos = new Vector2(500, 500);
             srcRec = new Rectangle(0, 0, 100, 100);
             playerTex = content.Load<Texture2D>("playerSpritePH");
         }
-
-
 
         public void handleAnimation(GameTime gameTime)
         {

@@ -53,10 +53,8 @@ namespace TCOBO
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
             base.Draw(gameTime);
             main.Draw(spriteBatch);
-            spriteBatch.End();
           
         }
     }

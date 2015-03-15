@@ -26,11 +26,6 @@ namespace TCOBO
             grassTile = content.Load<Texture2D>("grassTile");
         }
 
-        public Vector2 GetTilePos()
-        {
-            return pos;
-        }
-
         public void createTestWorld(SpriteBatch spriteBatch)
         {
             for (int i = 0; i < tileArray.GetLength(0); i++)
