@@ -1,2 +1,3 @@
 C:\Users\chris_000\OneDrive\Documents\MaH\Systemutveckling\TCOBO\TCOBO\TCOBO\TCOBOContent\obj\x86\Debug\TCOBOContent.contentprojResolveAssemblyReference.cache
 C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\obj\x86\Debug\TCOBOContent.contentprojResolveAssemblyReference.cache
+C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\obj\x86\Debug\TCOBOContent.contentprojResolveAssemblyReference.cache

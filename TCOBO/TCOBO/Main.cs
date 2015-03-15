@@ -16,6 +16,7 @@ namespace TCOBO
         private Game1 game1;
         private TestWorld testWorld;
         private GraphicsDevice graphics;
+        private Player player;
       
 
         public Main(Game1 game1)
@@ -23,13 +24,20 @@ namespace TCOBO
             
             this.game1 = game1;
             graphics = game1.GraphicsDevice;
+            player = new Player(game1.Content);
             testWorld = new TestWorld(game1.Content);
             
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            player.Update(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             testWorld.Draw(spriteBatch);
+            player.Draw(spriteBatch);
         }
     }
 }

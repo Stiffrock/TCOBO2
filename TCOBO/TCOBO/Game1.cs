@@ -17,14 +17,11 @@ namespace TCOBO
         SpriteBatch spriteBatch;
         Main main;
 
-        Texture2D testandring;
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            
-            
+                
         }
         protected override void Initialize()
         {
@@ -47,6 +44,8 @@ namespace TCOBO
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+
+            main.Update(gameTime);
 
             base.Update(gameTime);
         }

@@ -7,8 +7,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
-      <Time>2015-03-09T13:30:32.1949716+01:00</Time>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
+      <Time>2015-03-15T11:39:35.1318008+01:00</Time>
+    </Item>
+    <Item>
+      <Source>playerSpritePH.png</Source>
+      <Name>playerSpritePH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
+      <Time>2015-03-15T11:47:03.7384824+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -17,10 +26,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Spellabbet\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -48,8 +57,8 @@
         <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-08-18T15:31:39.322524+02:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-09-08T14:34:46.3837426+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
