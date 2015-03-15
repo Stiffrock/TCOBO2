@@ -14,7 +14,7 @@ namespace TCOBO
     class Player
     {
         private Texture2D playerTex;
-        private Vector2 pos;
+        public Vector2 pos;
         private ContentManager content;
         private Rectangle srcRec;
         private float deltaTime;

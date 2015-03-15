@@ -16,17 +16,20 @@ namespace TCOBO
         private Game1 game1;
         private TestWorld testWorld;
         private GraphicsDevice graphics;
-        private Player player;
+        public Player player;
         private Camera2D camera;
+        public Enemy enemyone;
+        
 
         public Main(Game1 game1)
         {
-            
             this.game1 = game1;
             graphics = game1.GraphicsDevice;
             player = new Player(game1.Content);
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
+            enemyone = new Enemy(game1.Content);
+             
         }
 
 
@@ -34,7 +37,8 @@ namespace TCOBO
         {
             player.Update(gameTime);
             camera.Update(gameTime);
-        
+            HuntTheNoobPlayer();
+            enemyone.Update(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -43,8 +47,37 @@ namespace TCOBO
                 camera.transform);
             testWorld.Draw(spriteBatch);
             player.Draw(spriteBatch);
+            enemyone.Draw(spriteBatch);
             spriteBatch.End();
         }
 
+        public void HuntTheNoobPlayer()
+        {
+
+                if (player.pos.X > enemyone.pos.X && player.pos.Y > enemyone.pos.Y)
+                {
+                       enemyone.speed.X = 1;
+                }
+                else
+                {
+                    enemyone.speed.X = 0;
+                }
+                if (player.pos.Y > enemyone.pos.Y && enemyone.speed.X == 0)
+                {
+                    enemyone.speed.Y = 1;
+                }
+                else
+                {
+                    enemyone.speed.Y = 0;
+                }
+                if (player.pos.X < enemyone.pos.X && player.pos.Y < enemyone.pos.Y)
+                {
+                    enemyone.speed.X = -1;
+                }
+                if (player.pos.Y < enemyone.pos.Y && enemyone.speed.X == 0)
+                {
+                    enemyone.speed.Y = -1;
+                }
+        }
     }
 }

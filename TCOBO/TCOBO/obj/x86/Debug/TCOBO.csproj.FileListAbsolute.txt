@@ -20,3 +20,39 @@ C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.F
 C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
 C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
 C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.pdb
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\bin\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\bin\x86\Debug\TCOBO.pdb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\obj\x86\Debug\TCOBO.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.0\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\bin\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\bin\x86\Debug\TCOBO.pdb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 2.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\bin\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\bin\x86\Debug\TCOBO.pdb
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
+C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb

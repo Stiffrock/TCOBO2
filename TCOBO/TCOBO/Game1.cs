@@ -17,6 +17,8 @@ namespace TCOBO
         SpriteBatch spriteBatch;
         Main main;
 
+
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
