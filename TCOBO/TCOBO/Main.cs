@@ -16,9 +16,9 @@ namespace TCOBO
         private Game1 game1;
         private TestWorld testWorld;
         private GraphicsDevice graphics;
-        public Player player;
+        private Player player;
         private Camera2D camera;
-        public Enemy enemyone;
+        private Enemy enemyone;
         
 
         public Main(Game1 game1)

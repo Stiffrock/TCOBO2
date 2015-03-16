@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TCOBO
 {
-    class Player
+    class Player : MovableObject
     {
         private Texture2D playerTex;
         public Vector2 pos;
@@ -92,7 +92,7 @@ namespace TCOBO
             }
         }
 
-        public void Movement()
+        public void playerDirection()
         {
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
@@ -111,13 +111,8 @@ namespace TCOBO
                 CurrentDirection = Direction.Down;
             }
         }
-
-
-        public void Update(GameTime gameTime)
+        private void Movement()
         {
-            
-            Movement();
-            handleAnimation(gameTime);
             if (CurrentDirection == Direction.Up)
             {
                 pos.Y -= speed;
@@ -138,15 +133,18 @@ namespace TCOBO
                 pos.X += speed;
                 CurrentDirection = Direction.Default;
             }
-
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Update(GameTime gameTime)
+        {           
+            playerDirection();
+            handleAnimation(gameTime);
+            Movement();         
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(playerTex, pos, srcRec, Color.White);
         }
-
-
-
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace TCOBO
 {
-    class Enemy
+    class Enemy : MovableObject
     {
         Texture2D tex;
         public Vector2 pos;
@@ -32,7 +32,7 @@ namespace TCOBO
             Fx = SpriteEffects.None;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             Fx = SpriteEffects.None;
             rotation = MathHelper.ToRadians(0);
@@ -53,7 +53,7 @@ namespace TCOBO
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(tex, pos, srcRec, Color.White, rotation, new Vector2(0, 25), 1, Fx, 1);
         }

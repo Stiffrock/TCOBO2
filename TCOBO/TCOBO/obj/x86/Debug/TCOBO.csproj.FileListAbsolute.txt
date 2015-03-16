@@ -56,3 +56,12 @@ C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.csp
 C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
 C:\Users\Rasmus\Documents\GitHub\TCOBO V 1.1\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.exe
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.pdb
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.csprojResolveAssemblyReference.cache
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
+C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
