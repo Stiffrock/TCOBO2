@@ -18,6 +18,7 @@ namespace TCOBO
         protected int frame;
         protected SpriteEffects Fx;
         protected float rotation;
+        public Rectangle hitBox;
         public Vector2 speed;
 
         public Enemy(ContentManager content)
@@ -27,6 +28,7 @@ namespace TCOBO
             srcRec = new Rectangle(0, 0, 50, 57);
             tex = content.Load<Texture2D>("Bird");
             this.speed = new Vector2(0, 0);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, tex.Width, tex.Height);
             frameTimer = 100;
             frameInterval = 100;
             Fx = SpriteEffects.None;
@@ -38,6 +40,8 @@ namespace TCOBO
             rotation = MathHelper.ToRadians(0);
             frameTimer -= gameTime.ElapsedGameTime.TotalMilliseconds;
             pos += speed;
+            hitBox.X = (int)pos.X;
+            hitBox.Y = (int)pos.Y;
 
             if (frameTimer <= 0)
             {

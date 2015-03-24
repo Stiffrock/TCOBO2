@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
-      <Time>2015-03-16T11:24:42.7804807+01:00</Time>
+      <Time>2015-03-24T15:44:14.6478269+01:00</Time>
     </Item>
     <Item>
       <Source>Bird.png</Source>
@@ -26,7 +26,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
-      <Time>2015-03-16T11:24:53.3280989+01:00</Time>
+      <Time>2015-03-24T15:44:14.6088+01:00</Time>
+    </Item>
+    <Item>
+      <Source>weaponPH.png</Source>
+      <Name>weaponPH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\weaponPH.xnb</Output>
+      <Time>2015-03-24T15:51:26.0376503+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
