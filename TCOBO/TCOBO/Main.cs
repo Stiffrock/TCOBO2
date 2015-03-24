@@ -32,6 +32,15 @@ namespace TCOBO
              
         }
 
+        public void Hit()
+        {
+            Rectangle rec = player.GetSwordRec();
+            if (rec.Intersects(enemyone.hitBox))
+            {
+                
+            }
+        }
+
 
         public void Update(GameTime gameTime)
         {
@@ -54,7 +63,7 @@ namespace TCOBO
         public void HuntTheNoobPlayer()
         {
 
-                if (player.pos.X > enemyone.pos.X && player.pos.Y > enemyone.pos.Y)
+                if (player.playerPos.X > enemyone.pos.X && player.playerPos.Y > enemyone.pos.Y)
                 {
                        enemyone.speed.X = 1;
                 }
@@ -62,7 +71,7 @@ namespace TCOBO
                 {
                     enemyone.speed.X = 0;
                 }
-                if (player.pos.Y > enemyone.pos.Y && enemyone.speed.X == 0)
+                if (player.playerPos.Y > enemyone.pos.Y && enemyone.speed.X == 0)
                 {
                     enemyone.speed.Y = 1;
                 }
@@ -70,11 +79,11 @@ namespace TCOBO
                 {
                     enemyone.speed.Y = 0;
                 }
-                if (player.pos.X < enemyone.pos.X && player.pos.Y < enemyone.pos.Y)
+                if (player.playerPos.X < enemyone.pos.X && player.playerPos.Y < enemyone.pos.Y)
                 {
                     enemyone.speed.X = -1;
                 }
-                if (player.pos.Y < enemyone.pos.Y && enemyone.speed.X == 0)
+                if (player.playerPos.Y < enemyone.pos.Y && enemyone.speed.X == 0)
                 {
                     enemyone.speed.Y = -1;
                 }
