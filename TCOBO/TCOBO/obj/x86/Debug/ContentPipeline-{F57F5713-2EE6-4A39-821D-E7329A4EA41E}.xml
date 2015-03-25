@@ -7,8 +7,40 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\Henrik\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
       <Time>2015-03-09T13:22:16.80036+01:00</Time>
+=======
+      <Output>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
+      <Time>2015-03-06T10:33:09.4556456+01:00</Time>
+    </Item>
+    <Item>
+      <Source>playerSpritePH.png</Source>
+      <Name>playerSpritePH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
+      <Time>2015-03-24T15:44:14.6478269+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Bird.png</Source>
+      <Name>Bird</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
+      <Time>2015-03-24T15:44:14.6088+01:00</Time>
+    </Item>
+    <Item>
+      <Source>weaponPH.png</Source>
+      <Name>weaponPH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\weaponPH.xnb</Output>
+      <Time>2015-03-24T15:51:26.0376503+01:00</Time>
+>>>>>>> origin/master
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -17,10 +49,17 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
+<<<<<<< HEAD
       <RootDirectory>C:\Users\Henrik\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
       <LoggerRootDirectory>C:\Users\Henrik\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\Henrik\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
       <OutputDirectory>C:\Users\Henrik\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+=======
+      <RootDirectory>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\chris_000\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+>>>>>>> origin/master
     </Settings>
     <Assemblies>
       <Assembly>

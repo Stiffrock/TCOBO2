@@ -1,1 +1,4 @@
 Content\grassTile.xnb
+Content\playerSpritePH.xnb
+Content\Bird.xnb
+Content\weaponPH.xnb
