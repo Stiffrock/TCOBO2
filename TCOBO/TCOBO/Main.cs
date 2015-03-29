@@ -37,8 +37,13 @@ namespace TCOBO
         {
             player.Update(gameTime);
             camera.Update(gameTime);
-            HuntTheNoobPlayer();
+            
             enemyone.Update(gameTime);
+
+            if (player.pos.X - enemyone.pos.X < 200 || enemyone.pos.X - player.pos.X > 200)
+            {
+                HuntTheNoobPlayer();
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
