@@ -108,7 +108,6 @@ namespace TCOBO
             player.Update(gameTime);
             camera.Update(gameTime);
             enemy.UpdateEnemy(gameTime, player.GetPos());
-            enemy.Update(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)
