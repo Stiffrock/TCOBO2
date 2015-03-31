@@ -144,8 +144,6 @@ namespace TCOBO
 
         public void playerDirection()
         {
-       
-      
             move = false;           
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
@@ -192,8 +190,6 @@ namespace TCOBO
             playerRotation = angle;
         }
 
-     
-
         private void handleAction(GameTime gameTime)
         {
             weaponTimer -= gameTime.ElapsedGameTime.Milliseconds;
@@ -224,11 +220,13 @@ namespace TCOBO
             if (dir == Direction.Up)
             {
                 weaponRotation = 1;
+                playerPos.Y -= 20;
                 origin = new Vector2(weaponPH.Width, weaponPH.Height);             
                 actionAttack = true;
             }
             if (dir == Direction.Down)
             {
+                playerPos.Y += 20;
                 weaponRotation = 4.2f;
                 origin = new Vector2(weaponPH.Width, weaponPH.Height);           
                 actionAttack = true;
@@ -236,12 +234,14 @@ namespace TCOBO
             
             if (dir == Direction.Right)
             {
+                playerPos.X += 20;
                 weaponRotation = 2.5f;
                 origin = new Vector2(weaponPH.Width, weaponPH.Height);
                 actionAttack = true;
             }
             if (dir == Direction.Left)
             {
+                playerPos.X -= 20;
                 weaponRotation = 5.5f;
                 origin = new Vector2(weaponPH.Width, weaponPH.Height);
                 actionAttack = true;
