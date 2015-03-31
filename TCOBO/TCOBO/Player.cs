@@ -11,8 +11,6 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TCOBO
 {
-    
-
     class Player : MovableObject 
     {
         public Texture2D playerTex, weaponPH;
