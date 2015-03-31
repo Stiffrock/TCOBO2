@@ -7,8 +7,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
       <Time>2015-03-15T11:39:35.1318008+01:00</Time>
+=======
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
+      <Time>2015-03-15T14:55:05.1025442+01:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>playerSpritePH.png</Source>
@@ -16,8 +21,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
       <Time>2015-03-16T20:04:12.7190807+01:00</Time>
+=======
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
+      <Time>2015-03-15T14:56:04.0049132+01:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>Bird.png</Source>
@@ -25,8 +35,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
       <Time>2015-03-29T16:00:05.2393712+02:00</Time>
+=======
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
+      <Time>2015-03-15T16:14:07.2137212+01:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>weaponPH.png</Source>
@@ -34,8 +49,31 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\weaponPH.xnb</Output>
       <Time>2015-03-29T16:00:25.4471324+02:00</Time>
+=======
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\weaponPH.xnb</Output>
+      <Time>2015-03-29T13:32:15.8148556+02:00</Time>
+    </Item>
+    <Item>
+      <Source>stone.png</Source>
+      <Name>stone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\stone.xnb</Output>
+      <Time>2015-03-29T14:31:59.3415731+02:00</Time>
+    </Item>
+    <Item>
+      <Source>mah_logo.png</Source>
+      <Name>mah_logo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\mah_logo.xnb</Output>
+      <Time>2015-03-31T12:34:00.5836275+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -44,10 +82,17 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
+<<<<<<< HEAD
       <RootDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
       <LoggerRootDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
       <OutputDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+=======
+      <RootDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBOContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+>>>>>>> origin/Stoffe
     </Settings>
     <Assemblies>
       <Assembly>
@@ -75,8 +120,13 @@
         <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
+<<<<<<< HEAD
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
         <Value>2014-09-08T14:34:46.3837426+02:00</Value>
+=======
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-09-10T11:27:58.3034247+02:00</Value>
+>>>>>>> origin/Stoffe
       </Assembly>
     </Assemblies>
   </Asset>

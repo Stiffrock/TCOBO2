@@ -18,7 +18,13 @@ namespace TCOBO
         private GraphicsDevice graphics;
         private Player player;
         private Camera2D camera;
+<<<<<<< HEAD
         private Enemy enemyone;             
+=======
+        private Enemy enemy;
+        private Inventory inventory;
+        
+>>>>>>> origin/Stoffe
 
         public Main(Game1 game1)
         {
@@ -27,11 +33,18 @@ namespace TCOBO
             player = new Player(game1.Content);
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
+<<<<<<< HEAD
             enemyone = new Enemy(game1.Content);             
+=======
+            enemy = new Enemy(game1.Content);
+            inventory = new Inventory(game1.Content);
+             
+>>>>>>> origin/Stoffe
         }
 
         public void Hit()
         {
+<<<<<<< HEAD
             Rectangle rec = player.GetPlayerRec();
             Texture2D enemyTex = enemyone.tex;
             float weaponTimer = player.GetWeaponTimer();
@@ -58,6 +71,11 @@ namespace TCOBO
                            enemyone.pos.X -= 100;
                        }
                    }
+=======
+            Rectangle rec = player.GetSwordRec();
+            if (rec.Intersects(enemy.hitBox))
+            {
+>>>>>>> origin/Stoffe
                 
               }
         }
@@ -101,7 +119,17 @@ namespace TCOBO
             Hit();
             player.Update(gameTime);
             camera.Update(gameTime);
+<<<<<<< HEAD
             enemyone.UpdateEnemy(gameTime, player.GetPos());
+=======
+            
+            enemy.Update(gameTime);
+
+            //if (player.pos.X - enemyone.pos.X < 200 || enemyone.pos.X - player.pos.X > 200)
+            //{
+                HuntTheNoobPlayer();
+            //}
+>>>>>>> origin/Stoffe
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -111,8 +139,41 @@ namespace TCOBO
                 camera.transform);           
             testWorld.Draw(spriteBatch);
             player.Draw(spriteBatch);
-            enemyone.Draw(spriteBatch);
+            enemy.Draw(spriteBatch);
+            inventory.Draw(spriteBatch);
             spriteBatch.End();
         }
+<<<<<<< HEAD
+=======
+
+        public void HuntTheNoobPlayer()
+        {
+
+                if (player.playerPos.X > enemy.pos.X && player.playerPos.Y > enemy.pos.Y)
+                {
+                       enemy.speed.X = 1;
+                }
+                else
+                {
+                    enemy.speed.X = 0;
+                }
+                if (player.playerPos.Y > enemy.pos.Y && enemy.speed.X == 0)
+                {
+                    enemy.speed.Y = 1;
+                }
+                else
+                {
+                    enemy.speed.Y = 0;
+                }
+                if (player.playerPos.X < enemy.pos.X && player.playerPos.Y < enemy.pos.Y)
+                {
+                    enemy.speed.X = -1;
+                }
+                if (player.playerPos.Y < enemy.pos.Y && enemy.speed.X == 0)
+                {
+                    enemy.speed.Y = -1;
+                }
+        }
+>>>>>>> origin/Stoffe
     }
 }
