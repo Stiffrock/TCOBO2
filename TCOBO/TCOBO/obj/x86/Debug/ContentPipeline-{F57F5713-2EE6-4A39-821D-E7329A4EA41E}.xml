@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\grassTile.xnb</Output>
       <Time>2015-03-15T14:55:05.1025442+01:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
       <Time>2015-03-15T14:56:04.0049132+01:00</Time>
     </Item>
     <Item>
@@ -25,8 +25,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
       <Time>2015-03-15T16:14:07.2137212+01:00</Time>
+    </Item>
+    <Item>
+      <Source>weaponPH.png</Source>
+      <Name>weaponPH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\weaponPH.xnb</Output>
+      <Time>2015-03-29T13:32:15.8148556+02:00</Time>
+    </Item>
+    <Item>
+      <Source>stone.png</Source>
+      <Name>stone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\stone.xnb</Output>
+      <Time>2015-03-29T14:31:59.3415731+02:00</Time>
+    </Item>
+    <Item>
+      <Source>mah_logo.png</Source>
+      <Name>mah_logo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\mah_logo.xnb</Output>
+      <Time>2015-03-31T12:34:00.5836275+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -35,10 +62,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBOContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

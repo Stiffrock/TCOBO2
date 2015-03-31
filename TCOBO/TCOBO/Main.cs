@@ -18,7 +18,8 @@ namespace TCOBO
         private GraphicsDevice graphics;
         private Player player;
         private Camera2D camera;
-        private Enemy enemyone;
+        private Enemy enemy;
+        private Inventory inventory;
         
 
         public Main(Game1 game1)
@@ -28,8 +29,18 @@ namespace TCOBO
             player = new Player(game1.Content);
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
-            enemyone = new Enemy(game1.Content);
+            enemy = new Enemy(game1.Content);
+            inventory = new Inventory(game1.Content);
              
+        }
+
+        public void Hit()
+        {
+            Rectangle rec = player.GetSwordRec();
+            if (rec.Intersects(enemy.hitBox))
+            {
+                
+            }
         }
 
 
@@ -38,12 +49,12 @@ namespace TCOBO
             player.Update(gameTime);
             camera.Update(gameTime);
             
-            enemyone.Update(gameTime);
+            enemy.Update(gameTime);
 
-            if (player.pos.X - enemyone.pos.X < 200 || enemyone.pos.X - player.pos.X > 200)
-            {
+            //if (player.pos.X - enemyone.pos.X < 200 || enemyone.pos.X - player.pos.X > 200)
+            //{
                 HuntTheNoobPlayer();
-            }
+            //}
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -52,36 +63,37 @@ namespace TCOBO
                 camera.transform);
             testWorld.Draw(spriteBatch);
             player.Draw(spriteBatch);
-            enemyone.Draw(spriteBatch);
+            enemy.Draw(spriteBatch);
+            inventory.Draw(spriteBatch);
             spriteBatch.End();
         }
 
         public void HuntTheNoobPlayer()
         {
 
-                if (player.pos.X > enemyone.pos.X && player.pos.Y > enemyone.pos.Y)
+                if (player.playerPos.X > enemy.pos.X && player.playerPos.Y > enemy.pos.Y)
                 {
-                       enemyone.speed.X = 1;
+                       enemy.speed.X = 1;
                 }
                 else
                 {
-                    enemyone.speed.X = 0;
+                    enemy.speed.X = 0;
                 }
-                if (player.pos.Y > enemyone.pos.Y && enemyone.speed.X == 0)
+                if (player.playerPos.Y > enemy.pos.Y && enemy.speed.X == 0)
                 {
-                    enemyone.speed.Y = 1;
+                    enemy.speed.Y = 1;
                 }
                 else
                 {
-                    enemyone.speed.Y = 0;
+                    enemy.speed.Y = 0;
                 }
-                if (player.pos.X < enemyone.pos.X && player.pos.Y < enemyone.pos.Y)
+                if (player.playerPos.X < enemy.pos.X && player.playerPos.Y < enemy.pos.Y)
                 {
-                    enemyone.speed.X = -1;
+                    enemy.speed.X = -1;
                 }
-                if (player.pos.Y < enemyone.pos.Y && enemyone.speed.X == 0)
+                if (player.playerPos.Y < enemy.pos.Y && enemy.speed.X == 0)
                 {
-                    enemyone.speed.Y = -1;
+                    enemy.speed.Y = -1;
                 }
         }
     }

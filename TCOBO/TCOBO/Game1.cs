@@ -16,6 +16,7 @@ namespace TCOBO
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Main main;
+        ItemManager itemManager;
 
 
 
@@ -33,7 +34,8 @@ namespace TCOBO
 
         protected override void LoadContent()
         {
-            main = new Main(this);          
+            main = new Main(this);
+            itemManager = new ItemManager(this);
             spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
@@ -48,6 +50,7 @@ namespace TCOBO
                 this.Exit();
 
             main.Update(gameTime);
+            itemManager.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -57,6 +60,7 @@ namespace TCOBO
             GraphicsDevice.Clear(Color.CornflowerBlue);
             base.Draw(gameTime);
             main.Draw(spriteBatch);
+            itemManager.Draw(spriteBatch);
           
         }
     }
