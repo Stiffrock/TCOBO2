@@ -28,7 +28,7 @@ namespace TCOBO
         public void Update(GameTime gameTime)
         {
             playerPos = player.GetPos();
-            centre = new Vector2(playerPos.X-400, playerPos.Y-260);
+            centre = new Vector2(playerPos.X-320, playerPos.Y-180);
             transform = Matrix.CreateScale(new Vector3(1,1,0))*
                 Matrix.CreateTranslation(new Vector3(-centre.X, -centre.Y,0));
         }
