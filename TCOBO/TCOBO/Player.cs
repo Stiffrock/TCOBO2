@@ -170,7 +170,7 @@ namespace TCOBO
 
             if (actionAttack == true)
             {
-                rotation += 0.05f;
+                rotation += 0.2f;
             }
                      
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && actionAttack == false)
@@ -187,7 +187,7 @@ namespace TCOBO
         }
         private void Attack(Direction dir)
         {
-            weaponTimer = 400;
+            weaponTimer = 100;
            // origin = new Vector2(weaponPH.Width, weaponPH.Height);
 
             if (dir == Direction.Up)
