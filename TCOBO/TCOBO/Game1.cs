@@ -16,13 +16,15 @@ namespace TCOBO
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Main main;
+        ItemManager itemManager;
+
+
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            
-            
+                
         }
         protected override void Initialize()
         {
@@ -32,7 +34,8 @@ namespace TCOBO
 
         protected override void LoadContent()
         {
-            main = new Main(this);          
+            main = new Main(this);
+            itemManager = new ItemManager(this);
             spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
@@ -46,16 +49,18 @@ namespace TCOBO
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            main.Update(gameTime);
+            itemManager.Update(gameTime);
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
             base.Draw(gameTime);
             main.Draw(spriteBatch);
-            spriteBatch.End();
+            itemManager.Draw(spriteBatch);
           
         }
     }
