@@ -14,10 +14,10 @@ namespace TCOBO
     class Player : MovableObject 
     {
         public Texture2D playerTex1, weaponPH;
-        public Vector2 playerPos, weaponPos, origin, mousePos, aimVector;
+        public Vector2 playerPos, origin, aimVector;
         private ContentManager content;
-        private Rectangle srcRec, weaponRec, attackHitBox;
-        private float deltaTime, weaponTimer = 0, weaponRotation = 0.2f, playerRotation = 0f, rotation = 0.2f;
+        private Rectangle srcRec, attackHitBox;
+        private float deltaTime, weaponTimer = 0,rotation = 0.2f;
         private int animaCount = 1;
         private bool actionAttack;
         private double playerAngle;
@@ -75,9 +75,9 @@ namespace TCOBO
         {
             return speed;
         }
-        public Rectangle GetSwordRec()
+        public Rectangle GetAttackHitbox()
         {
-            return weaponRec;
+            return attackHitBox;
         }
         public Rectangle GetPlayerRec()
         {
@@ -93,8 +93,7 @@ namespace TCOBO
             spriteEffect = SpriteEffects.None;
             playerTex1 = content.Load<Texture2D>("ballsprite1");
             weaponPH = content.Load<Texture2D>("weaponPH");
-            origin = new Vector2(80, 80);
-            weaponRec = new Rectangle((int)weaponPos.X, (int)weaponPos.Y, weaponPH.Width, weaponPH.Height);
+            origin = new Vector2(80, 80);    
             LoadPlayerTex();
             color = new Color(255, 30, 30, 255);  
         }
@@ -209,8 +208,7 @@ namespace TCOBO
             aimVector.Normalize();          
             double recX = (double)aimVector.X * 100;
             double recY = (double)aimVector.Y * 100;
-            attackHitBox = new Rectangle(((int)playerPos.X - 40) + (int)recX, ((int)playerPos.Y- 40) + (int)recY, 100, 100);
-        
+            attackHitBox = new Rectangle(((int)playerPos.X - 40) + (int)recX, ((int)playerPos.Y- 40) + (int)recY, 100, 100);        
         } 
 
         public void playerDirection()
@@ -246,12 +244,7 @@ namespace TCOBO
         private void handleAction(GameTime gameTime)
         {
             weaponTimer -= gameTime.ElapsedGameTime.Milliseconds;
-            weaponRec = new Rectangle((int)weaponPos.X, (int)weaponPos.Y, weaponPH.Width, weaponPH.Height);
 
-            if (actionAttack == true)
-            {
-                weaponRotation += 0.1f;
-            }
             if (Keyboard.GetState().IsKeyDown(Keys.D1))
             {
                 swordEquipped = !swordEquipped;
@@ -259,41 +252,36 @@ namespace TCOBO
                      
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && actionAttack == false)
             {
-                Attack(CurrentDirection);
-                
+                Attack(CurrentDirection);                
             }
+
             if (weaponTimer <= 0)
             {
                 actionAttack = false;
-                weaponRotation = 0;
             }
         }
-        private void Attack(Direction dir)
+        private void Attack(Direction dir) // TODO fix this shit with animations
         {
             weaponTimer = 200;
             if (dir == Direction.Up)
             {
-                weaponRotation = 1;
                 velocity.Y -= 100;          
                 actionAttack = true;
             }
             if (dir == Direction.Down)
             {
                 velocity.Y += 100;
-                weaponRotation = 4.2f;
                 actionAttack = true;
             }
             
             if (dir == Direction.Right)
             {
                 velocity.X += 100;
-                weaponRotation = 2.5f;
                 actionAttack = true;
             }
             if (dir == Direction.Left)
             {
                 velocity.X += 100;
-                weaponRotation = 5.5f;
                 actionAttack = true;
             }                     
         }
@@ -304,19 +292,16 @@ namespace TCOBO
             Movement(gameTime);
             handleAim();
             handleAction(gameTime);
-            handleAnimation(gameTime);  
-            playerAngle = rotation * (180.0 / Math.PI);
+            handleAnimation(gameTime);       
             Console.WriteLine(attackHitBox);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
-        {
-        
-            spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
-
+        {           
             if (swordEquipped)
                 spriteBatch.Draw(swordTex[animaCount], playerPos, null, Color.White, rotation, origin, 1f, SpriteEffects.None, 0f);
-            spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);            
+              spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
+              spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
         }
     }
 }
