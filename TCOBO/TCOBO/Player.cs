@@ -14,9 +14,9 @@ namespace TCOBO
     class Player : MovableObject 
     {
         public Texture2D playerTex1, weaponPH;
-        public Vector2 playerPos, weaponPos, origin, mousePos;
+        public Vector2 playerPos, weaponPos, origin, mousePos, aimVector;
         private ContentManager content;
-        private Rectangle srcRec, weaponRec, playerRec;
+        private Rectangle srcRec, weaponRec, attackHitBox;
         private float deltaTime, weaponTimer = 0, weaponRotation = 0.2f, playerRotation = 0f, rotation = 0.2f;
         private int animaCount = 1;
         private bool actionAttack;
@@ -32,7 +32,7 @@ namespace TCOBO
         private List<Texture2D> playerTex = new List<Texture2D>();
         private List<Texture2D> swordTex = new List<Texture2D>();
         
-        private enum Direction {Up, Down, Left, Right, Default}
+        private enum Direction {Up, Down, Left, Right, TopRight, TopLeft, BottomRight, BottomLeft, Default}
         private Direction CurrentDirection;
 
         public Vector2 GetPos()
@@ -71,17 +71,17 @@ namespace TCOBO
         {
             return playerTex1;
         }
-       /* public int GetSpeed()
+        public float GetSpeed()
         {
-          //  return speed;
-        }*/
+            return speed;
+        }
         public Rectangle GetSwordRec()
         {
             return weaponRec;
         }
         public Rectangle GetPlayerRec()
         {
-            return playerRec;
+            return attackHitBox;
         }
 
         public Player(ContentManager content)
@@ -89,13 +89,18 @@ namespace TCOBO
             this.content = content;
             playerPos = new Vector2(500, 500);
             srcRec = new Rectangle(0, 0, 100, 100);
-            playerRec = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
+            attackHitBox = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
             spriteEffect = SpriteEffects.None;
             playerTex1 = content.Load<Texture2D>("ballsprite1");
             weaponPH = content.Load<Texture2D>("weaponPH");
             origin = new Vector2(80, 80);
             weaponRec = new Rectangle((int)weaponPos.X, (int)weaponPos.Y, weaponPH.Width, weaponPH.Height);
+            LoadPlayerTex();
+            color = new Color(255, 30, 30, 255);  
+        }
 
+        private void LoadPlayerTex()
+        {
             for (int i = 1; i < 22; i++)
             {
                 playerTex.Add(content.Load<Texture2D>("player" + i));
@@ -104,8 +109,8 @@ namespace TCOBO
             {
                 swordTex.Add(content.Load<Texture2D>("sword" + i));
             }
-            color = new Color(255, 30, 30, 255);  
         }
+
         private void Movement(GameTime gameTime)
         {
             if (moveLeft)
@@ -196,6 +201,17 @@ namespace TCOBO
             rotation = (float)Math.Atan2(yDistance, xDistance);
         }
 
+        private void handleAim()    //Gets a normalized vector for aim and applies to attackHitBox position
+        {
+            float deltaX = ms.X - playerPos.X;
+            float deltaY = ms.Y - playerPos.Y;
+            aimVector = new Vector2(deltaX, deltaY);
+            aimVector.Normalize();          
+            double recX = (double)aimVector.X * 100;
+            double recY = (double)aimVector.Y * 100;
+            attackHitBox = new Rectangle(((int)playerPos.X - 40) + (int)recX, ((int)playerPos.Y- 40) + (int)recY, 100, 100);
+        
+        } 
 
         public void playerDirection()
         {
@@ -206,26 +222,22 @@ namespace TCOBO
             move = false;
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                CurrentDirection = Direction.Right;
                 move = true;
                 moveRight = true;
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
-                CurrentDirection = Direction.Left;
                 move = true;
                 moveLeft = true;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.W))
             {
-                CurrentDirection = Direction.Up;
                 move = true;
                 moveUp = true;
             }
 
             else if (Keyboard.GetState().IsKeyDown(Keys.S))
             {
-                CurrentDirection = Direction.Down;
                 move = true;
                 moveDown = true;
             }
@@ -238,7 +250,6 @@ namespace TCOBO
 
             if (actionAttack == true)
             {
-                //rotation += 0.2f;
                 weaponRotation += 0.1f;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.D1))
@@ -255,14 +266,11 @@ namespace TCOBO
             {
                 actionAttack = false;
                 weaponRotation = 0;
-               // spriteEffect = SpriteEffects.None;
             }
         }
         private void Attack(Direction dir)
         {
             weaponTimer = 200;
-           // origin = new Vector2(weaponPH.Width, weaponPH.Height);
-
             if (dir == Direction.Up)
             {
                 weaponRotation = 1;
@@ -291,32 +299,24 @@ namespace TCOBO
         }
 
         public override void Update(GameTime gameTime)
-        {
-            //mousePos = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);           
-            
+        {                  
             playerDirection();
             Movement(gameTime);
+            handleAim();
             handleAction(gameTime);
             handleAnimation(gameTime);  
-            double playerAngle = playerRotation * (180.0 / Math.PI);
-            Console.WriteLine(playerAngle);
+            playerAngle = rotation * (180.0 / Math.PI);
+            Console.WriteLine(attackHitBox);
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-
-            //spriteBatch.Draw(playerTex, playerPos, srcRec, Color.White);
-            // spriteBatch.Draw(playerTex[animaCount], playerPos, , Color.playerPosWhite, playerRotation, new Vector2(playerTex.Width /2, playerTex.Height / 2), 1f, spriteEffect, 2f);
-          //  spriteBatch.Draw(weaponPH, playerRec, Color.White); // Show where the players hit range is
+        
+            spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
 
             if (swordEquipped)
                 spriteBatch.Draw(swordTex[animaCount], playerPos, null, Color.White, rotation, origin, 1f, SpriteEffects.None, 0f);
-            spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
-
-            if (weaponTimer > 0)
-            {
-                //spriteBatch.Draw(weaponPH, weaponPos, weaponRec, Color.White, weaponRotation,origin, 1f, spriteEffect, 2f);
-            }           
+            spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);            
         }
     }
 }
