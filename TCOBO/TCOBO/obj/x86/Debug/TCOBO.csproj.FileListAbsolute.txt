@@ -80,3 +80,4 @@ C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\obj\x86\Debug\Microsoft.Xna.Framew
 C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\obj\x86\Debug\TCOBO.exe
 C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\obj\x86\Debug\TCOBO.pdb
 C:\Users\Rasmus\Desktop\TCOBO 2.0\TCOBO\TCOBO\bin\x86\Debug\Content\mah_logo.xnb
+C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\mah_logo.xnb
