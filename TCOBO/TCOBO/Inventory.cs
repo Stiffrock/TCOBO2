@@ -15,13 +15,13 @@ namespace TCOBO
         Texture2D inventoryTex;
 
         InventoryTile[,] grid;
-        const int num_rows = 5;
-        const int num_cols = 5;
+        const int num_rows = 3;
+        const int num_cols = 3;
 
         public Inventory(ContentManager content)
         {
             inventoryTex = content.Load<Texture2D>("mah_logo");
-
+            
             CreateGameGrid();
         }
 
@@ -41,13 +41,13 @@ namespace TCOBO
 
         void CreateGameGrid()
         {
-            grid = new InventoryTile[num_rows, num_cols];
+                grid = new InventoryTile[num_rows, num_cols];
 
             for (int i = 0; i < num_rows; i++)
             {
                 for (int j = 0; j < num_cols; j++)
                 {
-                    grid[i, j] = new InventoryTile(500 * 50 + 100, 500 * 50 + 200, 0, 0);
+                    grid[i, j] = new InventoryTile(i * 50 + 300, j * 50 + 300, 0, 0);
                 }
             }
         }

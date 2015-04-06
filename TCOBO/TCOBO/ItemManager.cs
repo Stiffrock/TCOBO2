@@ -13,12 +13,12 @@ namespace TCOBO
         //private Vector2 pos;
         private Game1 game1;
         private Stone stone;
-        private GraphicsDevice graphics;
+        private GraphicsDevice grahpics;
 
         public ItemManager(Game1 game1)
         {
             this.game1 = game1;
-            graphics = game1.GraphicsDevice;
+            grahpics = game1.GraphicsDevice;
             stone = new Stone(game1.Content);
         }
 
@@ -27,11 +27,11 @@ namespace TCOBO
             stone.Update(gameTime);
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch sb)
         {
-            spriteBatch.Begin();
-            stone.Draw(spriteBatch);
-            spriteBatch.End();
+            sb.Begin();
+            stone.Draw(sb);
+            sb.End();
         }
     }
 }

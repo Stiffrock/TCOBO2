@@ -12,6 +12,7 @@ namespace TCOBO
     {
         private Texture2D stoneTex;
         private Vector2 stonePos;
+
         public Stone(ContentManager content)
         {
             stonePos = new Vector2(150, 150);
@@ -19,13 +20,13 @@ namespace TCOBO
         }
 
         public override void Update(GameTime gameTime)
-        { 
-        
+        {
+            
         }
 
-        public override void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch sb)
         {
-            spriteBatch.Draw(stoneTex, stonePos, Color.White);
+            sb.Draw(stoneTex, stonePos, Color.White);
         }
 
     }

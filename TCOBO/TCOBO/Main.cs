@@ -13,10 +13,10 @@ namespace TCOBO
 {
     class Main
     {
-        private Game1 game1;
+        public Game1 game1;
         private TestWorld testWorld;
         private GraphicsDevice graphics;
-        private Player player;
+        public Player player;
         private Camera2D camera;        
         private Enemy enemy;
         private Inventory inventory;
