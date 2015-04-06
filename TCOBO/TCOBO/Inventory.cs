@@ -47,7 +47,7 @@ namespace TCOBO
             {
                 for (int j = 0; j < num_cols; j++)
                 {
-                    grid[i, j] = new InventoryTile(i * 50 + 100, j * 50 + 200, 0, 0);
+                    grid[i, j] = new InventoryTile(500 * 50 + 100, 500 * 50 + 200, 0, 0);
                 }
             }
         }
