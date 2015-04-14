@@ -34,6 +34,7 @@ namespace TCOBO
 
         protected override void LoadContent()
         {
+            TextureManager.LoadContent(Content);
             main = new Main(this);
             itemManager = new ItemManager(this);
             spriteBatch = new SpriteBatch(GraphicsDevice);

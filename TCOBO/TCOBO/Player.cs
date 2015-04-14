@@ -17,7 +17,8 @@ namespace TCOBO
         public Vector2 playerPos, origin, aimVector;
         private ContentManager content;
         private Rectangle srcRec, attackHitBox;
-        private float deltaTime, weaponTimer = 0,rotation = 0.2f;
+        private float deltaTime, weaponTimer = 0;
+        public float rotation = 0f;
         private int animaCount = 1;
         private bool actionAttack;
         private double playerAngle;
@@ -87,7 +88,7 @@ namespace TCOBO
         public Player(ContentManager content)
         {
             this.content = content;
-            playerPos = new Vector2(500, 500);
+            playerPos = new Vector2(-400, 350);
             srcRec = new Rectangle(0, 0, 100, 100);
             attackHitBox = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
             spriteEffect = SpriteEffects.None;
@@ -194,10 +195,7 @@ namespace TCOBO
                         animaCount = 0;
                 }
             }
-            ms = Mouse.GetState();
-            float xDistance = (float)ms.X - playerPos.X;
-            float yDistance = (float)ms.Y - playerPos.Y;
-            rotation = (float)Math.Atan2(yDistance, xDistance);
+
         }
 
         private void handleAim()    //Gets a normalized vector for aim and applies to attackHitBox position
@@ -301,7 +299,7 @@ namespace TCOBO
             if (swordEquipped)
                 spriteBatch.Draw(swordTex[animaCount], playerPos, null, Color.White, rotation, origin, 1f, SpriteEffects.None, 0f);
               spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
-              spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
+              //spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
         }
     }
 }

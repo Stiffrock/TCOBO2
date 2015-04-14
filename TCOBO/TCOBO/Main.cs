@@ -30,7 +30,11 @@ namespace TCOBO
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
             enemy = new Enemy(game1.Content);
-            inventory = new Inventory(game1.Content);             
+            inventory = new Inventory(game1.Content);
+            testWorld.ReadLevel("Map");
+            testWorld.SetMap();
+
+
         }
 
         public void Hit() // "knocksback" enemy
@@ -101,6 +105,7 @@ namespace TCOBO
         {          
             Hit();
             player.Update(gameTime);
+            Rotation();
             camera.Update(gameTime);
             enemy.UpdateEnemy(gameTime, player.GetPos());
         }
@@ -114,6 +119,23 @@ namespace TCOBO
             enemy.Draw(spriteBatch);
             inventory.Draw(spriteBatch);
             spriteBatch.End();
+
+
+        }
+
+        public void Rotation()
+        {
+            Vector2 mousePosition;
+            mousePosition.X = Mouse.GetState().X;
+            mousePosition.Y = Mouse.GetState().Y;
+
+            Vector2 worldPosition = Vector2.Transform(mousePosition, Matrix.Invert(camera.GetTransformation(graphics)));
+
+
+            Vector2 ms = worldPosition;
+            float xDistance = (float)ms.X - player.playerPos.X;
+            float yDistance = (float)ms.Y - player.playerPos.Y;
+            player.rotation = (float)Math.Atan2(yDistance, xDistance);
         }
 
     }

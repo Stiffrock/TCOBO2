@@ -33,5 +33,15 @@ namespace TCOBO
                 Matrix.CreateTranslation(new Vector3(-centre.X, -centre.Y,0));
         }
 
+        public Matrix GetTransformation(GraphicsDevice graphicsDevice)
+        {
+            transform =       // Thanks to o KB o for this solution
+              Matrix.CreateTranslation(new Vector3(-playerPos.X, -playerPos.Y, 0)) *
+                                         Matrix.CreateRotationZ(0) *
+                                         Matrix.CreateScale(new Vector3(1, 1, 1)) *
+                                         Matrix.CreateTranslation(new Vector3(graphicsDevice.Viewport.Width * 0.5f, graphicsDevice.Viewport.Height * 0.5f, 0));
+            return transform;
+        }
+
     }
 }
