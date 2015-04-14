@@ -15,6 +15,6 @@ namespace TCOBO
 
         public virtual void Update(GameTime gameTime) {}
 
-        public virtual void Draw(SpriteBatch spriteBatch) {}
+        public virtual void Draw(SpriteBatch sb) {}
     }
 }

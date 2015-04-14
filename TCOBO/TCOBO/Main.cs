@@ -13,10 +13,10 @@ namespace TCOBO
 {
     class Main
     {
-        private Game1 game1;
+        public Game1 game1;
         private TestWorld testWorld;
         private GraphicsDevice graphics;
-        private Player player;
+        public Player player;
         private Camera2D camera;        
         private Enemy enemy;
         private Inventory inventory;
@@ -30,18 +30,14 @@ namespace TCOBO
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
             enemy = new Enemy(game1.Content);
-            inventory = new Inventory(game1.Content);
-             
-
+            inventory = new Inventory(game1.Content);             
         }
 
-        public void Hit()
+        public void Hit() // "knocksback" enemy
         {
-
             Rectangle rec = player.GetPlayerRec();
             Texture2D enemyTex = enemy.tex;
             float weaponTimer = player.GetWeaponTimer();
-            //PixelCollision(enemyone, player);
             if (rec.Intersects(enemy.hitBox) && weaponTimer > 0)
                {
                 int dir = player.GetPlayerDirection();
@@ -101,7 +97,6 @@ namespace TCOBO
         }
 
 
-
         public void Update(GameTime gameTime)
         {          
             Hit();
@@ -111,8 +106,7 @@ namespace TCOBO
         }
 
         public void Draw(SpriteBatch spriteBatch)
-        {
-           
+        {          
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null,
                 camera.transform);           
             testWorld.Draw(spriteBatch);
