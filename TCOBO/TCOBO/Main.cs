@@ -19,7 +19,7 @@ namespace TCOBO
         public Player player;
         private Camera2D camera;        
         private Enemy enemy;
-        private Inventory inventory;
+        //private Inventory inventory;
         
 
         public Main(Game1 game1)
@@ -30,7 +30,7 @@ namespace TCOBO
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
             enemy = new Enemy(game1.Content);
-            inventory = new Inventory(game1.Content);             
+            //inventory = new Inventory(game1.Content, new Vector2((int)player.playerPos.X, (int)player.playerPos.Y + 250));             
         }
 
         public void Hit() // "knocksback" enemy
@@ -103,6 +103,7 @@ namespace TCOBO
             player.Update(gameTime);
             camera.Update(gameTime);
             enemy.UpdateEnemy(gameTime, player.GetPos());
+            
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -112,8 +113,9 @@ namespace TCOBO
             testWorld.Draw(spriteBatch);
             player.Draw(spriteBatch);
             enemy.Draw(spriteBatch);
-            inventory.Draw(spriteBatch);
+            //inventory.Draw(spriteBatch);
             spriteBatch.End();
+
         }
 
     }

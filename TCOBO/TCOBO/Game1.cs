@@ -59,8 +59,13 @@ namespace TCOBO
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             base.Draw(gameTime);
+
+            
             main.Draw(spriteBatch);
             itemManager.Draw(spriteBatch);
+
+
+            
           
         }
     }

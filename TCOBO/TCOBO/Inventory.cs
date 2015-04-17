@@ -12,17 +12,28 @@ namespace TCOBO
     class Inventory
     {
 
-        Texture2D inventoryTex;
+        private Texture2D inventoryTex;
 
         InventoryTile[,] grid;
         const int num_rows = 3;
-        const int num_cols = 3;
+        const int num_cols = 5;
 
-        public Inventory(ContentManager content)
+        private Vector2 pos;
+        public Rectangle hitBox;
+
+        public Inventory(ContentManager content, Vector2 pos)
         {
             inventoryTex = content.Load<Texture2D>("mah_logo");
-            
+
+            this.pos = pos;
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
+
             CreateGameGrid();
+        }
+
+        public void Update()
+        {
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
         }
 
         public void Draw(SpriteBatch spritebatch)
@@ -39,6 +50,7 @@ namespace TCOBO
             }
         }
 
+
         void CreateGameGrid()
         {
                 grid = new InventoryTile[num_rows, num_cols];
@@ -47,7 +59,9 @@ namespace TCOBO
             {
                 for (int j = 0; j < num_cols; j++)
                 {
-                    grid[i, j] = new InventoryTile(i * 50 + 300, j * 50 + 300, 0, 0);
+                    grid[i, j] = new InventoryTile(i * 50, j * 50, 0, 0);
+
+                    //i * 50 + 300, j * 50 + 300
                 }
             }
         }

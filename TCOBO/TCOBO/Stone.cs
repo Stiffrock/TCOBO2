@@ -11,18 +11,42 @@ namespace TCOBO
     class Stone : Item
     {
         private Texture2D stoneTex;
-        private Vector2 stonePos;
+        public Vector2 stonePos;
+        //private Texture2D tex;
+        //private Vector2 pos;
+        public Rectangle hitBox;
 
-        public Stone(ContentManager content)
+        public Stone(ContentManager content) : base(content)
         {
-            stonePos = new Vector2(150, 150);
+            //this.pos = pos;
             stoneTex = content.Load<Texture2D>("stone");
+            
+            this.stonePos = new Vector2(300, 300);
+            hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
         }
 
         public override void Update(GameTime gameTime)
         {
-            
+            hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
         }
+
+        //public bool PickUp(int x, int y)
+        //{
+        //    if (hitBox.Contains(x, y))
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
+
+        //public void Move(int x, int y)
+        //{
+        //    stonePos.X = x;
+        //    stonePos.Y = y;
+
+        //    hitBox.X = x;
+        //    hitBox.Y = y;
+        //}
 
         public override void Draw(SpriteBatch sb)
         {
