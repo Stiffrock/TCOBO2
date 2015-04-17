@@ -14,15 +14,13 @@ namespace TCOBO
     class Player : MovableObject 
     {
         public Texture2D playerTex1, weaponPH;
-        public Vector2 playerPos, origin, aimVector;
+        public Vector2 playerPos, origin, aimVector, mousePos;
         private ContentManager content;
-        private Rectangle srcRec, attackHitBox;
-        private float deltaTime, weaponTimer = 0,rotation = 0.2f;
+        public Rectangle srcRec, attackHitBox;
+        private float deltaTime, weaponTimer = 0;
+        public float rotation = 0f;
         private int animaCount = 1;
         private bool actionAttack;
-        private double playerAngle;
-        MouseState ms;
-        private SpriteEffects spriteEffect;
         Color color;
         float speed = 230f, max_speed = 130, slow_speed = 85;
         bool swordEquipped = false;
@@ -67,18 +65,6 @@ namespace TCOBO
         {
             return weaponTimer;
         }
-        public Texture2D GetPlayerTex()
-        {
-            return playerTex1;
-        }
-        public float GetSpeed()
-        {
-            return speed;
-        }
-        public Rectangle GetAttackHitbox()
-        {
-            return attackHitBox;
-        }
         public Rectangle GetPlayerRec()
         {
             return attackHitBox;
@@ -87,10 +73,10 @@ namespace TCOBO
         public Player(ContentManager content)
         {
             this.content = content;
-            playerPos = new Vector2(500, 500);
+            playerPos = new Vector2(-400, 350);
             srcRec = new Rectangle(0, 0, 100, 100);
             attackHitBox = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
-            spriteEffect = SpriteEffects.None;
+
             playerTex1 = content.Load<Texture2D>("ballsprite1");
             weaponPH = content.Load<Texture2D>("weaponPH");
             origin = new Vector2(80, 80);    
@@ -194,22 +180,18 @@ namespace TCOBO
                         animaCount = 0;
                 }
             }
-            ms = Mouse.GetState();
-            float xDistance = (float)ms.X - playerPos.X;
-            float yDistance = (float)ms.Y - playerPos.Y;
-            rotation = (float)Math.Atan2(yDistance, xDistance);
         }
 
-        private void handleAim()    //Gets a normalized vector for aim and applies to attackHitBox position
+       /* private void handleAim()    //Gets a normalized vector for aim and applies to attackHitBox position
         {
-            float deltaX = ms.X - playerPos.X;
-            float deltaY = ms.Y - playerPos.Y;
+            float deltaX = mousePos.X - playerPos.X;
+            float deltaY = mousePos.Y - playerPos.Y;
             aimVector = new Vector2(deltaX, deltaY);
             aimVector.Normalize();          
             double recX = (double)aimVector.X * 100;
             double recY = (double)aimVector.Y * 100;
             attackHitBox = new Rectangle(((int)playerPos.X - 40) + (int)recX, ((int)playerPos.Y- 40) + (int)recY, 100, 100);        
-        } 
+        } */
 
         public void playerDirection()
         {
@@ -242,58 +224,23 @@ namespace TCOBO
         }
 
         private void handleAction(GameTime gameTime)
-        {
-            weaponTimer -= gameTime.ElapsedGameTime.Milliseconds;
-
-            if (Keyboard.GetState().IsKeyDown(Keys.D1))
+        {        
+            if (KeyMouseReader.KeyPressed(Keys.D1))
             {
                 swordEquipped = !swordEquipped;
-            }
-                     
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && actionAttack == false)
-            {
-                Attack(CurrentDirection);                
-            }
+            }           
+        }
 
-            if (weaponTimer <= 0)
-            {
-                actionAttack = false;
-            }
-        }
-        private void Attack(Direction dir) // TODO fix this shit with animations
-        {
-            weaponTimer = 200;
-            if (dir == Direction.Up)
-            {
-                velocity.Y -= 100;          
-                actionAttack = true;
-            }
-            if (dir == Direction.Down)
-            {
-                velocity.Y += 100;
-                actionAttack = true;
-            }
-            
-            if (dir == Direction.Right)
-            {
-                velocity.X += 100;
-                actionAttack = true;
-            }
-            if (dir == Direction.Left)
-            {
-                velocity.X += 100;
-                actionAttack = true;
-            }                     
-        }
 
         public override void Update(GameTime gameTime)
-        {                  
+        {
+            mousePos.X = Mouse.GetState().X;
+            mousePos.Y = Mouse.GetState().Y;
             playerDirection();
             Movement(gameTime);
-            handleAim();
             handleAction(gameTime);
             handleAnimation(gameTime);       
-            Console.WriteLine(attackHitBox);
+          
         }
 
         public override void Draw(SpriteBatch spriteBatch)

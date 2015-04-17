@@ -47,3 +47,6 @@ Content\sword9.xnb
 Content\mah_logo.xnb
 Content\stone.xnb
 Content\ballsprite1.xnb
+Content\road1.xnb
+Content\Sand1.xnb
+Content\tree1.xnb

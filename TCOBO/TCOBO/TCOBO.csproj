@@ -72,12 +72,15 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities.cs" />
+    <Compile Include="Attack.cs" />
     <Compile Include="Camera2D.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="InventoryTile.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemManager.cs" />
+    <Compile Include="KeyMouseReader.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="MovableObject.cs" />
     <Compile Include="Player.cs" />
@@ -86,6 +89,8 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Stone.cs" />
     <Compile Include="TestWorld.cs" />
+    <Compile Include="TextureManager.cs" />
+    <Compile Include="Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -120,11 +125,6 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
