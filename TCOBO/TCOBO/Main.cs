@@ -25,6 +25,7 @@ namespace TCOBO
         private Inventory inventory;
         private List<Enemy> enemyList;
         private List<Enemy> inrangeList;
+        private Vector2 aimVector;
 
         
         public Main(Game1 game1)
@@ -60,6 +61,7 @@ namespace TCOBO
             float yDistance = (float)ms.Y - player.playerPos.Y;
             player.rotation = (float)Math.Atan2(yDistance, xDistance);
 
+            aimVector = new Vector2(xDistance, yDistance);
             player.aimRec = new Vector2(xDistance, yDistance);
             player.aimRec.Normalize();
             double recX = (double)player.aimRec.X * 100;
@@ -74,7 +76,7 @@ namespace TCOBO
             {
                 if (enemy.hitBox.Intersects(player.attackHitBox))
                 {
-                    attack.inRange(enemy);
+                    attack.inRange(enemy, aimVector);
                     inrangeList.Add(enemy);
                 }                       
             }

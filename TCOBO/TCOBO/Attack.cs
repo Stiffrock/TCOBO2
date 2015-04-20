@@ -24,24 +24,40 @@ namespace TCOBO
             
         }
 
-        public void inRange(Enemy enemy)
+        public void inRange(Enemy enemy, Vector2 aimVector)
         {
 
             if (KeyMouseReader.LeftClick() == true)
             {
-                double deltaX = player.playerPos.X - enemy.pos.X;
-                double deltaY = player.playerPos.Y - enemy.pos.Y;
+                double deltaX = enemy.pos.X - player.playerPos.X;
+                double deltaY =  enemy.pos.Y - player.playerPos.Y;
                 double deltaXY = Math.Pow(deltaX, 2) + Math.Pow(deltaY, 2);
-                double distanceVector = Math.Sqrt(deltaXY); // Längden
-                //  Vector2 deltaPos = new Vector2(deltaX, deltaY);
-                double radians = Math.Atan2(deltaY, deltaX);
-                double angle = (180 / Math.PI) * radians; // Vinkel              
-                float newPosX = (float)Math.Cos(angle) * (float)distanceVector;
-                float newPosY = (float)Math.Sin(angle) * (float)distanceVector;
-                enemy.pos.X += newPosX;
-                enemy.pos.Y += newPosY;
+                double distance = Math.Sqrt(deltaXY); // Längden         
+                double radians = Math.Atan2((float)aimVector.Y, (float)aimVector.X);             
+                double distanceX = Math.Cos(radians) * distance;
+                double distanceY = Math.Sin(radians) * distance;
+                write = (float)distance;
+                if (distance <= 190 && distance > 150)
+                {                    
+                enemy.pos.X += (float)distanceX / 4;
+                enemy.pos.Y += (float)distanceY / 4;
+                }
+                if (distance <= 150 && distance > 100)
+                {
+                    enemy.pos.X += (float)distanceX / 2;
+                    enemy.pos.Y += (float)distanceY / 2;
+                }
 
-                write = (float)angle;
+                if (distance < 100 && distance > 80)
+                {
+                    enemy.pos.X += (float)distanceX;
+                    enemy.pos.Y += (float)distanceY; 
+                }
+                if (distance < 80 && distance > 0)
+                {
+                    enemy.pos.X += (float)distanceX * 2;
+                    enemy.pos.Y += (float)distanceY * 2;
+                }
             }
         }
 
