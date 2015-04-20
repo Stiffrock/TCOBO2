@@ -15,6 +15,7 @@ namespace TCOBO
     {
         private Player player;
         private List<Enemy> inrangeList;
+        private float write;
 
         public Attack(Player player)
         {
@@ -23,20 +24,24 @@ namespace TCOBO
             
         }
 
-        public void inRange(List<Enemy> enemyList)
+        public void inRange(Enemy enemy)
         {
+
             if (KeyMouseReader.LeftClick() == true)
             {
-                foreach (Enemy enemy in enemyList) // TODO Fixxa så att fienden får en knockback som är rakt ut från player.
-                {
-             
-                    float deltaX = enemy.pos.X - player.playerPos.X;
-                    float deltaY = enemy.pos.Y - player.playerPos.Y;
-                    Vector2 deltaPos = new Vector2(deltaX, deltaY);
-                   // deltaPos.Normalize();                                   
-                    enemy.pos.X = deltaPos.X;
-                    enemy.pos.Y = deltaPos.Y;
-                }
+                double deltaX = player.playerPos.X - enemy.pos.X;
+                double deltaY = player.playerPos.Y - enemy.pos.Y;
+                double deltaXY = Math.Pow(deltaX, 2) + Math.Pow(deltaY, 2);
+                double distanceVector = Math.Sqrt(deltaXY); // Längden
+                //  Vector2 deltaPos = new Vector2(deltaX, deltaY);
+                double radians = Math.Atan2(deltaY, deltaX);
+                double angle = (180 / Math.PI) * radians; // Vinkel              
+                float newPosX = (float)Math.Cos(angle) * (float)distanceVector;
+                float newPosY = (float)Math.Sin(angle) * (float)distanceVector;
+                enemy.pos.X += newPosX;
+                enemy.pos.Y += newPosY;
+
+                write = (float)angle;
             }
         }
 
@@ -48,7 +53,7 @@ namespace TCOBO
         }
         public override void Update(GameTime gameTime)
         {
-            
+            Console.WriteLine(write);
         }
     }
 }

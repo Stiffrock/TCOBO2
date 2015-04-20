@@ -20,16 +20,13 @@ namespace TCOBO
         private Attack attack;
         private Camera2D camera;        
         private Enemy enemy;
-<<<<<<< HEAD
         //private Inventory inventory;
-=======
         private KeyMouseReader krm;
         private Inventory inventory;
         private List<Enemy> enemyList;
         private List<Enemy> inrangeList;
->>>>>>> origin/Stoffe
-        
 
+        
         public Main(Game1 game1)
         {
             this.game1 = game1;
@@ -39,17 +36,15 @@ namespace TCOBO
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
             enemy = new Enemy(game1.Content);
-<<<<<<< HEAD
             //inventory = new Inventory(game1.Content, new Vector2((int)player.playerPos.X, (int)player.playerPos.Y + 250));             
-=======
             enemyList = new List<Enemy>();
             inrangeList = new List<Enemy>();
             enemyList.Add(enemy);
             attack = new Attack(player);
-            inventory = new Inventory(game1.Content);
+            //inventory = new Inventory(game1.Content);
             testWorld.ReadLevel("Map");
             testWorld.SetMap();
->>>>>>> origin/Stoffe
+
         }
 
         
@@ -65,11 +60,10 @@ namespace TCOBO
             float yDistance = (float)ms.Y - player.playerPos.Y;
             player.rotation = (float)Math.Atan2(yDistance, xDistance);
 
-
-            player.aimVector = new Vector2(xDistance, yDistance); // PlayerAimRectangle
-            player.aimVector.Normalize();
-            double recX = (double)player.aimVector.X * 100;
-            double recY = (double)player.aimVector.Y * 100;
+            player.aimRec = new Vector2(xDistance, yDistance);
+            player.aimRec.Normalize();
+            double recX = (double)player.aimRec.X * 100;
+            double recY = (double)player.aimRec.Y * 100;
             player.attackHitBox = new Rectangle(((int)player.playerPos.X - 40) + (int)recX, ((int)player.playerPos.Y - 40) + (int)recY, 100, 100);
         }
 
@@ -80,17 +74,18 @@ namespace TCOBO
             {
                 if (enemy.hitBox.Intersects(player.attackHitBox))
                 {
+                    attack.inRange(enemy);
                     inrangeList.Add(enemy);
                 }                       
             }
-            if (inrangeList.Count() != 0)
+      /*      if (inrangeList.Count() != 0)
             {
                 if (!enemy.hitBox.Intersects(player.attackHitBox))
                 {
                     inrangeList.Remove(enemy);
                 }
-                attack.inRange(inrangeList);
-            }         
+               // attack.inRange(inrangeList);
+            }   */      
         }
 
 
@@ -103,11 +98,9 @@ namespace TCOBO
             Rotation();
             camera.Update(gameTime);
             enemy.UpdateEnemy(gameTime, player.GetPos());
-<<<<<<< HEAD
-            
-=======
-            Console.WriteLine(player.playerPos.X);
->>>>>>> origin/Stoffe
+          
+        //    Console.WriteLine(enemy.pos);
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -119,12 +112,12 @@ namespace TCOBO
             enemy.Draw(spriteBatch);
             //inventory.Draw(spriteBatch);
             spriteBatch.End();
-<<<<<<< HEAD
+
 
         }
 
-=======
         }        
->>>>>>> origin/Stoffe
+
     }
-}
+
+

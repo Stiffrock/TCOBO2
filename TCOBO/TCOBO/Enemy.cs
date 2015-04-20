@@ -65,7 +65,7 @@ namespace TCOBO
         public void UpdateEnemy(GameTime gameTime, Vector2 playerPos)
         {
             Fx = SpriteEffects.None;
-            HuntPlayer(playerPos);
+            //HuntPlayer(playerPos);
             rotation = MathHelper.ToRadians(0);
             frameTimer -= gameTime.ElapsedGameTime.TotalMilliseconds;
             pos += speed;
