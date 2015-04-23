@@ -84,6 +84,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="MovableObject.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="PlayerPanel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />

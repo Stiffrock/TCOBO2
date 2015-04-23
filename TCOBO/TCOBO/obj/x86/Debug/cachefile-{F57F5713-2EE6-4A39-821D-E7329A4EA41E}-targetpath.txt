@@ -50,3 +50,4 @@ Content\ballsprite1.xnb
 Content\road1.xnb
 Content\Sand1.xnb
 Content\tree1.xnb
+Content\infopanel - stats.xnb

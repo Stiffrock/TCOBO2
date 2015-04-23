@@ -20,20 +20,12 @@ namespace TCOBO
         private Attack attack;
         private Camera2D camera;        
         private Enemy enemy;
-<<<<<<< HEAD
-      
-=======
         //private Inventory inventory;
->>>>>>> origin/Stoffe
         private KeyMouseReader krm;
         private Inventory inventory;
         private List<Enemy> enemyList;
         private List<Enemy> inrangeList;
-<<<<<<< HEAD
-        
-=======
         private Vector2 aimVector;
->>>>>>> origin/Stoffe
 
         
         public Main(Game1 game1)
@@ -45,10 +37,7 @@ namespace TCOBO
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
             enemy = new Enemy(game1.Content);
-<<<<<<< HEAD
-=======
-            //inventory = new Inventory(game1.Content, new Vector2((int)player.playerPos.X, (int)player.playerPos.Y + 250));             
->>>>>>> origin/Stoffe
+            //inventory = new Inventory(game1.Content, new Vector2((int)player.playerPos.X, (int)player.playerPos.Y + 250));  
             enemyList = new List<Enemy>();
             inrangeList = new List<Enemy>();
             enemyList.Add(enemy);
@@ -56,10 +45,7 @@ namespace TCOBO
             //inventory = new Inventory(game1.Content);
             testWorld.ReadLevel("Map");
             testWorld.SetMap();
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/Stoffe
         }
 
         
@@ -114,13 +100,10 @@ namespace TCOBO
             Rotation();
             camera.Update(gameTime);
             enemy.UpdateEnemy(gameTime, player.GetPos());
-<<<<<<< HEAD
             Console.WriteLine(player.playerPos.X);
-=======
           
         //    Console.WriteLine(enemy.pos);
 
->>>>>>> origin/Stoffe
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -132,20 +115,12 @@ namespace TCOBO
             enemy.Draw(spriteBatch);
             //inventory.Draw(spriteBatch);
             spriteBatch.End();
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/Stoffe
 
         }
 
         }        
-<<<<<<< HEAD
-    }
-
-=======
-
     }
 
 
->>>>>>> origin/Stoffe
+

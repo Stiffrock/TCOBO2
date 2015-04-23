@@ -422,7 +422,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\mah_logo.xnb</Output>
-      <Time>2015-04-06T13:32:03.7596862+02:00</Time>
+      <Time>2015-04-23T13:09:37.7588459+02:00</Time>
     </Item>
     <Item>
       <Source>stone.png</Source>
@@ -468,6 +468,15 @@
       <Options>None</Options>
       <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\tree1.xnb</Output>
       <Time>2015-04-17T14:12:47.8022681+02:00</Time>
+    </Item>
+    <Item>
+      <Source>infopanel - stats.png</Source>
+      <Name>infopanel - stats</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\infopanel - stats.xnb</Output>
+      <Time>2015-04-23T13:09:24.4628174+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

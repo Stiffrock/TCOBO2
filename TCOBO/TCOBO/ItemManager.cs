@@ -18,6 +18,7 @@ namespace TCOBO
         private Item leaf;
         private Inventory inventory;
         private GraphicsDevice grahpics;
+        private PlayerPanel board;
 
         private bool PickedUp;
         private bool Inventored;
@@ -28,7 +29,9 @@ namespace TCOBO
             grahpics = game1.GraphicsDevice;
             stone = new Stone(game1.Content);
             //leaf = new Item(game1.Content, new Vector2(400, 200));
-            inventory = new Inventory(game1.Content, new Vector2(0, 0));
+            inventory = new Inventory(game1.Content, new Vector2(200, 200));
+            board = new PlayerPanel(game1.Content, new Vector2(550, 0));
+
 
             PickedUp = false;
             Inventored = false;
@@ -40,6 +43,7 @@ namespace TCOBO
             inventory.Update();
             PickItem();
             MoveItem();
+            board.Update();
         }
 
         public void PickItem()
@@ -77,6 +81,7 @@ namespace TCOBO
         public void Draw(SpriteBatch sb)
         {
             sb.Begin();
+            board.Draw(sb);
             inventory.Draw(sb);
 
             if (!Inventored)
