@@ -17,7 +17,7 @@ namespace TCOBO
         InventoryTile[,] grid;
         const int num_rows = 3;
         const int num_cols = 5;
-
+        private bool showInventory = false;
         private Vector2 pos;
         public Rectangle hitBox;
 
@@ -31,8 +31,18 @@ namespace TCOBO
             CreateGameGrid();
         }
 
+        private void ShowInventory()
+        {
+            if (KeyMouseReader.KeyPressed(Keys.I))
+            {
+                showInventory = !showInventory;
+            }
+        }
+
+
         public void Update()
         {
+            ShowInventory();
             hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
         }
 
@@ -42,14 +52,13 @@ namespace TCOBO
             {
                 for (int j = 0; j < num_cols; j++)
                 {
-                     if (Keyboard.GetState().IsKeyDown(Keys.I))
+                     if (showInventory)
 	                {
                         grid[i, j].Draw(inventoryTex, spritebatch);		 
 	                }
                 }
             }
         }
-
 
         void CreateGameGrid()
         {

@@ -15,6 +15,7 @@ namespace TCOBO
     {
         private Player player;
         private List<Enemy> inrangeList;
+        private float write;
 
         public Attack(Player player)
         {
@@ -23,19 +24,39 @@ namespace TCOBO
             
         }
 
-        public void inRange(List<Enemy> enemyList)
+        public void inRange(Enemy enemy, Vector2 aimVector)
         {
+
             if (KeyMouseReader.LeftClick() == true)
             {
-                foreach (Enemy enemy in enemyList) // TODO Fixxa så att fienden får en knockback som är rakt ut från player.
+                double deltaX = enemy.pos.X - player.playerPos.X;
+                double deltaY =  enemy.pos.Y - player.playerPos.Y;
+                double deltaXY = Math.Pow(deltaX, 2) + Math.Pow(deltaY, 2);
+                double distance = Math.Sqrt(deltaXY); // Längden         
+                double radians = Math.Atan2((float)aimVector.Y, (float)aimVector.X);             
+                double distanceX = Math.Cos(radians) * distance;
+                double distanceY = Math.Sin(radians) * distance;
+                write = (float)distance;
+                if (distance <= 190 && distance > 150)
+                {                    
+                enemy.pos.X += (float)distanceX / 4;
+                enemy.pos.Y += (float)distanceY / 4;
+                }
+                if (distance <= 150 && distance > 100)
                 {
-             
-                    float deltaX = enemy.pos.X - player.playerPos.X;
-                    float deltaY = enemy.pos.Y - player.playerPos.Y;
-                    Vector2 deltaPos = new Vector2(deltaX, deltaY);
-                   // deltaPos.Normalize();                                   
-                    enemy.pos.X = deltaPos.X;
-                    enemy.pos.Y = deltaPos.Y;
+                    enemy.pos.X += (float)distanceX / 2;
+                    enemy.pos.Y += (float)distanceY / 2;
+                }
+
+                if (distance < 100 && distance > 80)
+                {
+                    enemy.pos.X += (float)distanceX;
+                    enemy.pos.Y += (float)distanceY; 
+                }
+                if (distance < 80 && distance > 0)
+                {
+                    enemy.pos.X += (float)distanceX * 2;
+                    enemy.pos.Y += (float)distanceY * 2;
                 }
             }
         }
@@ -48,7 +69,7 @@ namespace TCOBO
         }
         public override void Update(GameTime gameTime)
         {
-            
+            Console.WriteLine(write);
         }
     }
 }

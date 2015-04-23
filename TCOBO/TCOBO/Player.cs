@@ -14,13 +14,12 @@ namespace TCOBO
     class Player : MovableObject 
     {
         public Texture2D playerTex1, weaponPH;
-        public Vector2 playerPos, origin, aimVector, mousePos;
+        public Vector2 playerPos, origin, aimRec, mousePos;
         private ContentManager content;
         public Rectangle srcRec, attackHitBox;
         private float deltaTime, weaponTimer = 0;
         public float rotation = 0f;
         private int animaCount = 1;
-        private bool actionAttack;
         Color color;
         float speed = 230f, max_speed = 130, slow_speed = 85;
         bool swordEquipped = false;
@@ -76,7 +75,6 @@ namespace TCOBO
             playerPos = new Vector2(-400, 350);
             srcRec = new Rectangle(0, 0, 100, 100);
             attackHitBox = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
-
             playerTex1 = content.Load<Texture2D>("ballsprite1");
             weaponPH = content.Load<Texture2D>("weaponPH");
             origin = new Vector2(80, 80);    
@@ -181,17 +179,6 @@ namespace TCOBO
                 }
             }
         }
-
-       /* private void handleAim()    //Gets a normalized vector for aim and applies to attackHitBox position
-        {
-            float deltaX = mousePos.X - playerPos.X;
-            float deltaY = mousePos.Y - playerPos.Y;
-            aimVector = new Vector2(deltaX, deltaY);
-            aimVector.Normalize();          
-            double recX = (double)aimVector.X * 100;
-            double recY = (double)aimVector.Y * 100;
-            attackHitBox = new Rectangle(((int)playerPos.X - 40) + (int)recX, ((int)playerPos.Y- 40) + (int)recY, 100, 100);        
-        } */
 
         public void playerDirection()
         {
