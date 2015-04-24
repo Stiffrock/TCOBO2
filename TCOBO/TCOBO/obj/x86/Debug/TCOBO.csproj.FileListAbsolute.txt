@@ -173,3 +173,5 @@ C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\tree1.x
 C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.exe
 C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\TCOBO.pdb
 C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\infopanel - stats.xnb
+C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\infopanel - stats.xnb
+C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\SpriteFont1.xnb

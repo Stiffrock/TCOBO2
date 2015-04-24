@@ -20,12 +20,14 @@ namespace TCOBO
         private Attack attack;
         private Camera2D camera;        
         private Enemy enemy;
-        //private Inventory inventory;
+        private SpriteFont spriteFont;
         private KeyMouseReader krm;
-        private Inventory inventory;
         private List<Enemy> enemyList;
         private List<Enemy> inrangeList;
         private Vector2 aimVector;
+        private PlayerPanel board;
+        private Tuple<int, int, int, int, int, int> playerStats;
+        private Tuple<float, float, float> effectiveStats;
 
         
         public Main(Game1 game1)
@@ -36,15 +38,15 @@ namespace TCOBO
             player = new Player(game1.Content);
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
-            enemy = new Enemy(game1.Content);
-            //inventory = new Inventory(game1.Content, new Vector2((int)player.playerPos.X, (int)player.playerPos.Y + 250));  
+            enemy = new Enemy(game1.Content);            
             enemyList = new List<Enemy>();
             inrangeList = new List<Enemy>();
             enemyList.Add(enemy);
             attack = new Attack(player);
-            //inventory = new Inventory(game1.Content);
             testWorld.ReadLevel("Map");
-            testWorld.SetMap();
+            testWorld.SetMap();                 
+            spriteFont = game1.Content.Load<SpriteFont>("SpriteFont1");
+            board = new PlayerPanel(game1.Content, new Vector2(550, 0), spriteFont);
 
         }
 
@@ -79,15 +81,7 @@ namespace TCOBO
                     attack.inRange(enemy, aimVector);
                     inrangeList.Add(enemy);
                 }                       
-            }
-      /*      if (inrangeList.Count() != 0)
-            {
-                if (!enemy.hitBox.Intersects(player.attackHitBox))
-                {
-                    inrangeList.Remove(enemy);
-                }
-               // attack.inRange(inrangeList);
-            }   */      
+            }   
         }
 
 
@@ -98,22 +92,26 @@ namespace TCOBO
             player.Update(gameTime);
             detectEnemy();
             Rotation();
+            playerStats = player.GetPlayerStats();
+            effectiveStats = player.GetEffectiveStats();
+            board.Update(playerStats, effectiveStats);
             camera.Update(gameTime);
             enemy.UpdateEnemy(gameTime, player.GetPos());
-            Console.WriteLine(player.playerPos.X);
-          
-        //    Console.WriteLine(enemy.pos);
+            
 
         }
 
         public void Draw(SpriteBatch spriteBatch)
-        {                       
+        {
+         
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null,
                 camera.transform);           
             testWorld.Draw(spriteBatch);           
             player.Draw(spriteBatch);
             enemy.Draw(spriteBatch);
-            //inventory.Draw(spriteBatch);
+            spriteBatch.End();
+            spriteBatch.Begin();
+            board.Draw(spriteBatch);    
             spriteBatch.End();
 
 
