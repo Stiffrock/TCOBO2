@@ -32,27 +32,34 @@ namespace TCOBO
             if (typeOfTile == "Sand1")
             {
                 msModifier = 0.7F;
-                image = TextureManager.sand1;
+              //  image = TextureManager.sand1;
+                image = TextureManager.sandtype2;
+               
             }
             else if (typeOfTile == "Sand2")
             {
                 msModifier = 0.7F;
                 image = TextureManager.sand1;
+        
             }
             else if (typeOfTile == "Sand3")
             {
                 msModifier = 0.7F;
                 image = TextureManager.sand1;
+       
             }
             else if (typeOfTile == "tree1")
             {
                 msModifier = 0.7F;
-                image = TextureManager.tree1;
+              //  image = TextureManager.tree1;
+                image = TextureManager.bushtile1;
             }
             else if (typeOfTile == "road1")
             {
                 msModifier = 0.7F;
-                image = TextureManager.road1;
+                //image = TextureManager.road1;
+                image = TextureManager.grass1;
+          
             }
         }
 
