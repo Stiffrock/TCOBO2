@@ -485,16 +485,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grasstile_type4.xnb</Output>
-      <Time>2015-04-26T13:12:33.7082569+02:00</Time>
-    </Item>
-    <Item>
-      <Source>sandtile_type2.png</Source>
-      <Name>sandtile_type2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sandtile_type2.xnb</Output>
-      <Time>2015-04-26T13:29:26.9863496+02:00</Time>
+      <Time>2015-04-27T13:57:38.6570034+02:00</Time>
     </Item>
     <Item>
       <Source>sandtile_type3.png</Source>
@@ -503,25 +494,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sandtile_type3.xnb</Output>
-      <Time>2015-04-26T13:34:54.0078584+02:00</Time>
-    </Item>
-    <Item>
-      <Source>bushtile_type1.png</Source>
-      <Name>bushtile_type1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type1.xnb</Output>
-      <Time>2015-04-26T13:46:28.4419112+02:00</Time>
-    </Item>
-    <Item>
-      <Source>bushtile_type2.png</Source>
-      <Name>bushtile_type2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type2.xnb</Output>
-      <Time>2015-04-26T13:55:23.0955713+02:00</Time>
+      <Time>2015-04-27T13:59:28.3330994+02:00</Time>
     </Item>
     <Item>
       <Source>treetile_type1.png</Source>
@@ -533,13 +506,31 @@
       <Time>2015-04-26T14:27:32.2043269+02:00</Time>
     </Item>
     <Item>
-      <Source>bushtile_type3.png</Source>
-      <Name>bushtile_type3</Name>
+      <Source>bushtile_type5.png</Source>
+      <Name>bushtile_type5</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type3.xnb</Output>
-      <Time>2015-04-26T14:37:58.742504+02:00</Time>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type5.xnb</Output>
+      <Time>2015-04-27T13:59:13.7372599+02:00</Time>
+    </Item>
+    <Item>
+      <Source>gravel_type1.png</Source>
+      <Name>gravel_type1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\gravel_type1.xnb</Output>
+      <Time>2015-04-27T14:03:12.5852491+02:00</Time>
+    </Item>
+    <Item>
+      <Source>brick_type1.png</Source>
+      <Name>brick_type1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\brick_type1.xnb</Output>
+      <Time>2015-04-27T14:08:41.8231288+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

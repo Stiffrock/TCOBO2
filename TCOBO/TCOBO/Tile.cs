@@ -58,7 +58,7 @@ namespace TCOBO
             {
                 msModifier = 0.7F;
                 //image = TextureManager.road1;
-                image = TextureManager.grass1;
+                image = TextureManager.graveltile1;
           
             }
         }

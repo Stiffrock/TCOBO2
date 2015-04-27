@@ -303,13 +303,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="sandtile_type2.png">
-      <Name>sandtile_type2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="infopanel - stats.png">
       <Name>infopanel - stats</Name>
       <Importer>TextureImporter</Importer>
@@ -324,34 +317,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="grasstile_type4.png">
-      <Name>grasstile_type4</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="sandtile_type3.png">
-      <Name>sandtile_type3</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="bushtile_type1.png">
-      <Name>bushtile_type1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="bushtile_type2.png">
-      <Name>bushtile_type2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="treetile_type1.png">
       <Name>treetile_type1</Name>
       <Importer>TextureImporter</Importer>
@@ -359,8 +324,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bushtile_type3.png">
-      <Name>bushtile_type3</Name>
+    <Compile Include="grasstile_type4.png">
+      <Name>grasstile_type4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="sandtile_type3.png">
+      <Name>sandtile_type3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bushtile_type5.png">
+      <Name>bushtile_type5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gravel_type1.png">
+      <Name>gravel_type1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="brick_type1.png">
+      <Name>brick_type1</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
