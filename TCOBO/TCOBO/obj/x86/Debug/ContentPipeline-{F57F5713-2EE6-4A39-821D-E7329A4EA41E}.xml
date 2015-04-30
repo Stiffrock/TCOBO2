@@ -532,6 +532,42 @@
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\brick_type1.xnb</Output>
       <Time>2015-04-27T14:08:41.8231288+02:00</Time>
     </Item>
+    <Item>
+      <Source>treetile_type50x50.png</Source>
+      <Name>treetile_type50x50</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type50x50.xnb</Output>
+      <Time>2015-04-30T16:17:43.0901126+02:00</Time>
+    </Item>
+    <Item>
+      <Source>treetile_type200x200.png</Source>
+      <Name>treetile_type200x200</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type200x200.xnb</Output>
+      <Time>2015-04-30T16:20:18.6127556+02:00</Time>
+    </Item>
+    <Item>
+      <Source>treetile2.png</Source>
+      <Name>treetile2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile2.xnb</Output>
+      <Time>2015-04-30T17:05:58.8803038+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bushtile_type7.png</Source>
+      <Name>bushtile_type7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type7.xnb</Output>
+      <Time>2015-04-30T17:16:38.0587954+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F57F5713-2EE6-4A39-821D-E7329A4EA41E}</ContentProjectGUID>
