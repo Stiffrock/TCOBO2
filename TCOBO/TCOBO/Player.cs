@@ -23,9 +23,9 @@ namespace TCOBO
             animaCount = 1, Level = 1, Str = 10, Dex = 10, 
             Vit = 10, Int = 10, maxLvl = 101, newStat = 0;
         private Color color;
-        float speed = 230f, max_speed = 130, slow_speed = 85;
+        float speed = 230f, max_speed = 130, slow_speed = 85, slow_speed_2 = 200;
         bool swordEquipped = false;
-        public Vector2 velocity;
+        public Vector2 velocity, velocity2;
         private Vector2 acceleration;
         private Tuple<int, int, int, int, int, int> playerStats;
         private Tuple<float, float, float> effectiveStats;
@@ -33,7 +33,8 @@ namespace TCOBO
         private List<Texture2D> playerTex = new List<Texture2D>();
         private List<Texture2D> swordTex = new List<Texture2D>();
         private List<float> levelList = new List<float>();
-
+        public Rectangle boundsTop, boundsBot, boundsLeft, boundsRight;
+        int playerSize = 36;
       
         public Vector2 GetPos()
         {
@@ -53,7 +54,7 @@ namespace TCOBO
         public Player(ContentManager content)
         {
             this.content = content;
-            playerPos = new Vector2(-400, 350);
+            playerPos = new Vector2(-370, 350);
             srcRec = new Rectangle(0, 0, 100, 100);
             attackHitBox = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
             playerTex1 = content.Load<Texture2D>("ballsprite1");
@@ -213,6 +214,38 @@ namespace TCOBO
 
             velocity += Vector2.Multiply(acceleration, (float)gameTime.ElapsedGameTime.TotalSeconds);
             playerPos += Vector2.Multiply(velocity, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            playerPos += Vector2.Multiply(velocity2, (float)gameTime.ElapsedGameTime.TotalSeconds);
+
+            if (velocity2.Y > 0)
+            {
+                if (velocity2.Y - slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds <= 0)
+                    velocity2.Y = 0;
+                else
+                    velocity2.Y -= slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            }
+            else if (velocity2.Y < 0)
+            {
+                if (velocity2.Y + slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds >= 0)
+                    velocity2.Y = 0;
+                else
+                    velocity2.Y += slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+
+            if (velocity2.X > 0)
+            {
+                if (velocity2.X - slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds <= 0)
+                    velocity2.X = 0;
+                else
+                    velocity2.X -= slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+            else if (velocity2.X < 0)
+            {
+                if (velocity2.X + slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds >= 0)
+                    velocity2.X = 0;
+                else
+                    velocity2.X += slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
         }
 
         public void handleAnimation(GameTime gameTime)
@@ -279,12 +312,72 @@ namespace TCOBO
             handleAnimation(gameTime);                 
         }
 
+        public void Collision (GameTime gameTime, List<Tile> tiles) 
+        {
+            boundsTop = new Rectangle((int)playerPos.X - playerSize/2 + playerSize / 10, (int)playerPos.Y - playerSize/2, playerSize - (playerSize / 5), playerSize / 10);
+            boundsBot = new Rectangle((int)playerPos.X - playerSize/2 + playerSize / 10, (int)playerPos.Y + playerSize / 2 - playerSize / 10, playerSize - (playerSize / 5), playerSize / 10);
+            boundsLeft = new Rectangle((int)playerPos.X - playerSize / 2, (int)playerPos.Y - playerSize / 2 + playerSize / 10, playerSize / 10, playerSize - playerSize / 5);
+            boundsRight = new Rectangle((int)playerPos.X + playerSize / 2 - playerSize / 10, (int)playerPos.Y - playerSize / 2 + playerSize / 10, playerSize / 10, playerSize - playerSize / 5);
+            foreach (Tile t in tiles)
+            {
+                if (t.collisionEnabled)
+                {
+                    if (t.bounds.Intersects(boundsLeft))
+                    {
+                        if (velocity.X < 0)
+                            velocity.X = (velocity.X * -2) + max_speed / 10;
+                        else
+                            velocity.X = max_speed / 10;
+                        velocity.Y = velocity.Y * 1.1f;
+                        break;
+                        
+                    }
+                    if (t.bounds.Intersects(boundsRight))
+                    {
+                        if (velocity.X < 0)
+                            velocity.X = -max_speed / 10;
+                        else
+                            velocity.X = (velocity.X * -2) - max_speed / 10;
+                        velocity.Y = velocity.Y * 1.1f;
+                        break;
+                    }
+                    if(t.bounds.Intersects(boundsBot))
+                    {
+                        if (velocity.Y < 0) //om påväg uppåt
+                            velocity.Y = -max_speed / 10;
+                        else
+                            velocity.Y = (velocity.Y * -2) - max_speed / 10;
+                        velocity.X = velocity.X * 1.1f;
+                        break;
+
+                    }
+                    if (t.bounds.Intersects(boundsTop))
+                    {
+                        if (velocity.Y < 0) //om påväg neråt
+                            velocity.Y = (velocity.Y * -2) + max_speed / 10;
+                        else
+                            velocity.Y = max_speed / 10;
+                        velocity.X = velocity.X * 1.1f;
+                        break;
+                    }
+                    
+                }
+            }
+        }
+        
+
         public override void Draw(SpriteBatch spriteBatch)
-        {           
+        {
+            //spriteBatch.Draw(TextureManager.sand1, boundingBox, Color.Black);
             if (swordEquipped)
                 spriteBatch.Draw(swordTex[animaCount], playerPos, null, Color.White, rotation, origin, 1f, SpriteEffects.None, 0f);
               spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
-              spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
+              //spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
+
+              spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
+              spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);
+              spriteBatch.Draw(TextureManager.sand1, boundsLeft, Color.Black);
+              spriteBatch.Draw(TextureManager.sand1, boundsRight, Color.Black);
         }
     }
 }
