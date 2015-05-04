@@ -50,14 +50,17 @@ Content\road1.xnb
 Content\Sand1.xnb
 Content\tree1.xnb
 Content\infopanel - stats.xnb
-Content\SpriteFont1.xnb
+Content\treetile_type1.xnb
 Content\grasstile_type4.xnb
 Content\sandtile_type3.xnb
-Content\treetile_type1.xnb
 Content\bushtile_type5.xnb
 Content\gravel_type1.xnb
 Content\brick_type1.xnb
+<<<<<<< HEAD
 Content\treetile_type50x50.xnb
 Content\treetile_type200x200.xnb
 Content\treetile2.xnb
 Content\bushtile_type7.xnb
+=======
+Content\SpriteFont1.xnb
+>>>>>>> origin/Stoffe

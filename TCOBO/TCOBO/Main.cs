@@ -90,6 +90,7 @@ namespace TCOBO
             krm.Update();
             attack.Update(gameTime);
             player.Update(gameTime);
+            player.Collision(gameTime, testWorld.tiles);
             detectEnemy();
             Rotation();
             playerStats = player.GetPlayerStats();
