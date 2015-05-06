@@ -26,6 +26,7 @@ namespace TCOBO
             inventoryTex = content.Load<Texture2D>("mah_logo");
 
             this.pos = pos;
+            //this.sf = sf;
             hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
 
             CreateGameGrid();

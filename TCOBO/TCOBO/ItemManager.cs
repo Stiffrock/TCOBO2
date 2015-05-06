@@ -19,9 +19,12 @@ namespace TCOBO
         private Inventory inventory;
         private GraphicsDevice grahpics;
        // private PlayerPanel board;
+        private SpriteFont sf;
 
         private bool PickedUp;
         private bool Inventored;
+        private bool Showstats;
+        private bool IsInventoryshown;
 
         public ItemManager(Game1 game1)
         {
@@ -32,9 +35,13 @@ namespace TCOBO
             inventory = new Inventory(game1.Content, new Vector2(200, 200));
           //  board = new PlayerPanel(game1.Content, new Vector2(550, 0));
 
+            this.sf = game1.Content.Load<SpriteFont>("SpriteFont1");
+
 
             PickedUp = false;
             Inventored = false;
+            Showstats = false;
+            IsInventoryshown = false;
         }
 
         public void Update(GameTime gameTime)
@@ -43,6 +50,8 @@ namespace TCOBO
             inventory.Update();
             PickItem();
             MoveItem();
+            ShowStats();
+            IsInventoryShown();
           //  board.Update();
         }
 
@@ -76,17 +85,43 @@ namespace TCOBO
                 stone.stonePos.X = Mouse.GetState().X -25;
                 stone.stonePos.Y = Mouse.GetState().Y -25;
             }
-        } 
+        }
+
+        public void ShowStats()
+        {
+            if (stone.hitBox.Contains(Mouse.GetState().X,Mouse.GetState().Y))
+            {
+                Showstats = true;
+            }
+            else
+            {
+                Showstats = false;
+            }
+        }
+
+        private void IsInventoryShown()
+        {
+            if (KeyMouseReader.KeyPressed(Keys.I))
+            {
+                IsInventoryshown = !IsInventoryshown;
+            }
+        }
 
         public void Draw(SpriteBatch sb)
         {
             sb.Begin();
-           // board.Draw(sb);
             inventory.Draw(sb);
-
+            
             if (!Inventored)
             {
                 stone.Draw(sb);
+            }
+
+            if (Showstats && IsInventoryshown)
+            {
+                sb.DrawString(sf, "This is a stone.", new Vector2(575, 350), Color.Black);
+                sb.DrawString(sf, "You can't do shit with it.", new Vector2(575, 375), Color.Black);
+
             }
             sb.End();
 
