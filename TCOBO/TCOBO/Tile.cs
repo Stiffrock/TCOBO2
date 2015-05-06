@@ -53,7 +53,10 @@ namespace TCOBO
             {
                 msModifier = 0.7F;        
                 collisionEnabled = true;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Stoffe
                 image = TextureManager.bushtile1;
 
             }
