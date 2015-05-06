@@ -14,72 +14,123 @@ namespace TCOBO
     class Player : MovableObject 
     {
         public Texture2D playerTex1, weaponPH;
-        public Vector2 playerPos, origin, aimRec, mousePos;
+        public Vector2 playerPos, origin, aimRec;
         private ContentManager content;
         public Rectangle srcRec, attackHitBox;
-        private float deltaTime, weaponTimer = 0;
+        private float deltaTime, Exp = 0, mDamage = 1, sDamage = 1, HP = 10;
         public float rotation = 0f;
-        private int animaCount = 1;
-        Color color;
-        float speed = 230f, max_speed = 130, slow_speed = 85;
+        private int 
+            animaCount = 1, Level = 1, Str = 10, Dex = 10, 
+            Vit = 10, Int = 10, maxLvl = 101, newStat = 0;
+        private Color color;
+        float speed = 230f, max_speed = 130, slow_speed = 85, slow_speed_2 = 200;
         bool swordEquipped = false;
-        public Vector2 velocity;
-        Vector2 acceleration;
+        public Vector2 velocity, velocity2;
+        private Vector2 acceleration;
+        private Tuple<int, int, int, int, int, int> playerStats;
+        private Tuple<float, float, float> effectiveStats;
         private bool move, moveUp, moveDown, moveLeft, moveRight;
         private List<Texture2D> playerTex = new List<Texture2D>();
         private List<Texture2D> swordTex = new List<Texture2D>();
-        
-        private enum Direction {Up, Down, Left, Right, TopRight, TopLeft, BottomRight, BottomLeft, Default}
-        private Direction CurrentDirection;
-
+        private List<float> levelList = new List<float>();
+        public Rectangle boundsTop, boundsBot, boundsLeft, boundsRight;
+        int playerSize = 36;
+      
         public Vector2 GetPos()
         {
             return playerPos;
         }
-        public int GetPlayerDirection()
+
+        public Tuple<int, int, int, int, int, int> GetPlayerStats()
         {
-            if (CurrentDirection == Direction.Up)
-            {
-                return 1;
-            }
-            if (CurrentDirection == Direction.Down)
-            {
-                return 2;
-            }
-            if (CurrentDirection == Direction.Right)
-            {
-                return 3;
-            }
-            if (CurrentDirection == Direction.Left)
-            {
-                return 4;
-            }
-            else
-            {
-                return 0;
-            }         
+            return playerStats;
+        }
+        public Tuple<float, float, float> GetEffectiveStats()
+        {
+            return effectiveStats;
         }
 
-        public float GetWeaponTimer()
-        {
-            return weaponTimer;
-        }
-        public Rectangle GetPlayerRec()
-        {
-            return attackHitBox;
-        }
 
         public Player(ContentManager content)
         {
             this.content = content;
-            playerPos = new Vector2(-400, 350);
+            playerPos = new Vector2(-370, 350);
             srcRec = new Rectangle(0, 0, 100, 100);
             attackHitBox = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
             playerTex1 = content.Load<Texture2D>("ballsprite1");
             weaponPH = content.Load<Texture2D>("weaponPH");
-            origin = new Vector2(80, 80);    
+            origin = new Vector2(80, 80);
+            color = new Color(255, 30, 30, 255);            
             LoadPlayerTex();
-            color = new Color(255, 30, 30, 255);  
+            HandleLevel();
+            Console.Write(levelList[99]);
+        }
+
+        public void HandleLevel()
+        {            
+            for (int i = 1; i < maxLvl; i++)
+            {
+                float newLevel = i*10;
+                levelList.Add(newLevel);                
+            }         
+        }
+
+        public void HandleLevelUp()
+        {
+            if (Level <= 99)
+            {
+                float needExp = levelList[Level];
+
+                if (Exp > needExp)
+                {
+                    Level += 1;
+                    newStat += 5;
+                    Exp = 0;
+                    Console.WriteLine("Level   "+  Level);
+                }               
+            }
+        }
+
+        public void HandlePlayerStats() // Bör göra all stat förändring här
+        {
+            playerStats = Tuple.Create<int, int, int, int, int, int>(Str, Dex, Vit, Int, Level, newStat);
+            effectiveStats = Tuple.Create<float, float, float>(mDamage, sDamage, HP);
+            
+            mDamage = Str * 0.5f;
+            sDamage = Int * 0.5f;
+            HP = Vit;
+
+            if (newStat != 0)
+            {
+                if (KeyMouseReader.KeyPressed(Keys.D1))
+                {
+                    Str += 1;
+                    newStat -= 1;
+                }
+                if (KeyMouseReader.KeyPressed(Keys.D2))
+                {
+                    Dex += 1;
+                    newStat -= 1;
+                }
+                if (KeyMouseReader.KeyPressed(Keys.D3))
+                {
+                    Vit += 1;
+                    newStat -= 1;
+                }
+                if (KeyMouseReader.KeyPressed(Keys.D4))
+                {
+                    Int += 1;
+                    newStat -= 1;
+                }
+             
+            }
+
+            if (KeyMouseReader.KeyPressed(Keys.D5))
+            {
+                Exp += 5;
+                Console.WriteLine("Exp   "+Exp);
+            }
+
         }
 
         private void LoadPlayerTex()
@@ -163,6 +214,38 @@ namespace TCOBO
 
             velocity += Vector2.Multiply(acceleration, (float)gameTime.ElapsedGameTime.TotalSeconds);
             playerPos += Vector2.Multiply(velocity, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            playerPos += Vector2.Multiply(velocity2, (float)gameTime.ElapsedGameTime.TotalSeconds);
+
+            if (velocity2.Y > 0)
+            {
+                if (velocity2.Y - slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds <= 0)
+                    velocity2.Y = 0;
+                else
+                    velocity2.Y -= slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            }
+            else if (velocity2.Y < 0)
+            {
+                if (velocity2.Y + slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds >= 0)
+                    velocity2.Y = 0;
+                else
+                    velocity2.Y += slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+
+            if (velocity2.X > 0)
+            {
+                if (velocity2.X - slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds <= 0)
+                    velocity2.X = 0;
+                else
+                    velocity2.X -= slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+            else if (velocity2.X < 0)
+            {
+                if (velocity2.X + slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds >= 0)
+                    velocity2.X = 0;
+                else
+                    velocity2.X += slow_speed_2 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
         }
 
         public void handleAnimation(GameTime gameTime)
@@ -212,7 +295,7 @@ namespace TCOBO
 
         private void handleAction(GameTime gameTime)
         {        
-            if (KeyMouseReader.KeyPressed(Keys.D1))
+            if (KeyMouseReader.KeyPressed(Keys.E))
             {
                 swordEquipped = !swordEquipped;
             }           
@@ -221,21 +304,80 @@ namespace TCOBO
 
         public override void Update(GameTime gameTime)
         {
-            mousePos.X = Mouse.GetState().X;
-            mousePos.Y = Mouse.GetState().Y;
-            playerDirection();
+            HandleLevelUp();
+            HandlePlayerStats(); 
+            playerDirection();           
             Movement(gameTime);
             handleAction(gameTime);
-            handleAnimation(gameTime);       
-          
+            handleAnimation(gameTime);                 
         }
 
+        public void Collision (GameTime gameTime, List<Tile> tiles) 
+        {
+            boundsTop = new Rectangle((int)playerPos.X - playerSize/2 + playerSize / 10, (int)playerPos.Y - playerSize/2, playerSize - (playerSize / 5), playerSize / 10);
+            boundsBot = new Rectangle((int)playerPos.X - playerSize/2 + playerSize / 10, (int)playerPos.Y + playerSize / 2 - playerSize / 10, playerSize - (playerSize / 5), playerSize / 10);
+            boundsLeft = new Rectangle((int)playerPos.X - playerSize / 2, (int)playerPos.Y - playerSize / 2 + playerSize / 10, playerSize / 10, playerSize - playerSize / 5);
+            boundsRight = new Rectangle((int)playerPos.X + playerSize / 2 - playerSize / 10, (int)playerPos.Y - playerSize / 2 + playerSize / 10, playerSize / 10, playerSize - playerSize / 5);
+            foreach (Tile t in tiles)
+            {
+                if (t.collisionEnabled)
+                {
+                    if (t.bounds.Intersects(boundsLeft))
+                    {
+                        if (velocity.X < 0)
+                            velocity.X = (velocity.X * -2) + max_speed / 10;
+                        else
+                            velocity.X = max_speed / 10;
+                        velocity.Y = velocity.Y * 1.1f;
+                        break;
+                        
+                    }
+                    if (t.bounds.Intersects(boundsRight))
+                    {
+                        if (velocity.X < 0)
+                            velocity.X = -max_speed / 10;
+                        else
+                            velocity.X = (velocity.X * -2) - max_speed / 10;
+                        velocity.Y = velocity.Y * 1.1f;
+                        break;
+                    }
+                    if(t.bounds.Intersects(boundsBot))
+                    {
+                        if (velocity.Y < 0) //om påväg uppåt
+                            velocity.Y = -max_speed / 10;
+                        else
+                            velocity.Y = (velocity.Y * -2) - max_speed / 10;
+                        velocity.X = velocity.X * 1.1f;
+                        break;
+
+                    }
+                    if (t.bounds.Intersects(boundsTop))
+                    {
+                        if (velocity.Y < 0) //om påväg neråt
+                            velocity.Y = (velocity.Y * -2) + max_speed / 10;
+                        else
+                            velocity.Y = max_speed / 10;
+                        velocity.X = velocity.X * 1.1f;
+                        break;
+                    }
+                    
+                }
+            }
+        }
+        
+
         public override void Draw(SpriteBatch spriteBatch)
-        {           
+        {
+            //spriteBatch.Draw(TextureManager.sand1, boundingBox, Color.Black);
             if (swordEquipped)
                 spriteBatch.Draw(swordTex[animaCount], playerPos, null, Color.White, rotation, origin, 1f, SpriteEffects.None, 0f);
               spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
-              spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
+              //spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
+
+              spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
+              spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);
+              spriteBatch.Draw(TextureManager.sand1, boundsLeft, Color.Black);
+              spriteBatch.Draw(TextureManager.sand1, boundsRight, Color.Black);
         }
     }
 }

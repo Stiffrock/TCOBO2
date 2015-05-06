@@ -73,7 +73,6 @@ namespace TCOBO
         }
         public override void Update(GameTime gameTime)
         {
-            Console.WriteLine(write);
         }
     }
 }

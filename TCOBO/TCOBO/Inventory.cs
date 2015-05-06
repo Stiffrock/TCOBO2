@@ -15,8 +15,8 @@ namespace TCOBO
         private Texture2D inventoryTex;
 
         InventoryTile[,] grid;
-        const int num_rows = 3;
-        const int num_cols = 5;
+        const int num_rows = 5;
+        const int num_cols = 4;
         private bool showInventory = false;
         private Vector2 pos;
         public Rectangle hitBox;
@@ -68,7 +68,7 @@ namespace TCOBO
             {
                 for (int j = 0; j < num_cols; j++)
                 {
-                    grid[i, j] = new InventoryTile(i * 50, j * 50, 0, 0);
+                    grid[i, j] = new InventoryTile(i * 50 + 550, j * 50 + 125, 0, 0);
 
                     //i * 50 + 300, j * 50 + 300
                 }
