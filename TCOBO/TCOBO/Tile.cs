@@ -51,11 +51,9 @@ namespace TCOBO
             }
             else if (typeOfTile == "tree1")
             {
-<<<<<<< HEAD
                 msModifier = 0.7F;        
-=======
                 collisionEnabled = true;
->>>>>>> origin/Stoffe
+
                 image = TextureManager.bushtile1;
 
             }
