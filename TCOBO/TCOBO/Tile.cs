@@ -34,7 +34,7 @@ namespace TCOBO
             {
                 msModifier = 0.7F;
               //  image = TextureManager.sand1;
-                image = TextureManager.sandtype2;
+                image = TextureManager.sandtile1;
                
             }
             else if (typeOfTile == "Sand2")
@@ -51,8 +51,10 @@ namespace TCOBO
             }
             else if (typeOfTile == "tree1")
             {
+                msModifier = 0.7F;        
                 collisionEnabled = true;
                 image = TextureManager.bushtile1;
+
             }
             else if (typeOfTile == "road1")
             {

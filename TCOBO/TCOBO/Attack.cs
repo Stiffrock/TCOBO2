@@ -37,6 +37,10 @@ namespace TCOBO
                 double distanceX = Math.Cos(radians) * distance;
                 double distanceY = Math.Sin(radians) * distance;
                 write = (float)distance;
+
+                
+
+
                 if (distance <= 190 && distance > 150)
                 {                    
                 enemy.pos.X += (float)distanceX / 4;
