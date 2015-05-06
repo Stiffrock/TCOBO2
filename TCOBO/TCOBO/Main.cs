@@ -90,6 +90,7 @@ namespace TCOBO
             krm.Update();
             attack.Update(gameTime);
             player.Update(gameTime);
+            player.Collision(gameTime, testWorld.tiles);
             detectEnemy();
             Rotation();
             playerStats = player.GetPlayerStats();
@@ -103,9 +104,11 @@ namespace TCOBO
 
         public void Draw(SpriteBatch spriteBatch)
         {
-         
+
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null,
-                camera.transform);           
+                camera.transform);
+            spriteBatch.Draw(TextureManager.bigtree, new Vector2(-750, 200), Color.White);
+            spriteBatch.Draw(TextureManager.smalltree, new Vector2(-700, 400), Color.White);
             testWorld.Draw(spriteBatch);           
             player.Draw(spriteBatch);
             enemy.Draw(spriteBatch);
