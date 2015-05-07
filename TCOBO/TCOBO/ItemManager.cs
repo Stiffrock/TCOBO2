@@ -14,7 +14,11 @@ namespace TCOBO
         //private Texture2D tex;
         //private Vector2 pos;
         private Game1 game1;
+<<<<<<< HEAD
+        public Stone stone;
+=======
         private Sword sword;
+>>>>>>> origin/Stoffe
         private Item leaf;
         private Inventory inventory;
         private InventoryTile inventoryTile;
@@ -22,8 +26,13 @@ namespace TCOBO
        // private PlayerPanel board;
         private SpriteFont sf;
         private bool PickedUp;
+<<<<<<< HEAD
 
         private bool Inventored;
+=======
+        private bool DrawStone;
+        private bool Backpacked;
+>>>>>>> origin/Stoffe
         private bool Showstats;
         private bool IsInventoryshown;
         public List<Item> ItemList = new List<Item>();
@@ -33,19 +42,25 @@ namespace TCOBO
         {
             this.game1 = game1;
             grahpics = game1.GraphicsDevice;
+<<<<<<< HEAD
+            stone = new Stone(game1.Content);
+            inventory = new Inventory(game1.Content, new Vector2(200, 200));
+=======
             sword = new Sword(game1.Content);
             inventory = new Inventory(game1.Content, new Vector2(200, 200));
             //leaf = new Item(game1.Content, new Vector2(400, 200));
            
           //  board = new PlayerPanel(game1.Content, new Vector2(550, 0));
+>>>>>>> origin/Stoffe
 
             this.sf = game1.Content.Load<SpriteFont>("SpriteFont1");
 
             ItemList.Add(sword);
             PickedUp = false;
-            Inventored = false;
+            DrawStone = true;
             Showstats = false;
             IsInventoryshown = false;
+            Backpacked = false;
         }
 
         public void Update(GameTime gameTime)
@@ -57,6 +72,10 @@ namespace TCOBO
             ShowStats();
             HandleInventory();
             IsInventoryShown();
+<<<<<<< HEAD
+            EquipItem();
+=======
+>>>>>>> origin/Stoffe
         }
 
         public void PickItem()
@@ -87,6 +106,27 @@ namespace TCOBO
                     break;
                 }*/
             }
+<<<<<<< HEAD
+            if (stone.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(stone.hitBox))
+            {
+                Backpacked = true;
+            }
+            if (!inventory.hitBox.Contains(stone.hitBox))
+            {
+                Backpacked = false;
+            }
+
+            if (!inventory.hitBox.Contains(stone.hitBox) && !IsInventoryshown)
+            {
+                DrawStone = false;
+            }
+            else
+            {
+                DrawStone = true;
+            }
+
+            
+=======
         }
         public void HandleInventory()
         {
@@ -115,7 +155,20 @@ namespace TCOBO
                     }
                 }
             }
+<<<<<<< HEAD
                        
+=======
+
+>>>>>>> origin/Stoffe
+        }
+
+        public void EquipItem()
+        {
+            if (Mouse.GetState().RightButton == ButtonState.Pressed && inventory.hitBox.Contains(stone.hitBox))
+            {
+                stone.Equiped = !stone.Equiped;
+            }
+>>>>>>> origin/Stoffe
         }
 
         public void MoveItem()
@@ -154,7 +207,11 @@ namespace TCOBO
         {
             inventory.Draw(sb);
 
+<<<<<<< HEAD
+            if (IsInventoryshown || !IsInventoryshown && !inventory.hitBox.Contains(stone.hitBox))
+=======
             foreach (Item item in ItemList)
+>>>>>>> origin/Stoffe
             {
                 item.Draw(sb); 
             }          

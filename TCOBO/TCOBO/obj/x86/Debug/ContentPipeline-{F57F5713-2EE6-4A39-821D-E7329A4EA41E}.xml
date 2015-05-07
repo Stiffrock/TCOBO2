@@ -7,8 +7,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
+      <Time>2015-03-15T14:56:04.0049132+01:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\playerSpritePH.xnb</Output>
       <Time>2015-03-16T20:04:12.7190807+01:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>Bird.png</Source>
@@ -16,8 +21,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
+      <Time>2015-03-15T16:14:07.2137212+01:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Bird.xnb</Output>
       <Time>2015-03-29T16:00:05.2393712+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>weaponPH.png</Source>
@@ -25,8 +35,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\weaponPH.xnb</Output>
+      <Time>2015-03-29T13:32:15.8148556+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\weaponPH.xnb</Output>
       <Time>2015-03-29T16:00:25.4471324+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player1.png</Source>
@@ -34,8 +49,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player1.xnb</Output>
+      <Time>2015-04-05T19:15:20.3328926+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player1.xnb</Output>
       <Time>2015-04-15T10:02:41.6190943+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player10.png</Source>
@@ -43,8 +63,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player10.xnb</Output>
+      <Time>2015-04-05T19:15:20.3328926+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player10.xnb</Output>
       <Time>2015-04-15T10:02:41.6190943+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player11.png</Source>
@@ -52,8 +77,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player11.xnb</Output>
+      <Time>2015-04-05T19:15:20.3338926+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player11.xnb</Output>
       <Time>2015-04-15T10:02:41.6190943+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player12.png</Source>
@@ -61,8 +91,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player12.xnb</Output>
+      <Time>2015-04-05T19:15:20.3338926+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player12.xnb</Output>
       <Time>2015-04-15T10:02:41.6190943+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player13.png</Source>
@@ -70,8 +105,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player13.xnb</Output>
+      <Time>2015-04-05T19:15:20.3348927+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player13.xnb</Output>
       <Time>2015-04-15T10:02:41.6200948+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player14.png</Source>
@@ -79,8 +119,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player14.xnb</Output>
+      <Time>2015-04-05T19:15:20.3348927+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player14.xnb</Output>
       <Time>2015-04-15T10:02:41.6200948+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player15.png</Source>
@@ -88,8 +133,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player15.xnb</Output>
+      <Time>2015-04-05T19:15:20.3358927+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player15.xnb</Output>
       <Time>2015-04-15T10:02:41.6200948+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player16.png</Source>
@@ -97,8 +147,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player16.xnb</Output>
+      <Time>2015-04-05T19:15:20.3358927+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player16.xnb</Output>
       <Time>2015-04-15T10:02:41.6210961+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player17.png</Source>
@@ -106,8 +161,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player17.xnb</Output>
+      <Time>2015-04-05T19:15:20.3368928+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player17.xnb</Output>
       <Time>2015-04-15T10:02:41.6842094+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player18.png</Source>
@@ -115,8 +175,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player18.xnb</Output>
+      <Time>2015-04-05T19:15:20.3378929+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player18.xnb</Output>
       <Time>2015-04-15T10:02:41.6842094+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player19.png</Source>
@@ -124,8 +189,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player19.xnb</Output>
+      <Time>2015-04-05T19:15:20.3378929+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player19.xnb</Output>
       <Time>2015-04-15T10:02:41.6842094+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player2.png</Source>
@@ -133,8 +203,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player2.xnb</Output>
+      <Time>2015-04-05T19:15:20.3388929+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player2.xnb</Output>
       <Time>2015-04-15T10:02:41.6842094+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player20.png</Source>
@@ -142,8 +217,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player20.xnb</Output>
+      <Time>2015-04-05T19:15:20.3388929+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player20.xnb</Output>
       <Time>2015-04-15T10:02:41.6852104+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player21.png</Source>
@@ -151,8 +231,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player21.xnb</Output>
+      <Time>2015-04-05T19:15:20.339893+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player21.xnb</Output>
       <Time>2015-04-15T10:02:41.6852104+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player3.png</Source>
@@ -160,8 +245,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player3.xnb</Output>
+      <Time>2015-04-05T19:15:20.339893+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player3.xnb</Output>
       <Time>2015-04-15T10:02:41.6852104+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player4.png</Source>
@@ -169,8 +259,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player4.xnb</Output>
+      <Time>2015-04-05T19:15:20.340893+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player4.xnb</Output>
       <Time>2015-04-15T10:02:41.6852104+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player5.png</Source>
@@ -178,8 +273,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player5.xnb</Output>
+      <Time>2015-04-05T19:15:20.340893+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player5.xnb</Output>
       <Time>2015-04-15T10:02:41.6862118+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player6.png</Source>
@@ -187,8 +287,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player6.xnb</Output>
+      <Time>2015-04-05T19:15:20.3418931+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player6.xnb</Output>
       <Time>2015-04-15T10:02:41.6862118+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player7.png</Source>
@@ -196,8 +301,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player7.xnb</Output>
+      <Time>2015-04-05T19:15:20.3418931+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player7.xnb</Output>
       <Time>2015-04-15T10:02:41.6925608+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player8.png</Source>
@@ -205,8 +315,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player8.xnb</Output>
+      <Time>2015-04-05T19:15:20.3418931+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player8.xnb</Output>
       <Time>2015-04-15T10:02:41.6929742+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>player9.png</Source>
@@ -214,8 +329,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player9.xnb</Output>
+      <Time>2015-04-05T19:15:20.3428931+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\player9.xnb</Output>
       <Time>2015-04-15T10:02:41.6929742+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword1.png</Source>
@@ -223,8 +343,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword1.xnb</Output>
+      <Time>2015-04-05T19:15:20.3428931+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword1.xnb</Output>
       <Time>2015-04-15T10:02:41.6939783+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword10.png</Source>
@@ -232,8 +357,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword10.xnb</Output>
+      <Time>2015-04-05T19:15:20.3438932+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword10.xnb</Output>
       <Time>2015-04-15T10:02:41.6939783+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword11.png</Source>
@@ -241,8 +371,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword11.xnb</Output>
+      <Time>2015-04-05T19:15:20.3438932+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword11.xnb</Output>
       <Time>2015-04-15T10:02:41.6949784+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword12.png</Source>
@@ -250,8 +385,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword12.xnb</Output>
+      <Time>2015-04-05T19:15:20.3448933+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword12.xnb</Output>
       <Time>2015-04-15T10:02:41.6949784+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword13.png</Source>
@@ -259,8 +399,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword13.xnb</Output>
+      <Time>2015-04-05T19:15:20.3448933+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword13.xnb</Output>
       <Time>2015-04-15T10:02:41.6949784+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword14.png</Source>
@@ -268,8 +413,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword14.xnb</Output>
+      <Time>2015-04-05T19:15:20.3448933+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword14.xnb</Output>
       <Time>2015-04-15T10:02:41.6949784+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword15.png</Source>
@@ -277,8 +427,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword15.xnb</Output>
+      <Time>2015-04-05T19:15:20.3458933+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword15.xnb</Output>
       <Time>2015-04-15T10:02:41.695981+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword16.png</Source>
@@ -286,8 +441,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword16.xnb</Output>
+      <Time>2015-04-05T19:15:20.3458933+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword16.xnb</Output>
       <Time>2015-04-15T10:02:41.695981+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword17.png</Source>
@@ -295,8 +455,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword17.xnb</Output>
+      <Time>2015-04-05T19:15:20.3468934+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword17.xnb</Output>
       <Time>2015-04-15T10:02:41.695981+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword18.png</Source>
@@ -304,8 +469,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword18.xnb</Output>
+      <Time>2015-04-05T19:15:20.3468934+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword18.xnb</Output>
       <Time>2015-04-15T10:02:41.695981+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword19.png</Source>
@@ -313,8 +483,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword19.xnb</Output>
+      <Time>2015-04-05T19:15:20.3468934+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword19.xnb</Output>
       <Time>2015-04-15T10:02:41.695981+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword2.png</Source>
@@ -322,8 +497,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword2.xnb</Output>
+      <Time>2015-04-05T19:15:20.3478934+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword2.xnb</Output>
       <Time>2015-04-15T10:02:41.6969817+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword20.png</Source>
@@ -331,8 +511,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword20.xnb</Output>
+      <Time>2015-04-05T19:15:20.3478934+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword20.xnb</Output>
       <Time>2015-04-15T10:02:41.6969817+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword21.png</Source>
@@ -340,8 +525,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword21.xnb</Output>
+      <Time>2015-04-05T19:15:20.3488935+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword21.xnb</Output>
       <Time>2015-04-15T10:02:41.6969817+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword3.png</Source>
@@ -349,8 +539,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword3.xnb</Output>
+      <Time>2015-04-05T19:15:20.3488935+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword3.xnb</Output>
       <Time>2015-04-15T10:02:41.6969817+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword4.png</Source>
@@ -358,8 +553,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword4.xnb</Output>
+      <Time>2015-04-05T19:15:20.3488935+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword4.xnb</Output>
       <Time>2015-04-15T10:02:41.6979812+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword5.png</Source>
@@ -367,8 +567,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword5.xnb</Output>
+      <Time>2015-04-05T19:15:20.3498935+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword5.xnb</Output>
       <Time>2015-04-15T10:02:41.6982958+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword6.png</Source>
@@ -376,8 +581,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword6.xnb</Output>
+      <Time>2015-04-05T19:15:20.3498935+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword6.xnb</Output>
       <Time>2015-04-15T10:02:41.6982958+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword7.png</Source>
@@ -385,8 +595,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword7.xnb</Output>
+      <Time>2015-04-05T19:15:20.3508936+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword7.xnb</Output>
       <Time>2015-04-15T10:02:41.6982958+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword8.png</Source>
@@ -394,8 +609,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword8.xnb</Output>
+      <Time>2015-04-05T19:15:20.3508936+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword8.xnb</Output>
       <Time>2015-04-15T10:02:41.714891+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sword9.png</Source>
@@ -403,8 +623,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword9.xnb</Output>
+      <Time>2015-04-05T19:15:20.3508936+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sword9.xnb</Output>
       <Time>2015-04-15T10:02:41.714891+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>mah_logo.png</Source>
@@ -412,8 +637,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\mah_logo.xnb</Output>
+      <Time>2015-04-23T13:09:37.7588459+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\mah_logo.xnb</Output>
       <Time>2015-04-24T15:16:07.2219187+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>stone.png</Source>
@@ -421,8 +651,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\stone.xnb</Output>
+      <Time>2015-03-29T14:31:59.3415731+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\stone.xnb</Output>
       <Time>2015-03-31T13:49:37.5857728+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>ballsprite1.jpg</Source>
@@ -430,8 +665,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\ballsprite1.xnb</Output>
+      <Time>2015-04-05T19:15:20.3298924+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\ballsprite1.xnb</Output>
       <Time>2015-04-15T10:02:41.6160913+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>road1.png</Source>
@@ -439,8 +679,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\road1.xnb</Output>
+      <Time>2015-04-17T14:12:47.8012681+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\road1.xnb</Output>
       <Time>2015-04-15T10:02:41.6939783+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>Sand1.png</Source>
@@ -448,8 +693,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Sand1.xnb</Output>
+      <Time>2015-04-17T14:12:47.7972679+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\Sand1.xnb</Output>
       <Time>2015-04-15T10:02:41.6130885+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>tree1.png</Source>
@@ -457,8 +707,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\tree1.xnb</Output>
+      <Time>2015-04-17T14:12:47.8022681+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\tree1.xnb</Output>
       <Time>2015-04-15T10:02:41.714891+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>infopanel - stats.png</Source>
@@ -466,8 +721,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\infopanel - stats.xnb</Output>
+      <Time>2015-04-23T13:09:24.4628174+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\infopanel - stats.xnb</Output>
       <Time>2015-04-24T15:16:07.2219187+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>treetile_type1.png</Source>
@@ -475,8 +735,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type1.xnb</Output>
+      <Time>2015-05-06T13:19:14.2846668+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type1.xnb</Output>
       <Time>2015-04-26T14:27:32.2043269+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>grasstile_type4.png</Source>
@@ -484,8 +749,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grasstile_type4.xnb</Output>
+      <Time>2015-05-06T13:19:14.2806666+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\grasstile_type4.xnb</Output>
       <Time>2015-04-27T13:57:38.6570034+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>sandtile_type3.png</Source>
@@ -493,8 +763,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sandtile_type3.xnb</Output>
+      <Time>2015-05-06T13:19:14.2836667+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\sandtile_type3.xnb</Output>
       <Time>2015-04-27T13:59:28.3330994+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>bushtile_type5.png</Source>
@@ -502,8 +777,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type5.xnb</Output>
+      <Time>2015-05-06T13:19:14.2796665+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type5.xnb</Output>
       <Time>2015-04-27T13:59:13.7372599+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>gravel_type1.png</Source>
@@ -511,8 +791,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\gravel_type1.xnb</Output>
+      <Time>2015-05-06T13:19:14.2806666+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\gravel_type1.xnb</Output>
       <Time>2015-04-27T14:03:12.5852491+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>brick_type1.png</Source>
@@ -520,8 +805,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\brick_type1.xnb</Output>
+      <Time>2015-05-06T13:19:14.2786664+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\brick_type1.xnb</Output>
       <Time>2015-04-27T14:08:41.8231288+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>treetile_type50x50.png</Source>
@@ -529,8 +819,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type50x50.xnb</Output>
+      <Time>2015-05-06T13:19:14.2856668+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type50x50.xnb</Output>
       <Time>2015-05-04T18:06:45.7434049+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>treetile_type200x200.png</Source>
@@ -538,8 +833,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type200x200.xnb</Output>
+      <Time>2015-05-06T13:19:14.2846668+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile_type200x200.xnb</Output>
       <Time>2015-05-04T18:06:45.7434049+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>treetile2.png</Source>
@@ -547,8 +847,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile2.xnb</Output>
+      <Time>2015-05-06T13:19:14.2836667+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\treetile2.xnb</Output>
       <Time>2015-05-04T18:06:45.7424054+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>bushtile_type7.png</Source>
@@ -556,8 +861,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type7.xnb</Output>
+      <Time>2015-05-06T13:19:14.2796665+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\bushtile_type7.xnb</Output>
       <Time>2015-05-06T18:13:50.9709421+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>SpriteFont1.spritefont</Source>
@@ -565,6 +875,10 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
+      <Output>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2015-04-26T12:35:57.2863974+02:00</Time>
+=======
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
       <Time>2015-04-24T19:36:35.3767997+02:00</Time>
     </Item>
@@ -612,6 +926,7 @@
       <Options>None</Options>
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\inventorysword_type4.xnb</Output>
       <Time>2015-05-07T11:23:57.9318072+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -620,10 +935,17 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
+<<<<<<< HEAD
+      <RootDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Rasmus\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+=======
       <RootDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBOContent\</RootDirectory>
       <LoggerRootDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\obj\x86\Debug\</IntermediateDirectory>
       <OutputDirectory>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\</OutputDirectory>
+>>>>>>> origin/Stoffe
     </Settings>
     <Assemblies>
       <Assembly>
@@ -651,8 +973,13 @@
         <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
+<<<<<<< HEAD
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-09-10T11:27:58.3034247+02:00</Value>
+=======
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
         <Value>2014-09-08T14:34:46.3837426+02:00</Value>
+>>>>>>> origin/Stoffe
       </Assembly>
     </Assemblies>
   </Asset>
