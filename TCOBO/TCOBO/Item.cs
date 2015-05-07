@@ -12,19 +12,14 @@ namespace TCOBO
     {
         //private Vector2 itemPos;
         //private Texture2D itemTex;
-        //private Rectangle hitBox;
+        public  Rectangle hitBox;
+        public Vector2 pos;
+
         public Item(ContentManager content)
         {
-            //this.itemPos = itemPos;
-            //this.itemTex = itemTex;
-            //this.hitBox = new Rectangle(0, 0, 50, 50);
+
         }
 
-
-        //public void Update(GameTime gameTime)
-        //{
-        //hitBox = new Rectangle(0, 0, itemTex.Width, itemTex.Height);
-        //}
         public virtual void Update(GameTime gameTime) { }
 
         //public bool PickUp(int x, int y)

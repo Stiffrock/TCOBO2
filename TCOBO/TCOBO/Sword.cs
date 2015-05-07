@@ -8,30 +8,38 @@ using System.Text;
 
 namespace TCOBO
 {
-    class Stone : Item
+    class Sword : Item
     {
-        private Texture2D stoneTex;
-        public Vector2 stonePos;
+        private Texture2D swordTex;
+
         //private Texture2D tex;
         //private Vector2 pos;
-        public Rectangle hitBox;
+       
 
+<<<<<<< HEAD:TCOBO/TCOBO/Stone.cs
         public bool Equiped;
 
         public Stone(ContentManager content) : base(content)
+=======
+        public Sword(ContentManager content) : base(content)
+>>>>>>> origin/Stoffe:TCOBO/TCOBO/Sword.cs
         {
-            //this.pos = pos;
-            stoneTex = content.Load<Texture2D>("stone");
+            swordTex = TextureManager.standardSword;
             
+<<<<<<< HEAD:TCOBO/TCOBO/Stone.cs
             this.stonePos = new Vector2(300, 300);
             hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
 
             Equiped = false;
+=======
+            this.pos = new Vector2(300, 300);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
+>>>>>>> origin/Stoffe:TCOBO/TCOBO/Sword.cs
         }
 
         public override void Update(GameTime gameTime)
         {
-            hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
         }
 
         //public bool PickUp(int x, int y)
@@ -54,6 +62,7 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch sb)
         {
+<<<<<<< HEAD:TCOBO/TCOBO/Stone.cs
             if (!Equiped)
             {
                 sb.Draw(stoneTex, stonePos, Color.White);
@@ -62,6 +71,9 @@ namespace TCOBO
             {
                 sb.Draw(stoneTex, stonePos, Color.Red);
             }
+=======
+            sb.Draw(swordTex, pos,new Rectangle(0,0,50,50) , Color.White);
+>>>>>>> origin/Stoffe:TCOBO/TCOBO/Sword.cs
         }
 
     }
