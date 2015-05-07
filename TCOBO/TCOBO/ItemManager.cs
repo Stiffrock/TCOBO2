@@ -54,14 +54,37 @@ namespace TCOBO
             MoveItem();
             ShowStats();
             IsInventoryShown();
-          //  board.Update();
         }
 
         public void PickItem()
         {
+
             foreach (Item item in ItemList)
             {
-                
+                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) &&  KeyMouseReader.LeftClick() == true)
+                {
+                    InventoryList.Add(item);
+                    ItemList.Remove(item);
+                    item.pos.X = 550;
+                    item.pos.Y = 130;
+                    break;
+                }
+              /*  if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released)
+                {
+                    PickedUp = false;
+                }
+                if (PickedUp == true && inventory.hitBox.Contains(sword.hitBox))
+                {                
+                    InventoryList.Add(item);
+                    ItemList.Remove(item);
+                    break;
+                }*/
+            }
+        }
+        public void HandleInventory()
+        {
+            foreach (Item item in InventoryList)
+            {
                 if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Pressed)
                 {
                     PickedUp = true;
@@ -73,16 +96,9 @@ namespace TCOBO
                 if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(sword.hitBox))
                 {
                     Inventored = true;
-                }
-                
+                }               
             }
 
-
-           /* if (Keyboard.GetState().IsKeyDown(Keys.I))
-            {
-                Inventored = false;
-            }*/
-            
         }
 
         public void MoveItem()
@@ -91,8 +107,11 @@ namespace TCOBO
             {
                 sword.pos.X = Mouse.GetState().X -25;
                 sword.pos.Y = Mouse.GetState().Y -25;
+                sword.hitBox.X = Mouse.GetState().X - 25;
+                sword.hitBox.Y = Mouse.GetState().Y - 25;
             }
         }
+
 
         public void ShowStats()
         {
@@ -116,13 +135,16 @@ namespace TCOBO
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Begin();
+          //  sb.Begin();
             inventory.Draw(sb);
-            
-            if (!Inventored)
+
+            foreach (Item item in ItemList)
             {
-                sword.Draw(sb);
+                item.Draw(sb); 
             }
+      
+          
+            
 
             if (Showstats && IsInventoryshown)
             {
@@ -131,6 +153,19 @@ namespace TCOBO
 
             }
             sb.End();
+            sb.Begin();
+            foreach (Item item in InventoryList)
+            {
+                if (IsInventoryshown)
+                {
+                    item.Draw(sb);
+                }
+
+            }
+            sb.End();
+          
+  
+     
 
         }
     }

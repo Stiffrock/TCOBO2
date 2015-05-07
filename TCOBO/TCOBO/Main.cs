@@ -111,9 +111,10 @@ namespace TCOBO
             enemy.Draw(spriteBatch);
             spriteBatch.End();
             spriteBatch.Begin();
-            board.Draw(spriteBatch);        
-            spriteBatch.End();
+            board.Draw(spriteBatch);
             itemManager.Draw(spriteBatch);
+           
+            
 
 
         }
