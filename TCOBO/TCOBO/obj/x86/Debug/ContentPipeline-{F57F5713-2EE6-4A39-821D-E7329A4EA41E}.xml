@@ -568,6 +568,51 @@
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
       <Time>2015-04-24T19:36:35.3767997+02:00</Time>
     </Item>
+    <Item>
+      <Source>watertile_type2.png</Source>
+      <Name>watertile_type2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\watertile_type2.xnb</Output>
+      <Time>2015-05-07T10:29:28.0739346+02:00</Time>
+    </Item>
+    <Item>
+      <Source>inventorysword_type1.png</Source>
+      <Name>inventorysword_type1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\inventorysword_type1.xnb</Output>
+      <Time>2015-05-07T11:16:45.88618+02:00</Time>
+    </Item>
+    <Item>
+      <Source>inventorysword_type2.png</Source>
+      <Name>inventorysword_type2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\inventorysword_type2.xnb</Output>
+      <Time>2015-05-07T11:23:58.0013635+02:00</Time>
+    </Item>
+    <Item>
+      <Source>inventorysword_type3.png</Source>
+      <Name>inventorysword_type3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\inventorysword_type3.xnb</Output>
+      <Time>2015-05-07T11:23:57.9663303+02:00</Time>
+    </Item>
+    <Item>
+      <Source>inventorysword_type4.png</Source>
+      <Name>inventorysword_type4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\inventorysword_type4.xnb</Output>
+      <Time>2015-05-07T11:23:57.9318072+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F57F5713-2EE6-4A39-821D-E7329A4EA41E}</ContentProjectGUID>

@@ -19,7 +19,8 @@ namespace TCOBO
         public Stone(ContentManager content) : base(content)
         {
             //this.pos = pos;
-            stoneTex = content.Load<Texture2D>("stone");
+            //stoneTex = TextureManager.standardSword;
+            stoneTex = TextureManager.standardSword;
             
             this.stonePos = new Vector2(300, 300);
             hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
@@ -50,7 +51,7 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch sb)
         {
-            sb.Draw(stoneTex, stonePos, Color.White);
+            sb.Draw(stoneTex, stonePos,new Rectangle(0,0,50,50) , Color.White);
         }
 
     }
