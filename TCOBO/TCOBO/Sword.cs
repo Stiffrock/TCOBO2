@@ -10,23 +10,17 @@ namespace TCOBO
 {
     class Sword : Item
     {
-        private Texture2D swordTex;
-
-        //private Texture2D tex;
-        //private Vector2 pos;
-       
 
         public Sword(ContentManager content) : base(content)
         {
-            swordTex = TextureManager.standardSword;
-            
+            this.itemTex = TextureManager.standardSword;
             this.pos = new Vector2(300, 300);
-            hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, itemTex.Width, itemTex.Height);
         }
 
         public override void Update(GameTime gameTime)
         {
-            hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, itemTex.Width, itemTex.Height);
         }
 
         //public bool PickUp(int x, int y)
@@ -49,7 +43,7 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch sb)
         {
-            sb.Draw(swordTex, pos,new Rectangle(0,0,50,50) , Color.White);
+            sb.Draw(itemTex, pos,new Rectangle(0,0,50,50) , Color.White);
         }
 
     }

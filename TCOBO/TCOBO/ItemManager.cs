@@ -17,10 +17,12 @@ namespace TCOBO
         private Sword sword;
         private Item leaf;
         private Inventory inventory;
+        private InventoryTile inventoryTile;
         private GraphicsDevice grahpics;
        // private PlayerPanel board;
         private SpriteFont sf;
         private bool PickedUp;
+
         private bool Inventored;
         private bool Showstats;
         private bool IsInventoryshown;
@@ -53,20 +55,25 @@ namespace TCOBO
             PickItem();
             MoveItem();
             ShowStats();
+            HandleInventory();
             IsInventoryShown();
         }
 
         public void PickItem()
         {
-
             foreach (Item item in ItemList)
             {
                 if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) &&  KeyMouseReader.LeftClick() == true)
                 {
+
+
                     InventoryList.Add(item);
                     ItemList.Remove(item);
+                                                          
                     item.pos.X = 550;
                     item.pos.Y = 130;
+                    item.hitBox.X = 550;
+                    item.hitBox.Y = 130;
                     break;
                 }
               /*  if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released)
@@ -85,30 +92,40 @@ namespace TCOBO
         {
             foreach (Item item in InventoryList)
             {
-                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && KeyMouseReader.LeftClick())
                 {
                     PickedUp = true;
                 }
-                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released)
-                {
-                    PickedUp = false;
-                }
-                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(sword.hitBox))
-                {
-                    Inventored = true;
-                }               
             }
-
+          
+            foreach (InventoryTile tile in inventory.grid)
+            {
+                foreach (Item item in InventoryList)
+                {
+                    if (item.hitBox.Intersects(tile.texture_rect))
+                    {
+                        if (KeyMouseReader.RightClick())
+                        {
+                            item.pos = tile.pos;
+                            PickedUp = false;
+                            break;
+                                    
+                        }
+                            
+                    }
+                }
+            }
+                       
         }
 
         public void MoveItem()
         {
             if (PickedUp == true)
             {
-                sword.pos.X = Mouse.GetState().X -25;
-                sword.pos.Y = Mouse.GetState().Y -25;
-                sword.hitBox.X = Mouse.GetState().X - 25;
-                sword.hitBox.Y = Mouse.GetState().Y - 25;
+                sword.pos.X = KeyMouseReader.MousePos().X -25;
+                sword.pos.Y = KeyMouseReader.MousePos().Y -25;
+                sword.hitBox.X = KeyMouseReader.MousePos().X +25;
+                sword.hitBox.Y = KeyMouseReader.MousePos().Y -25;
             }
         }
 
@@ -135,17 +152,12 @@ namespace TCOBO
 
         public void Draw(SpriteBatch sb)
         {
-          //  sb.Begin();
             inventory.Draw(sb);
 
             foreach (Item item in ItemList)
             {
                 item.Draw(sb); 
-            }
-      
-          
-            
-
+            }          
             if (Showstats && IsInventoryshown)
             {
                 sb.DrawString(sf, "This is a stone.", new Vector2(575, 350), Color.Black);
@@ -154,11 +166,13 @@ namespace TCOBO
             }
             sb.End();
             sb.Begin();
+
             foreach (Item item in InventoryList)
             {
                 if (IsInventoryshown)
                 {
                     item.Draw(sb);
+              
                 }
 
             }
