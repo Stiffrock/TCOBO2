@@ -13,9 +13,10 @@ namespace TCOBO
     {
 
         private Texture2D inventoryTex;
-        public InventoryTile[,] grid;
-        public const int num_rows = 5;
-        public const int num_cols = 4;
+
+        InventoryTile[,] grid;
+        const int num_rows = 5;
+        const int num_cols = 4;
         private bool showInventory = false;
         private Vector2 pos;
         public Rectangle hitBox;

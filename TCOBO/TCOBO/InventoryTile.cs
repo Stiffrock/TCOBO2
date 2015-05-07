@@ -9,9 +9,8 @@ namespace TCOBO
 {
     class InventoryTile
     {
-        public Vector2 pos;        
-        public Rectangle texture_rect;
-
+        Vector2 pos;
+        Rectangle texture_rect;
         //Vector2 playerPos;
         //public bool isCollided = false;
 
@@ -27,10 +26,14 @@ namespace TCOBO
                 //pos = new Vector2(playerPos.X, playerPos.Y);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             texture_rect = new Rectangle((int)pos.X, (int)pos.Y, 50, 50);
 =======
             texture_rect = new Rectangle(0, 0, 50, 50);
 >>>>>>> origin/Stoffe
+=======
+            texture_rect = new Rectangle(200, 200, 50, 50);
+>>>>>>> parent of 1aa870d... Snap to grid
         }
 
         

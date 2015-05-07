@@ -19,13 +19,16 @@ namespace TCOBO
 
         private Item leaf;
         private Inventory inventory;
-        private InventoryTile inventoryTile;
         private GraphicsDevice grahpics;
        // private PlayerPanel board;
         private SpriteFont sf;
         private bool PickedUp;
+<<<<<<< HEAD
 
 
+=======
+        private bool Inventored;
+>>>>>>> parent of 1aa870d... Snap to grid
         private bool Showstats;
         private bool IsInventoryshown;
         public List<Item> ItemList = new List<Item>();
@@ -59,7 +62,6 @@ namespace TCOBO
             PickItem();
             MoveItem();
             ShowStats();
-            HandleInventory();
             IsInventoryShown();
            // EquipItem();
 
@@ -67,19 +69,15 @@ namespace TCOBO
 
         public void PickItem()
         {
+
             foreach (Item item in ItemList)
             {
                 if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) &&  KeyMouseReader.LeftClick() == true)
                 {
-
-
                     InventoryList.Add(item);
                     ItemList.Remove(item);
-                                                          
                     item.pos.X = 550;
                     item.pos.Y = 130;
-                    item.hitBox.X = 550;
-                    item.hitBox.Y = 130;
                     break;
                 }
               /*  if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released)
@@ -98,30 +96,21 @@ namespace TCOBO
         {
             foreach (Item item in InventoryList)
             {
-                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && KeyMouseReader.LeftClick())
+                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Pressed)
                 {
                     PickedUp = true;
                 }
-            }
-          
-            foreach (InventoryTile tile in inventory.grid)
-            {
-                foreach (Item item in InventoryList)
+                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released)
                 {
-                    if (item.hitBox.Intersects(tile.texture_rect))
-                    {
-                        if (KeyMouseReader.RightClick())
-                        {
-                            item.pos = tile.pos;
-                            PickedUp = false;
-                            break;
-                                    
-                        }
-                            
-                    }
+                    PickedUp = false;
                 }
+                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(sword.hitBox))
+                {
+                    Inventored = true;
+                }               
             }
 
+<<<<<<< HEAD
         }
 
         public void EquipItem()
@@ -131,16 +120,18 @@ namespace TCOBO
                 sword.Equiped = !sword.Equiped;
             }
 
+=======
+>>>>>>> parent of 1aa870d... Snap to grid
         }
 
         public void MoveItem()
         {
             if (PickedUp == true)
             {
-                sword.pos.X = KeyMouseReader.MousePos().X -25;
-                sword.pos.Y = KeyMouseReader.MousePos().Y -25;
-                sword.hitBox.X = KeyMouseReader.MousePos().X +25;
-                sword.hitBox.Y = KeyMouseReader.MousePos().Y -25;
+                sword.pos.X = Mouse.GetState().X -25;
+                sword.pos.Y = Mouse.GetState().Y -25;
+                sword.hitBox.X = Mouse.GetState().X - 25;
+                sword.hitBox.Y = Mouse.GetState().Y - 25;
             }
         }
 
@@ -167,6 +158,7 @@ namespace TCOBO
 
         public void Draw(SpriteBatch sb)
         {
+          //  sb.Begin();
             inventory.Draw(sb);
 
 <<<<<<< HEAD
@@ -176,7 +168,11 @@ namespace TCOBO
 >>>>>>> origin/Stoffe
             {
                 item.Draw(sb); 
-            }          
+            }
+      
+          
+            
+
             if (Showstats && IsInventoryshown)
             {
                 sb.DrawString(sf, "This is a stone.", new Vector2(575, 350), Color.Black);
@@ -185,13 +181,11 @@ namespace TCOBO
             }
             sb.End();
             sb.Begin();
-
             foreach (Item item in InventoryList)
             {
                 if (IsInventoryshown)
                 {
                     item.Draw(sb);
-              
                 }
 
             }
