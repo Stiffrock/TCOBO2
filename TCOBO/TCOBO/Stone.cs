@@ -16,6 +16,8 @@ namespace TCOBO
         //private Vector2 pos;
         public Rectangle hitBox;
 
+        public bool Equiped;
+
         public Stone(ContentManager content) : base(content)
         {
             //this.pos = pos;
@@ -23,6 +25,8 @@ namespace TCOBO
             
             this.stonePos = new Vector2(300, 300);
             hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
+
+            Equiped = false;
         }
 
         public override void Update(GameTime gameTime)
@@ -50,7 +54,14 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch sb)
         {
-            sb.Draw(stoneTex, stonePos, Color.White);
+            if (!Equiped)
+            {
+                sb.Draw(stoneTex, stonePos, Color.White);
+            }
+            else
+            {
+                sb.Draw(stoneTex, stonePos, Color.Red);
+            }
         }
 
     }

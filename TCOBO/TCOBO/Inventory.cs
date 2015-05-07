@@ -27,7 +27,7 @@ namespace TCOBO
 
             this.pos = pos;
             //this.sf = sf;
-            hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
+            hitBox = new Rectangle(550, 125, 150, 250);
 
             CreateGameGrid();
         }
@@ -44,8 +44,10 @@ namespace TCOBO
         public void Update()
         {
             ShowInventory();
-            hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
+            //hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
         }
+
+        
 
         public void Draw(SpriteBatch spritebatch)
         {

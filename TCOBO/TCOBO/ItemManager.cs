@@ -14,7 +14,7 @@ namespace TCOBO
         //private Texture2D tex;
         //private Vector2 pos;
         private Game1 game1;
-        private Stone stone;
+        public Stone stone;
         private Item leaf;
         private Inventory inventory;
         private GraphicsDevice grahpics;
@@ -22,7 +22,8 @@ namespace TCOBO
         private SpriteFont sf;
 
         private bool PickedUp;
-        private bool Inventored;
+        private bool DrawStone;
+        private bool Backpacked;
         private bool Showstats;
         private bool IsInventoryshown;
 
@@ -31,17 +32,16 @@ namespace TCOBO
             this.game1 = game1;
             grahpics = game1.GraphicsDevice;
             stone = new Stone(game1.Content);
-            //leaf = new Item(game1.Content, new Vector2(400, 200));
             inventory = new Inventory(game1.Content, new Vector2(200, 200));
-          //  board = new PlayerPanel(game1.Content, new Vector2(550, 0));
 
             this.sf = game1.Content.Load<SpriteFont>("SpriteFont1");
 
 
             PickedUp = false;
-            Inventored = false;
+            DrawStone = true;
             Showstats = false;
             IsInventoryshown = false;
+            Backpacked = false;
         }
 
         public void Update(GameTime gameTime)
@@ -52,7 +52,7 @@ namespace TCOBO
             MoveItem();
             ShowStats();
             IsInventoryShown();
-          //  board.Update();
+            EquipItem();
         }
 
         public void PickItem()
@@ -66,16 +66,33 @@ namespace TCOBO
             {
                 PickedUp = false;
             }
-            if (stone.hitBox.Contains(Mouse.GetState().X,Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(stone.hitBox))
+            if (stone.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(stone.hitBox))
             {
-                Inventored = true;
+                Backpacked = true;
+            }
+            if (!inventory.hitBox.Contains(stone.hitBox))
+            {
+                Backpacked = false;
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.I))
+            if (!inventory.hitBox.Contains(stone.hitBox) && !IsInventoryshown)
             {
-                Inventored = false;
+                DrawStone = false;
             }
+            else
+            {
+                DrawStone = true;
+            }
+
             
+        }
+
+        public void EquipItem()
+        {
+            if (Mouse.GetState().RightButton == ButtonState.Pressed && inventory.hitBox.Contains(stone.hitBox))
+            {
+                stone.Equiped = !stone.Equiped;
+            }
         }
 
         public void MoveItem()
@@ -111,8 +128,8 @@ namespace TCOBO
         {
             sb.Begin();
             inventory.Draw(sb);
-            
-            if (!Inventored)
+
+            if (IsInventoryshown || !IsInventoryshown && !inventory.hitBox.Contains(stone.hitBox))
             {
                 stone.Draw(sb);
             }

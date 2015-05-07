@@ -26,8 +26,8 @@ namespace TCOBO
             this.hitBox = new Rectangle((int)pos.X, (int)pos.Y, boardTex.Width, boardTex.Height);
             this.boardPos = pos;
             this.spriteFont = spriteFont;
-        
 
+            
         }
 
         private void ShowBoard()
@@ -57,6 +57,7 @@ namespace TCOBO
             int Int = playerStats.Item4;
             int Level = playerStats.Item5;
             int newStat = playerStats.Item6;
+
             if (showBoard)
             {             
                 spriteBatch.Draw(boardTex, boardPos, Color.White);
@@ -66,6 +67,8 @@ namespace TCOBO
                 spriteBatch.DrawString(spriteFont, " Damage:" + Dmg.ToString() + "   Spell Damage:" + SpellDmg.ToString() + "\n" + " Hp:" + HP.ToString()+ "      Attack Speed:" + Dex.ToString(), new Vector2(567, 70), Color.Black);
                            
             }
+
+            
         }
     }
 }

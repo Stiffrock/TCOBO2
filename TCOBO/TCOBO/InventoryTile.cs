@@ -14,23 +14,31 @@ namespace TCOBO
         //Vector2 playerPos;
         //public bool isCollided = false;
 
+        public bool Equiped;
+
         public InventoryTile(int x, int y, int tex_x, int tex_y)
         {
             this.pos = new Vector2(x, y);
-
+            Equiped = false;
 
             //Vector2 playerPos
 
                 //pos = new Vector2(playerPos.X, playerPos.Y);
 
-            texture_rect = new Rectangle(200, 200, 50, 50);
+            texture_rect = new Rectangle(0, 0, 50, 50);
         }
+
+        
+
+        
 
         
 
         public void Draw(Texture2D texture, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, pos, Color.White);
+            
+                spriteBatch.Draw(texture, pos, Color.White);
+            
         }
 
     }
