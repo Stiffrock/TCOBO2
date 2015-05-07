@@ -8,27 +8,25 @@ using System.Text;
 
 namespace TCOBO
 {
-    class Stone : Item
+    class Sword : Item
     {
-        private Texture2D stoneTex;
-        public Vector2 stonePos;
+        private Texture2D swordTex;
+
         //private Texture2D tex;
         //private Vector2 pos;
-        public Rectangle hitBox;
+       
 
-        public Stone(ContentManager content) : base(content)
+        public Sword(ContentManager content) : base(content)
         {
-            //this.pos = pos;
-            //stoneTex = TextureManager.standardSword;
-            stoneTex = TextureManager.standardSword;
+            swordTex = TextureManager.standardSword;
             
-            this.stonePos = new Vector2(300, 300);
-            hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
+            this.pos = new Vector2(300, 300);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
         }
 
         public override void Update(GameTime gameTime)
         {
-            hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
         }
 
         //public bool PickUp(int x, int y)
@@ -51,7 +49,7 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch sb)
         {
-            sb.Draw(stoneTex, stonePos,new Rectangle(0,0,50,50) , Color.White);
+            sb.Draw(swordTex, pos,new Rectangle(0,0,50,50) , Color.White);
         }
 
     }

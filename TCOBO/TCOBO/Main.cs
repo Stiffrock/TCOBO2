@@ -49,7 +49,6 @@ namespace TCOBO
             testWorld.SetMap();                 
             spriteFont = game1.Content.Load<SpriteFont>("SpriteFont1");
             board = new PlayerPanel(game1.Content, new Vector2(550, 0), spriteFont);
-
         }
 
         
@@ -84,7 +83,6 @@ namespace TCOBO
                 }                       
             }   
         }
-
 
         public void Update(GameTime gameTime)
         {
