@@ -16,6 +16,7 @@ namespace TCOBO
         //private Vector2 pos;
        
 
+<<<<<<< HEAD
         public bool Equiped;
 
         //public Stone(ContentManager content) : base(content)
@@ -29,11 +30,21 @@ namespace TCOBO
             Equiped = false;
             this.pos = new Vector2(300, 300);
             hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
+=======
+
+
+        public Sword(ContentManager content) : base(content)
+        {
+            this.itemTex = TextureManager.standardSword;
+            this.pos = new Vector2(300, 300);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, itemTex.Width, itemTex.Height);
+            
+>>>>>>> origin/Stoffe
         }
 
         public override void Update(GameTime gameTime)
         {
-            hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
+            hitBox = new Rectangle((int)pos.X, (int)pos.Y, itemTex.Width, itemTex.Height);
         }
 
         //public bool PickUp(int x, int y)
@@ -56,6 +67,7 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch sb)
         {
+<<<<<<< HEAD
             //if (!Equiped)
             //{
             //    sb.Draw(stoneTex, stonePos, Color.White);
@@ -65,6 +77,10 @@ namespace TCOBO
             //    sb.Draw(stoneTex, stonePos, Color.Red);
             //}
             sb.Draw(swordTex, pos,new Rectangle(0,0,50,50) , Color.White);
+=======
+            sb.Draw(itemTex, pos,new Rectangle(0,0,50,50) , Color.White);
+
+>>>>>>> origin/Stoffe
         }
 
     }

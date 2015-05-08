@@ -10,8 +10,8 @@ namespace TCOBO
 {
     abstract class Item
     {
-        //private Vector2 itemPos;
-        //private Texture2D itemTex;
+        public Vector2 itemPos;
+        public Texture2D itemTex;
         public  Rectangle hitBox;
         public Vector2 pos;
 

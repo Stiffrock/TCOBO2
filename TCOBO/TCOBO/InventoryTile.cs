@@ -9,8 +9,8 @@ namespace TCOBO
 {
     class InventoryTile
     {
-        Vector2 pos;
-        Rectangle texture_rect;
+        public Vector2 pos;
+        public Rectangle texture_rect;
         //Vector2 playerPos;
         //public bool isCollided = false;
 
@@ -22,10 +22,9 @@ namespace TCOBO
             Equiped = false;
 
             //Vector2 playerPos
+            //pos = new Vector2(playerPos.X, playerPos.Y);
+            texture_rect = new Rectangle((int)pos.X, (int)pos.Y, 50, 50);
 
-                //pos = new Vector2(playerPos.X, playerPos.Y);
-
-            texture_rect = new Rectangle(0, 0, 50, 50);
         }
 
         
