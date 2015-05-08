@@ -34,7 +34,8 @@ namespace TCOBO
             {
                 msModifier = 0.7F;
               //  image = TextureManager.sand1;
-                image = TextureManager.sandtile1;
+              //  image = TextureManager.sandtile1;
+                image = TextureManager.watertile1;
                
             }
             else if (typeOfTile == "Sand2")
