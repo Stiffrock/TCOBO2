@@ -168,7 +168,7 @@ namespace TCOBO
         //        stone.Equiped = !stone.Equiped;
         //    }
         //}
-=======
+
 
                  
             }
