@@ -16,7 +16,7 @@ namespace TCOBO
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Main main;
-        ItemManager itemManager;
+      
 
 
 
@@ -36,7 +36,8 @@ namespace TCOBO
         {
             TextureManager.LoadContent(Content);
             main = new Main(this);
-            itemManager = new ItemManager(this);
+       
+         
             spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
@@ -51,7 +52,7 @@ namespace TCOBO
                 this.Exit();
 
             main.Update(gameTime);
-            itemManager.Update(gameTime);
+   
 
             base.Update(gameTime);
         }
@@ -63,7 +64,7 @@ namespace TCOBO
 
             
             main.Draw(spriteBatch);
-            itemManager.Draw(spriteBatch);
+        
 
 
             

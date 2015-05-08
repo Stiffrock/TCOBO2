@@ -14,11 +14,11 @@ namespace TCOBO
 
         private Texture2D inventoryTex;
 
-        InventoryTile[,] grid;
+        public InventoryTile[,] grid;
         const int num_rows = 5;
         const int num_cols = 4;
         private bool showInventory = false;
-        private Vector2 pos;
+        public Vector2 pos;
         public Rectangle hitBox;
 
         public Inventory(ContentManager content, Vector2 pos)
@@ -26,7 +26,8 @@ namespace TCOBO
             inventoryTex = content.Load<Texture2D>("mah_logo");
 
             this.pos = pos;
-            hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
+            //this.sf = sf;
+            hitBox = new Rectangle(550, 125, 150, 250);
 
             CreateGameGrid();
         }
@@ -43,8 +44,10 @@ namespace TCOBO
         public void Update()
         {
             ShowInventory();
-            hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
+            //hitBox = new Rectangle((int)pos.X, (int)pos.Y, 150, 250);
         }
+
+        
 
         public void Draw(SpriteBatch spritebatch)
         {

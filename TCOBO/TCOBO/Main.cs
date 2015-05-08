@@ -15,6 +15,7 @@ namespace TCOBO
     {
         public Game1 game1;
         private TestWorld testWorld;
+        private ItemManager itemManager;
         private GraphicsDevice graphics;
         public Player player;
         private Attack attack;
@@ -35,6 +36,7 @@ namespace TCOBO
             this.game1 = game1;
             graphics = game1.GraphicsDevice;
             krm = new KeyMouseReader();
+            itemManager = new ItemManager(game1);
             player = new Player(game1.Content);
             testWorld = new TestWorld(game1.Content);
             camera = new Camera2D(game1.GraphicsDevice.Viewport, player);
@@ -47,7 +49,6 @@ namespace TCOBO
             testWorld.SetMap();                 
             spriteFont = game1.Content.Load<SpriteFont>("SpriteFont1");
             board = new PlayerPanel(game1.Content, new Vector2(550, 0), spriteFont);
-
         }
 
         
@@ -62,7 +63,6 @@ namespace TCOBO
             float xDistance = (float)ms.X - player.playerPos.X;
             float yDistance = (float)ms.Y - player.playerPos.Y;
             player.rotation = (float)Math.Atan2(yDistance, xDistance);
-
             aimVector = new Vector2(xDistance, yDistance);
             player.aimRec = new Vector2(xDistance, yDistance);
             player.aimRec.Normalize();
@@ -84,9 +84,9 @@ namespace TCOBO
             }   
         }
 
-
         public void Update(GameTime gameTime)
         {
+            itemManager.Update(gameTime);
             krm.Update();
             attack.Update(gameTime);
             player.Update(gameTime);
@@ -97,14 +97,11 @@ namespace TCOBO
             effectiveStats = player.GetEffectiveStats();
             board.Update(playerStats, effectiveStats);
             camera.Update(gameTime);
-            enemy.UpdateEnemy(gameTime, player.GetPos());
-            
-
+            enemy.UpdateEnemy(gameTime, player.GetPos());            
         }
 
         public void Draw(SpriteBatch spriteBatch)
-        {
-
+        {     
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null,
                 camera.transform);
             spriteBatch.Draw(TextureManager.bigtree, new Vector2(-750, 200), Color.White);
@@ -114,8 +111,10 @@ namespace TCOBO
             enemy.Draw(spriteBatch);
             spriteBatch.End();
             spriteBatch.Begin();
-            board.Draw(spriteBatch);    
-            spriteBatch.End();
+            board.Draw(spriteBatch);
+            itemManager.Draw(spriteBatch);
+           
+            
 
 
         }
