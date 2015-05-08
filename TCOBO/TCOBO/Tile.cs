@@ -63,6 +63,18 @@ namespace TCOBO
                 image = TextureManager.graveltile1;
           
             }
+            else if (typeOfTile == "bigtree")
+            {
+                //image = TextureManager.road1;
+                image = TextureManager.bigtree;
+
+            }
+            else if (typeOfTile == "grass")
+            {
+                //image = TextureManager.road1;
+                image = TextureManager.grasstile1;
+
+            }
         }
 
 

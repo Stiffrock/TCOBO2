@@ -374,10 +374,10 @@ namespace TCOBO
               spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
               //spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
 
-              spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
-              spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);
-              spriteBatch.Draw(TextureManager.sand1, boundsLeft, Color.Black);
-              spriteBatch.Draw(TextureManager.sand1, boundsRight, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsLeft, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsRight, Color.Black);
         }
     }
 }
