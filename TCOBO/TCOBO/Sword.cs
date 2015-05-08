@@ -16,25 +16,19 @@ namespace TCOBO
         //private Vector2 pos;
        
 
-<<<<<<< HEAD:TCOBO/TCOBO/Stone.cs
         public bool Equiped;
 
-        public Stone(ContentManager content) : base(content)
-=======
+        //public Stone(ContentManager content) : base(content)
         public Sword(ContentManager content) : base(content)
->>>>>>> origin/Stoffe:TCOBO/TCOBO/Sword.cs
         {
             swordTex = TextureManager.standardSword;
             
-<<<<<<< HEAD:TCOBO/TCOBO/Stone.cs
-            this.stonePos = new Vector2(300, 300);
-            hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
+            //this.stonePos = new Vector2(300, 300);
+            //hitBox = new Rectangle((int)stonePos.X, (int)stonePos.Y, stoneTex.Width, stoneTex.Height);
 
             Equiped = false;
-=======
             this.pos = new Vector2(300, 300);
             hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
->>>>>>> origin/Stoffe:TCOBO/TCOBO/Sword.cs
         }
 
         public override void Update(GameTime gameTime)
@@ -62,18 +56,15 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch sb)
         {
-<<<<<<< HEAD:TCOBO/TCOBO/Stone.cs
-            if (!Equiped)
-            {
-                sb.Draw(stoneTex, stonePos, Color.White);
-            }
-            else
-            {
-                sb.Draw(stoneTex, stonePos, Color.Red);
-            }
-=======
+            //if (!Equiped)
+            //{
+            //    sb.Draw(stoneTex, stonePos, Color.White);
+            //}
+            //else
+            //{
+            //    sb.Draw(stoneTex, stonePos, Color.Red);
+            //}
             sb.Draw(swordTex, pos,new Rectangle(0,0,50,50) , Color.White);
->>>>>>> origin/Stoffe:TCOBO/TCOBO/Sword.cs
         }
 
     }

@@ -14,11 +14,8 @@ namespace TCOBO
         //private Texture2D tex;
         //private Vector2 pos;
         private Game1 game1;
-<<<<<<< HEAD
-        public Stone stone;
-=======
+        //public Stone stone;
         private Sword sword;
->>>>>>> origin/Stoffe
         private Item leaf;
         private Inventory inventory;
         private GraphicsDevice grahpics;
@@ -36,16 +33,13 @@ namespace TCOBO
         {
             this.game1 = game1;
             grahpics = game1.GraphicsDevice;
-<<<<<<< HEAD
-            stone = new Stone(game1.Content);
+            //stone = new Stone(game1.Content);
             inventory = new Inventory(game1.Content, new Vector2(200, 200));
-=======
             sword = new Sword(game1.Content);
             inventory = new Inventory(game1.Content, new Vector2(200, 200));
             //leaf = new Item(game1.Content, new Vector2(400, 200));
            
           //  board = new PlayerPanel(game1.Content, new Vector2(550, 0));
->>>>>>> origin/Stoffe
 
             this.sf = game1.Content.Load<SpriteFont>("SpriteFont1");
 
@@ -64,11 +58,8 @@ namespace TCOBO
             PickItem();
             MoveItem();
             ShowStats();
-            IsInventoryShown();
-<<<<<<< HEAD
-            EquipItem();
-=======
->>>>>>> origin/Stoffe
+            //IsInventoryShown();
+            //EquipItem();
         }
 
         public void PickItem()
@@ -95,27 +86,24 @@ namespace TCOBO
                     break;
                 }*/
             }
-<<<<<<< HEAD
-            if (stone.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(stone.hitBox))
-            {
-                Backpacked = true;
-            }
-            if (!inventory.hitBox.Contains(stone.hitBox))
-            {
-                Backpacked = false;
-            }
+            //if (stone.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(stone.hitBox))
+            //{
+            //    Backpacked = true;
+            //}
+            //if (!inventory.hitBox.Contains(stone.hitBox))
+            //{
+            //    Backpacked = false;
+            //}
 
-            if (!inventory.hitBox.Contains(stone.hitBox) && !IsInventoryshown)
-            {
-                DrawStone = false;
-            }
-            else
-            {
-                DrawStone = true;
-            }
+            //if (!inventory.hitBox.Contains(stone.hitBox) && !IsInventoryshown)
+            //{
+            //    DrawStone = false;
+            //}
+            //else
+            //{
+            //    DrawStone = true;
+            //}
 
-            
-=======
         }
         public void HandleInventory()
         {
@@ -129,22 +117,21 @@ namespace TCOBO
                 {
                     PickedUp = false;
                 }
-                if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(sword.hitBox))
-                {
-                    Inventored = true;
-                }               
+                //if (item.hitBox.Contains(Mouse.GetState().X, Mouse.GetState().Y) && Mouse.GetState().LeftButton == ButtonState.Released && inventory.hitBox.Contains(sword.hitBox))
+                //{
+                //    Inventored = true;
+                //}               
             }
 
->>>>>>> origin/Stoffe
         }
 
-        public void EquipItem()
-        {
-            if (Mouse.GetState().RightButton == ButtonState.Pressed && inventory.hitBox.Contains(stone.hitBox))
-            {
-                stone.Equiped = !stone.Equiped;
-            }
-        }
+        //public void EquipItem()
+        //{
+        //    if (Mouse.GetState().RightButton == ButtonState.Pressed && inventory.hitBox.Contains(stone.hitBox))
+        //    {
+        //        stone.Equiped = !stone.Equiped;
+        //    }
+        //}
 
         public void MoveItem()
         {
@@ -183,11 +170,8 @@ namespace TCOBO
           //  sb.Begin();
             inventory.Draw(sb);
 
-<<<<<<< HEAD
-            if (IsInventoryshown || !IsInventoryshown && !inventory.hitBox.Contains(stone.hitBox))
-=======
+            //if (IsInventoryshown || !IsInventoryshown && !inventory.hitBox.Contains(stone.hitBox))
             foreach (Item item in ItemList)
->>>>>>> origin/Stoffe
             {
                 item.Draw(sb); 
             }
