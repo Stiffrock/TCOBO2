@@ -27,7 +27,7 @@ namespace TCOBO
 
             this.pos = pos;
             //this.sf = sf;
-            hitBox = new Rectangle(550, 125, 150, 250);
+            hitBox = new Rectangle(550, 125, 250, 250);
 
             CreateGameGrid();
         }
