@@ -16,7 +16,7 @@ namespace TCOBO
         public Texture2D playerTex1, weaponPH;
         public Vector2 playerPos, origin, aimRec;
         private ContentManager content;
-        public Color swordColor = Color.White;
+        public Color swordColor, newColor;
         public Rectangle srcRec, attackHitBox;
         private float deltaTime, Exp = 0, mDamage = 1, sDamage = 1, HP = 10;
 
@@ -26,7 +26,7 @@ namespace TCOBO
             Vit = 10, Int = 10, maxLvl = 101, newStat = 0;
         private Color color;
         public float speed = 230f, max_speed = 130, slow_speed = 85, slow_speed_2 = 200;
-        bool swordEquipped = false;
+        public bool swordEquipped = false, swordinHand = false;
         public Vector2 velocity, velocity2;
         private Vector2 acceleration;
         private Tuple<int, int, int, int, int, int> playerStats;
@@ -60,7 +60,7 @@ namespace TCOBO
         public Player(ContentManager content)
         {
             this.content = content;
-
+            swordColor = Color.White;
             playerPos = new Vector2(-145, 0);
             //attackHitBox = new Rectangle(0, 0, 0, 0);
             srcRec = new Rectangle(0, 0, 100, 100);
@@ -69,7 +69,6 @@ namespace TCOBO
             size = Vit / 10;
             LoadPlayerTex();
             HandleLevel();
-            Console.Write(levelList[99]);
         }
 
         public void HandleLevel()
@@ -324,7 +323,6 @@ namespace TCOBO
                     max_speed += 5;
                 }
 
-
                 swordEquipped = !swordEquipped;
             }
 
@@ -397,10 +395,20 @@ namespace TCOBO
                 }
             }
         }
+
+        public void colorswitch(Color newCol)
+        {
+            swordColor = newCol;
+
+            
+
+        }
+
+
         public override void Update(GameTime gameTime)
         {
 
-
+            
             float tempVit = Vit;
             size = tempVit / 10;
             HandleLevelUp();
@@ -413,16 +421,16 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-
+      
             //spriteBatch.Draw(TextureManager.sand1, boundingBox, Color.Black);
-            if (swordEquipped && !(strike || strike2))
+            if (swordinHand && swordEquipped && !(strike || strike2))
                 spriteBatch.Draw(swordTex[animaCount], playerPos, null, swordColor, rotation, origin, size, SpriteEffects.None, 0f);
            
-            if (strike) {
+            if (swordinHand && strike) {
                 spriteBatch.Draw(strikeTexSword1, playerPos, null, swordColor, rotation, origin, size, SpriteEffects.None, 0f);
                 spriteBatch.Draw(strikeTexPlayer1, playerPos, null, color, rotation, origin, size, SpriteEffects.None, 0f);
             }
-            else if (strike2)
+            else if (swordinHand && strike2)
             {
                 spriteBatch.Draw(strikeTexSword2, playerPos, null, swordColor, rotation, origin, size, SpriteEffects.None, 0f);
                 spriteBatch.Draw(strikeTexPlayer2, playerPos, null, color, rotation, origin, size, SpriteEffects.None, 0f);
@@ -433,7 +441,7 @@ namespace TCOBO
             }
 
             //Show attackHitBox
-            spriteBatch.Draw(TextureManager.bricktile1, attackHitBox, Color.Black);
+            //spriteBatch.Draw(TextureManager.bricktile1, attackHitBox, Color.Black);
             
 
               //spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);

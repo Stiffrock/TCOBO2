@@ -42,10 +42,6 @@ namespace TCOBO
             IsInventoryshown = false;
         }
 
-       /* public Color changeWeaponColor(Color color)
-        {
-            //return color = sword.swordColor;
-        }*/
 
 
 
@@ -87,13 +83,13 @@ namespace TCOBO
             {
                 if (item.hitBox.Contains(KeyMouseReader.MousePos().X, KeyMouseReader.MousePos().Y) && KeyMouseReader.RightClick() && item.equip == false)
                 {
-                    EquipList.Add(item);
+                    //EquipList.Add(item);
                     item.equip = true;
                     return;
                 }
                 if (item.hitBox.Contains(KeyMouseReader.MousePos().X, KeyMouseReader.MousePos().Y) && KeyMouseReader.RightClick() && item.equip == true)
                 {                   
-                    EquipList.Remove(item);
+                   // EquipList.Remove(item);
                     item.equip = false;
                     return;
                 }
