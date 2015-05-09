@@ -307,11 +307,28 @@ namespace TCOBO
         }
 
         private void handleAction(GameTime gameTime)
-        {        
+        {   
+     
             if (KeyMouseReader.KeyPressed(Keys.E))
             {
+                if (swordEquipped)              // HIHIHI SECRET HAX
+                {
+                    speed -= 3;
+                    max_speed -= 5;
+                }
+                else
+                {
+                    speed += 3;
+                    max_speed += 5;
+                }
+
+
                 swordEquipped = !swordEquipped;
             }
+
+
+
+
             if (KeyMouseReader.LeftClick() == true && swordEquipped == true && strike == false && strike2 == false)
             {
                 strike = true;
@@ -328,6 +345,7 @@ namespace TCOBO
 
         public override void Update(GameTime gameTime)
         {
+
             float tempVit = Vit;
             size = tempVit / 10;
             HandleLevelUp();
