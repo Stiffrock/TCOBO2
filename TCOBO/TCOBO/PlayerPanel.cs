@@ -38,10 +38,10 @@ namespace TCOBO
             currentVitFont = spriteFont;
             currentIntFont = spriteFont;
             statColor = Color.Black;
-            StrButton = new Rectangle(573, 38, 25, 25);
-            DexButton = new Rectangle(615, 38, 25, 25);
-            VitButton = new Rectangle(658, 38, 25, 25);
-            IntButton = new Rectangle(700, 38, 25, 25);            
+            StrButton = new Rectangle(973, 40, 25, 25);
+            DexButton = new Rectangle(1015, 40, 25, 25);
+            VitButton = new Rectangle(1058, 40, 25, 25);
+            IntButton = new Rectangle(1100, 40, 25, 25);            
         }
 
         private void ShowBoard()
@@ -76,22 +76,22 @@ namespace TCOBO
             {
                 
                 spriteBatch.Draw(boardTex, boardPos, Color.White);
-                spriteBatch.DrawString(spriteFont, " Available Stats: " + newStat.ToString(), new Vector2(567, 20), Color.Black);
+                spriteBatch.DrawString(spriteFont, " Available Stats: " + newStat.ToString(), new Vector2(967, 20), Color.Black);
 
                // spriteBatch.DrawString(currentFont, " Str   " + "Dex   " + "Vit   " + "Int   " + "Lvl", new Vector2(567, 40), statColor);
 
-                spriteBatch.DrawString(currentStrFont, "Str", new Vector2(573 ,36), Color.Black);
-                spriteBatch.DrawString(currentDexFont, "Dex", new Vector2(615, 36), Color.Black);
-                spriteBatch.DrawString(currentVitFont, "Vit", new Vector2(655, 36), Color.Black);
-                spriteBatch.DrawString(currentIntFont, "Int", new Vector2(698, 36), Color.Black);
-                spriteBatch.DrawString(spriteFont, "Level", new Vector2(735, 36), Color.Black);
-                spriteBatch.DrawString(spriteFont, " " + Str.ToString() + "    " + Dex.ToString() + "    " + Vit.ToString() + "    " + Int.ToString() + "    " + Level.ToString(), new Vector2(567, 50), statColor);               
+                spriteBatch.DrawString(currentStrFont, "Str", new Vector2(973 ,36), Color.Black);
+                spriteBatch.DrawString(currentDexFont, "Dex", new Vector2(1015, 36), Color.Black);
+                spriteBatch.DrawString(currentVitFont, "Vit", new Vector2(1055, 36), Color.Black);
+                spriteBatch.DrawString(currentIntFont, "Int", new Vector2(1098, 36), Color.Black);
+                spriteBatch.DrawString(spriteFont, "Level", new Vector2(1135, 36), Color.Black);
+                spriteBatch.DrawString(spriteFont, " " + Str.ToString() + "    " + Dex.ToString() + "    " + Vit.ToString() + "    " + Int.ToString() + "    " + Level.ToString(), new Vector2(967, 50), statColor);               
 
 
-                spriteBatch.DrawString(currentStrFont, "Dmg: " + Dmg.ToString(), new Vector2(573, 70), Color.Black);
-                spriteBatch.DrawString(currentDexFont, "Speed: " + Dex.ToString(), new Vector2(700, 70), Color.Black);
-                spriteBatch.DrawString(currentIntFont, "Spell Dmg: " + SpellDmg.ToString(), new Vector2(573, 80), Color.Black);
-                spriteBatch.DrawString(currentVitFont, "Hp: " + HP.ToString(), new Vector2(700, 80), Color.Black);
+                spriteBatch.DrawString(currentStrFont, "Dmg: " + Dmg.ToString(), new Vector2(973, 70), Color.Black);
+                spriteBatch.DrawString(currentDexFont, "Speed: " + Dex.ToString(), new Vector2(1100, 70), Color.Black);
+                spriteBatch.DrawString(currentIntFont, "Spell Dmg: " + SpellDmg.ToString(), new Vector2(973, 80), Color.Black);
+                spriteBatch.DrawString(currentVitFont, "Hp: " + HP.ToString(), new Vector2(1100, 80), Color.Black);
 
 
                 
@@ -99,10 +99,10 @@ namespace TCOBO
                 if (showStatButton)
                 {
                    // currentFont = MOStatFont;
-                    spriteBatch.Draw(TextureManager.statBox, new Vector2(572, 48), new Rectangle(6, 6, 23, 23), Color.White);
-                    spriteBatch.Draw(TextureManager.statBox, new Vector2(614, 48), new Rectangle(6, 6, 23, 23), Color.White);
-                    spriteBatch.Draw(TextureManager.statBox, new Vector2(656, 48), new Rectangle(6, 6, 23, 23), Color.Gold);
-                    spriteBatch.Draw(TextureManager.statBox, new Vector2(696, 48), new Rectangle(6, 6, 23, 23), Color.Gold);  
+                    spriteBatch.Draw(TextureManager.statBox, new Vector2(972, 48), new Rectangle(6, 6, 23, 23), Color.White);
+                    spriteBatch.Draw(TextureManager.statBox, new Vector2(1014, 48), new Rectangle(6, 6, 23, 23), Color.White);
+                    spriteBatch.Draw(TextureManager.statBox, new Vector2(1056, 48), new Rectangle(6, 6, 23, 23), Color.Gold);
+                    spriteBatch.Draw(TextureManager.statBox, new Vector2(1096, 48), new Rectangle(6, 6, 23, 23), Color.Gold);  
                     
                 }
                 else

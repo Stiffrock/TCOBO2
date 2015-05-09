@@ -60,7 +60,8 @@ namespace TCOBO
         public Player(ContentManager content)
         {
             this.content = content;
-            playerPos = new Vector2(-370, 350);
+
+            playerPos = new Vector2(-145, 0);
             srcRec = new Rectangle(0, 0, 100, 100);
             origin = new Vector2(80, 80);
             color = new Color(255, 30, 30, 255);
