@@ -185,3 +185,8 @@ C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\statbox
 C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\statbox3.xnb
 C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\statBox4.xnb
 C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\MOStatFont.xnb
+C:\Users\Balder\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\statBox.xnb
+C:\Users\Balder\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\statbox2.xnb
+C:\Users\Balder\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\statbox3.xnb
+C:\Users\Balder\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\statBox4.xnb
+C:\Users\Balder\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\MOStatFont.xnb
