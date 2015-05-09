@@ -85,11 +85,17 @@ namespace TCOBO
                 spriteBatch.DrawString(currentVitFont, "Vit", new Vector2(655, 36), Color.Black);
                 spriteBatch.DrawString(currentIntFont, "Int", new Vector2(698, 36), Color.Black);
                 spriteBatch.DrawString(spriteFont, "Level", new Vector2(735, 36), Color.Black);
+                spriteBatch.DrawString(spriteFont, " " + Str.ToString() + "    " + Dex.ToString() + "    " + Vit.ToString() + "    " + Int.ToString() + "    " + Level.ToString(), new Vector2(567, 50), statColor);               
 
 
+                spriteBatch.DrawString(currentStrFont, "Dmg: " + Dmg.ToString(), new Vector2(573, 70), Color.Black);
+                spriteBatch.DrawString(currentDexFont, "Speed: " + Dex.ToString(), new Vector2(700, 70), Color.Black);
+                spriteBatch.DrawString(currentIntFont, "Spell Dmg: " + SpellDmg.ToString(), new Vector2(573, 80), Color.Black);
+                spriteBatch.DrawString(currentVitFont, "Hp: " + HP.ToString(), new Vector2(700, 80), Color.Black);
 
-                spriteBatch.DrawString(spriteFont, " "+Str.ToString() + "    " + Dex.ToString() + "    " + Vit.ToString() + "    " + Int.ToString() + "    " + Level.ToString(), new Vector2(567, 50), statColor);               
-                spriteBatch.DrawString(spriteFont, " Damage:" + Dmg.ToString() + "   Spell Damage:" + SpellDmg.ToString() + "\n" + " Hp:" + HP.ToString()+ "      Speed Bonus:" + Dex.ToString(), new Vector2(567, 70), Color.Black);
+
+                
+               // spriteBatch.DrawString(spriteFont, " Damage:" + Dmg.ToString() + "   Spell Damage:" + SpellDmg.ToString() + "\n" + " Hp:" + HP.ToString()+ "      Speed Bonus:" + Dex.ToString(), new Vector2(567, 70), Color.Black);
                 if (showStatButton)
                 {
                    // currentFont = MOStatFont;

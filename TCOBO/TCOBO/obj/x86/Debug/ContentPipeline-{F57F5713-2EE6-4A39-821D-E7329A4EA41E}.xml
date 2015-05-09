@@ -764,7 +764,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2015-05-06T09:45:59.2250331+02:00</Time>
+      <Time>2015-05-09T18:49:27.1873928+02:00</Time>
     </Item>
     <Item>
       <Source>statBox.png</Source>
@@ -809,7 +809,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\MOStatFont.xnb</Output>
-      <Time>2015-05-09T18:36:10.685455+02:00</Time>
+      <Time>2015-05-09T18:49:00.7583964+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
