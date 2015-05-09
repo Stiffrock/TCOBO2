@@ -21,7 +21,7 @@ namespace TCOBO
         private float deltaTime, Exp = 0, mDamage = 1, sDamage = 1, HP = 10;
 
         public float rotation = 0f;
-        private int 
+        public int 
             animaCount = 1, Level = 1, Str = 10, Dex = 10, 
             Vit = 10, Int = 10, maxLvl = 101, newStat = 0;
         private Color color;
@@ -95,51 +95,20 @@ namespace TCOBO
             }
         }
 
-
         public void HandlePlayerStats() // Bör göra all stat förändring här
         {
             playerStats = Tuple.Create<int, int, int, int, int, int>(Str, Dex, Vit, Int, Level, newStat);
             effectiveStats = Tuple.Create<float, float, float>(mDamage, sDamage, HP);
             
             mDamage = Str * 0.5f;
-            sDamage = Int * 0.5f;
-         
-
+            sDamage = Int * 0.5f;        
             HP = Vit;
-
-            if (newStat > 0)
-            {
-                if (KeyMouseReader.KeyPressed(Keys.D1))
-                {
-                    Str += 1;
-                    newStat -= 1;
-                }
-                else if (KeyMouseReader.KeyPressed(Keys.D2))
-                {
-                    Dex += 1;
-                    max_speed += 2;
-                    speed += 1;
-                    newStat -= 1;
-                }
-                else if (KeyMouseReader.KeyPressed(Keys.D3))
-                {
-                    Vit += 1;
-                    newStat -= 1;
-                }
-                else if (KeyMouseReader.KeyPressed(Keys.D4))
-                {
-                    Int += 1;
-                    newStat -= 1;
-                }
-             
-            }
 
             if (KeyMouseReader.KeyPressed(Keys.D5))
             {
                 Exp += 5;
                 Console.WriteLine("Exp   "+Exp);
             }
-
         }
 
         private void LoadPlayerTex()
@@ -152,7 +121,6 @@ namespace TCOBO
             {
                 swordTex.Add(content.Load<Texture2D>("sword" + i));
             }
-
             
             strikeTexSword1 = content.Load<Texture2D>("faststrikeSword1");
             strikeTexPlayer1 = content.Load<Texture2D>("faststrikePlayer1");
@@ -358,7 +326,6 @@ namespace TCOBO
             }
         }
 
-
         public override void Update(GameTime gameTime)
         {
             float tempVit = Vit;
@@ -423,8 +390,7 @@ namespace TCOBO
                     
                 }
             }
-        }
-        
+        }       
 
         public override void Draw(SpriteBatch spriteBatch)
         {

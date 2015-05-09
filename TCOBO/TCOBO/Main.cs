@@ -81,6 +81,79 @@ namespace TCOBO
             newSwordColor = itemManager.changeWeaponColor(swordColor);
         }
 
+        public void ClickStats()
+        {
+            if (player.newStat != 0)
+            {
+                board.statColor = Color.Gold;
+                board.showStatButton = true;
+
+                if (board.StrButton.Contains(KeyMouseReader.MousePos().X, KeyMouseReader.MousePos().Y) )
+                {
+                    board.currentStrFont = board.MOStatFont;
+                    if (KeyMouseReader.LeftClick())
+                    {
+                        player.Str += 1;
+                        player.newStat -= 1;
+                    }                    
+                }
+                else
+                {
+                    board.currentStrFont = board.spriteFont;
+                }
+                if (board.DexButton.Contains(KeyMouseReader.MousePos().X, KeyMouseReader.MousePos().Y))
+                {
+                    board.currentDexFont = board.MOStatFont;
+                    if (KeyMouseReader.LeftClick())
+                    {
+                        player.Dex += 1;
+                        player.newStat -= 1;
+                    }
+                }
+                else
+                {
+                    board.currentDexFont = board.spriteFont;
+                }
+
+                if (board.VitButton.Contains(KeyMouseReader.MousePos().X, KeyMouseReader.MousePos().Y))
+                {
+                    board.currentVitFont = board.MOStatFont;
+                    if (KeyMouseReader.LeftClick())
+                    {
+                        player.Vit += 1;
+                        player.newStat -= 1;
+                    }
+                }
+                else
+                {
+                    board.currentVitFont = board.spriteFont;
+                }
+
+                if (board.IntButton.Contains(KeyMouseReader.MousePos().X, KeyMouseReader.MousePos().Y))
+                {
+                    board.currentIntFont = board.MOStatFont;
+                    if (KeyMouseReader.LeftClick())
+                    {
+                        player.Int += 1;
+                        player.newStat -= 1;
+                    }
+                }
+                else
+                {
+                    board.currentIntFont = board.spriteFont;
+                }                
+            }
+            else
+            {
+                board.currentStrFont = board.spriteFont;
+                board.currentDexFont = board.spriteFont;
+                board.currentVitFont = board.spriteFont;
+                board.currentIntFont = board.spriteFont;
+                board.statColor = Color.Black;
+                board.showStatButton = false;
+            }
+        }
+
         private void detectEnemy()
         {
             foreach (Enemy enemy in enemyList)
@@ -95,6 +168,7 @@ namespace TCOBO
 
         public void Update(GameTime gameTime)
         {
+            ClickStats();
             changeweaponColor();
             player.swordColor = newSwordColor;
             itemManager.Update(gameTime);

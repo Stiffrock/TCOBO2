@@ -65,7 +65,6 @@ Content\inventorysword_type1.xnb
 Content\inventorysword_type2.xnb
 Content\inventorysword_type3.xnb
 Content\inventorysword_type4.xnb
-Content\SpriteFont1.xnb
 Content\strike1.xnb
 Content\strike10.xnb
 Content\strike11.xnb
@@ -83,3 +82,9 @@ Content\faststrikeplayer1.xnb
 Content\faststrikesword1.xnb
 Content\faststrikeplayer2.xnb
 Content\faststrikesword2.xnb
+Content\SpriteFont1.xnb
+Content\statBox.xnb
+Content\statbox2.xnb
+Content\statbox3.xnb
+Content\statBox4.xnb
+Content\MOStatFont.xnb
