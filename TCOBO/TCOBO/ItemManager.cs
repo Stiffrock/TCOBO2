@@ -151,10 +151,7 @@ namespace TCOBO
         //        stone.Equiped = !stone.Equiped;
         //    }
         //}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/Stoffe
 
                  
             

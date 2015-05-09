@@ -14,8 +14,7 @@ namespace TCOBO
 
         //private Texture2D tex;
         //private Vector2 pos;
-<<<<<<< HEAD
-=======
+
        
 
         public bool Equiped;
@@ -34,7 +33,6 @@ namespace TCOBO
         //    hitBox = new Rectangle((int)pos.X, (int)pos.Y, swordTex.Width, swordTex.Height);
         //}
 
->>>>>>> origin/Stoffe
 
         public Sword(ContentManager content)
             : base(content)
@@ -42,11 +40,7 @@ namespace TCOBO
             this.itemTex = TextureManager.standardSword;
             this.pos = new Vector2(300, 300);
             hitBox = new Rectangle((int)pos.X, (int)pos.Y, itemTex.Width, itemTex.Height);
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/Stoffe
         }
 
         public override void Update(GameTime gameTime)
@@ -82,11 +76,8 @@ namespace TCOBO
             //{
             //    sb.Draw(stoneTex, stonePos, Color.Red);
             //}
-<<<<<<< HEAD
 
-=======
             //sb.Draw(swordTex, pos,new Rectangle(0,0,50,50) , Color.White);
->>>>>>> origin/Stoffe
             sb.Draw(itemTex, pos,new Rectangle(0,0,50,50) , Color.White);
 
         }
