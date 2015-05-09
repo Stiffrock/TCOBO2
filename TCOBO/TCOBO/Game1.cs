@@ -29,6 +29,9 @@ namespace TCOBO
         protected override void Initialize()
         {
             base.Initialize();
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.ApplyChanges();
             IsMouseVisible = true;
         }
 

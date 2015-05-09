@@ -25,7 +25,7 @@ namespace TCOBO
             animaCount = 1, Level = 1, Str = 10, Dex = 10, 
             Vit = 10, Int = 10, maxLvl = 101, newStat = 0;
         private Color color;
-        float speed = 230f, max_speed = 130, slow_speed = 85, slow_speed_2 = 200;
+        public float speed = 230f, max_speed = 130, slow_speed = 85, slow_speed_2 = 200;
         bool swordEquipped = false;
         public Vector2 velocity, velocity2;
         private Vector2 acceleration;
@@ -60,7 +60,8 @@ namespace TCOBO
         public Player(ContentManager content)
         {
             this.content = content;
-            playerPos = new Vector2(-370, 350);
+
+            playerPos = new Vector2(-145, 0);
             srcRec = new Rectangle(0, 0, 100, 100);
             origin = new Vector2(80, 80);
             color = new Color(255, 30, 30, 255);
@@ -307,11 +308,28 @@ namespace TCOBO
         }
 
         private void handleAction(GameTime gameTime)
-        {        
+        {   
+     
             if (KeyMouseReader.KeyPressed(Keys.E))
             {
+                if (swordEquipped)              // HIHIHI SECRET HAX
+                {
+                    speed -= 3;
+                    max_speed -= 5;
+                }
+                else
+                {
+                    speed += 3;
+                    max_speed += 5;
+                }
+
+
                 swordEquipped = !swordEquipped;
             }
+
+
+
+
             if (KeyMouseReader.LeftClick() == true && swordEquipped == true && strike == false && strike2 == false)
             {
                 strike = true;
@@ -328,6 +346,7 @@ namespace TCOBO
 
         public override void Update(GameTime gameTime)
         {
+
             float tempVit = Vit;
             size = tempVit / 10;
             HandleLevelUp();

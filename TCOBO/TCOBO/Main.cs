@@ -50,7 +50,7 @@ namespace TCOBO
             testWorld.ReadLevel("Map01");
             testWorld.SetMap();                 
             spriteFont = game1.Content.Load<SpriteFont>("SpriteFont1");
-            board = new PlayerPanel(game1.Content, new Vector2(550, 0), spriteFont);
+            board = new PlayerPanel(game1.Content, new Vector2(950, 0), spriteFont);
         }
 
 
@@ -107,6 +107,8 @@ namespace TCOBO
                     if (KeyMouseReader.LeftClick())
                     {
                         player.Dex += 1;
+                        player.speed += 1;
+                        player.max_speed += 3;
                         player.newStat -= 1;
                     }
                 }

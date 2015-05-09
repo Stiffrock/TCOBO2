@@ -754,8 +754,22 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\Balder\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\faststrikesword2.xnb</Output>
       <Time>2015-05-09T16:23:03.0796259+02:00</Time>
+=======
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\faststrikesword2.xnb</Output>
+      <Time>2015-05-09T16:50:42.8550403+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2015-05-09T18:50:00.2249953+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <Item>
       <Source>statBox.png</Source>
@@ -808,8 +822,13 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\Balder\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\MOStatFont.xnb</Output>
       <Time>2015-05-09T18:39:42.3986013+02:00</Time>
+=======
+      <Output>C:\Users\Stoffe\Documents\GitHub\TCOBO\TCOBO\TCOBO\bin\x86\Debug\Content\MOStatFont.xnb</Output>
+      <Time>2015-05-09T18:49:00.7583964+02:00</Time>
+>>>>>>> origin/Stoffe
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
