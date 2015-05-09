@@ -9,7 +9,7 @@ using System.Text;
 
 namespace TCOBO
 {
-    class ItemManager
+    class ItemManager       //TODO Gör så att equippat vapen skickar en color variabel beroende på vapen till main, som skickar den till vidare till player för att ritas ut
     {
         //private Texture2D tex;
         //private Vector2 pos;
@@ -52,6 +52,11 @@ namespace TCOBO
 
             Showstats = false;
             IsInventoryshown = false;
+        }
+
+        public Color changeWeaponColor(Color color)
+        {
+            return color = sword.swordColor;
         }
 
         public void Update(GameTime gameTime)
@@ -151,10 +156,7 @@ namespace TCOBO
         //        stone.Equiped = !stone.Equiped;
         //    }
         //}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/Stoffe
 
                  
             

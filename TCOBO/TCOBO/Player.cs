@@ -16,8 +16,10 @@ namespace TCOBO
         public Texture2D playerTex1, weaponPH;
         public Vector2 playerPos, origin, aimRec;
         private ContentManager content;
+        public Color swordColor;
         public Rectangle srcRec, attackHitBox;
         private float deltaTime, Exp = 0, mDamage = 1, sDamage = 1, HP = 10;
+
         public float rotation = 0f;
         private int 
             animaCount = 1, Level = 1, Str = 10, Dex = 10, 
@@ -34,7 +36,8 @@ namespace TCOBO
         private List<Texture2D> swordTex = new List<Texture2D>();
         private List<float> levelList = new List<float>();
         public Rectangle boundsTop, boundsBot, boundsLeft, boundsRight;
-        int playerSize = 36;
+        float playerSize = 36, basePlayerSize = 36;
+        public float size;
       
         public Vector2 GetPos()
         {
@@ -56,11 +59,11 @@ namespace TCOBO
             this.content = content;
             playerPos = new Vector2(-370, 350);
             srcRec = new Rectangle(0, 0, 100, 100);
-            attackHitBox = new Rectangle((int)playerPos.X, (int)playerPos.Y, 100, 150);
             playerTex1 = content.Load<Texture2D>("ballsprite1");
             weaponPH = content.Load<Texture2D>("weaponPH");
             origin = new Vector2(80, 80);
-            color = new Color(255, 30, 30, 255);            
+            color = new Color(255, 30, 30, 255);
+            size = Vit / 10;
             LoadPlayerTex();
             HandleLevel();
             Console.Write(levelList[99]);
@@ -91,6 +94,7 @@ namespace TCOBO
             }
         }
 
+
         public void HandlePlayerStats() // Bör göra all stat förändring här
         {
             playerStats = Tuple.Create<int, int, int, int, int, int>(Str, Dex, Vit, Int, Level, newStat);
@@ -98,6 +102,8 @@ namespace TCOBO
             
             mDamage = Str * 0.5f;
             sDamage = Int * 0.5f;
+         
+
             HP = Vit;
 
             if (newStat > 0)
@@ -110,6 +116,8 @@ namespace TCOBO
                 else if (KeyMouseReader.KeyPressed(Keys.D2))
                 {
                     Dex += 1;
+                    max_speed += 2;
+                    speed += 1;
                     newStat -= 1;
                 }
                 else if (KeyMouseReader.KeyPressed(Keys.D3))
@@ -304,6 +312,8 @@ namespace TCOBO
 
         public override void Update(GameTime gameTime)
         {
+            float tempVit = Vit;
+            size = tempVit / 10;
             HandleLevelUp();
             HandlePlayerStats(); 
             playerDirection();           
@@ -313,11 +323,12 @@ namespace TCOBO
         }
 
         public void Collision (GameTime gameTime, List<Tile> tiles) 
-        {
-            boundsTop = new Rectangle((int)playerPos.X - playerSize/2 + playerSize / 10, (int)playerPos.Y - playerSize/2, playerSize - (playerSize / 5), playerSize / 10);
-            boundsBot = new Rectangle((int)playerPos.X - playerSize/2 + playerSize / 10, (int)playerPos.Y + playerSize / 2 - playerSize / 10, playerSize - (playerSize / 5), playerSize / 10);
-            boundsLeft = new Rectangle((int)playerPos.X - playerSize / 2, (int)playerPos.Y - playerSize / 2 + playerSize / 10, playerSize / 10, playerSize - playerSize / 5);
-            boundsRight = new Rectangle((int)playerPos.X + playerSize / 2 - playerSize / 10, (int)playerPos.Y - playerSize / 2 + playerSize / 10, playerSize / 10, playerSize - playerSize / 5);
+         {
+            playerSize = basePlayerSize * size;
+            boundsTop = new Rectangle((int)(playerPos.X - playerSize/2 + playerSize / 10), (int)(playerPos.Y - playerSize/2), (int)(playerSize - (playerSize / 5)), (int)(playerSize / 10));
+            boundsBot = new Rectangle((int)(playerPos.X - playerSize/2 + playerSize / 10), (int)((playerPos.Y + playerSize / 2 - playerSize / 10)), (int)(playerSize - (playerSize / 5)), (int)(playerSize / 10));
+            boundsLeft = new Rectangle((int)(playerPos.X - playerSize / 2), (int)(playerPos.Y - playerSize / 2 + playerSize / 10), (int)(playerSize / 10), (int)(playerSize - playerSize / 5));
+            boundsRight = new Rectangle((int)(playerPos.X + playerSize / 2 - playerSize / 10), (int)(playerPos.Y - playerSize / 2 + playerSize / 10), (int)(playerSize / 10), (int)(playerSize - playerSize / 5));
             foreach (Tile t in tiles)
             {
                 if (t.collisionEnabled)
@@ -368,11 +379,14 @@ namespace TCOBO
 
         public override void Draw(SpriteBatch spriteBatch)
         {
+            //spriteBatch.Draw(weaponPH, attackHitBox, Color.White);
             //spriteBatch.Draw(TextureManager.sand1, boundingBox, Color.Black);
             if (swordEquipped)
-                spriteBatch.Draw(swordTex[animaCount], playerPos, null, Color.White, rotation, origin, 1f, SpriteEffects.None, 0f);
-              spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
-              //spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
+                spriteBatch.Draw(swordTex[animaCount], playerPos, null, swordColor, rotation, origin, size, SpriteEffects.None, 0f);
+           
+              spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, size, SpriteEffects.None, 0f);
+              
+             // Show attackHitBox
 
               //spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
               //spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);

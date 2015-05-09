@@ -11,6 +11,7 @@ namespace TCOBO
     abstract class Item
     {
         public Vector2 itemPos;
+        public Color itemColor;
         public Texture2D itemTex;
         public  Rectangle hitBox;
         public Vector2 pos;

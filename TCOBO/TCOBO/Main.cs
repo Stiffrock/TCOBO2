@@ -11,9 +11,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace TCOBO
 {
-    class Main
+    class Main              
     {
-        public Game1 game1;
+        public Game1 game1; 
         private TestWorld testWorld;
         private ItemManager itemManager;
         private GraphicsDevice graphics;
@@ -22,6 +22,8 @@ namespace TCOBO
         private Camera2D camera;        
         private Enemy enemy;
         private SpriteFont spriteFont;
+        private Color swordColor;
+        private Color newSwordColor;
         private KeyMouseReader krm;
         private List<Enemy> enemyList;
         private List<Enemy> inrangeList;
@@ -51,6 +53,7 @@ namespace TCOBO
             board = new PlayerPanel(game1.Content, new Vector2(550, 0), spriteFont);
         }
 
+
         
         
         public void Rotation()
@@ -63,14 +66,20 @@ namespace TCOBO
             float xDistance = (float)ms.X - player.playerPos.X;
             float yDistance = (float)ms.Y - player.playerPos.Y;
             player.rotation = (float)Math.Atan2(yDistance, xDistance);
+
             aimVector = new Vector2(xDistance, yDistance);
+
             player.aimRec = new Vector2(xDistance, yDistance);
             player.aimRec.Normalize();
-            double recX = (double)player.aimRec.X * 100;
-            double recY = (double)player.aimRec.Y * 100;
-            player.attackHitBox = new Rectangle(((int)player.playerPos.X - 40) + (int)recX, ((int)player.playerPos.Y - 40) + (int)recY, 100, 100);
+            double recX = (double)player.aimRec.X * 40 * player.size;
+            double recY = (double)player.aimRec.Y * 40 * player.size;
+            player.attackHitBox = new Rectangle((int)(player.playerPos.X + recX - 25 * player.size), (int)(player.playerPos.Y + recY - 25 * player.size), (int)(50*player.size), (int)(50*player.size));
         }
 
+        public void changeweaponColor()
+        {
+            newSwordColor = itemManager.changeWeaponColor(swordColor);
+        }
 
         private void detectEnemy()
         {
@@ -86,6 +95,8 @@ namespace TCOBO
 
         public void Update(GameTime gameTime)
         {
+            changeweaponColor();
+            player.swordColor = newSwordColor;
             itemManager.Update(gameTime);
             krm.Update();
             attack.Update(gameTime);
