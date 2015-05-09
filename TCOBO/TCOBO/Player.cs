@@ -16,7 +16,7 @@ namespace TCOBO
         public Texture2D playerTex1, weaponPH;
         public Vector2 playerPos, origin, aimRec;
         private ContentManager content;
-        public Color swordColor;
+        public Color swordColor = Color.White;
         public Rectangle srcRec, attackHitBox;
         private float deltaTime, Exp = 0, mDamage = 1, sDamage = 1, HP = 10;
 
@@ -62,6 +62,7 @@ namespace TCOBO
             this.content = content;
 
             playerPos = new Vector2(-145, 0);
+            //attackHitBox = new Rectangle(0, 0, 0, 0);
             srcRec = new Rectangle(0, 0, 100, 100);
             origin = new Vector2(80, 80);
             color = new Color(255, 30, 30, 255);
@@ -327,9 +328,6 @@ namespace TCOBO
                 swordEquipped = !swordEquipped;
             }
 
-
-
-
             if (KeyMouseReader.LeftClick() == true && swordEquipped == true && strike == false && strike2 == false)
             {
                 strike = true;
@@ -344,18 +342,7 @@ namespace TCOBO
             }
         }
 
-        public override void Update(GameTime gameTime)
-        {
 
-            float tempVit = Vit;
-            size = tempVit / 10;
-            HandleLevelUp();
-            HandlePlayerStats(); 
-            playerDirection();           
-            Movement(gameTime);
-            handleAction(gameTime);
-            handleAnimation(gameTime);                 
-        }
 
         public void Collision (GameTime gameTime, List<Tile> tiles) 
          {
@@ -409,7 +396,20 @@ namespace TCOBO
                     
                 }
             }
-        }       
+        }
+        public override void Update(GameTime gameTime)
+        {
+
+
+            float tempVit = Vit;
+            size = tempVit / 10;
+            HandleLevelUp();
+            HandlePlayerStats();
+            playerDirection();
+            Movement(gameTime);
+            handleAction(gameTime);
+            handleAnimation(gameTime);
+        }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
@@ -431,9 +431,10 @@ namespace TCOBO
             {
                 spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, size, SpriteEffects.None, 0f);
             }
-              
-              
-             //Show attackHitBox
+
+            //Show attackHitBox
+            spriteBatch.Draw(TextureManager.bricktile1, attackHitBox, Color.Black);
+            
 
               //spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
               //spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);

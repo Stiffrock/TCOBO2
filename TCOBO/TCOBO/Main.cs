@@ -52,10 +52,7 @@ namespace TCOBO
             spriteFont = game1.Content.Load<SpriteFont>("SpriteFont1");
             board = new PlayerPanel(game1.Content, new Vector2(950, 0), spriteFont);
         }
-
-
-        
-        
+      
         public void Rotation()
         {
             Vector2 mousePosition;
@@ -76,10 +73,10 @@ namespace TCOBO
             player.attackHitBox = new Rectangle((int)(player.playerPos.X + recX - 25 * player.size), (int)(player.playerPos.Y + recY - 25 * player.size), (int)(50*player.size), (int)(50*player.size));
         }
 
-        public void changeweaponColor()
+       /* public void changeweaponColor()
         {
             newSwordColor = itemManager.changeWeaponColor(swordColor);
-        }
+        }*/
 
         public void ClickStats()
         {
@@ -156,6 +153,60 @@ namespace TCOBO
             }
         }
 
+        public void detectItem()
+        {
+            foreach (Item item in itemManager.ItemList)
+            {
+                if (player.attackHitBox.Intersects(item.hitBox)&& KeyMouseReader.LeftClick())
+                {
+                    item.pos = new Vector2(1050, 170);
+                    itemManager.InventoryList.Add(item);
+                    itemManager.ItemList.Remove(item);
+                    item.bagRange = true;
+                    break;
+                }
+            }
+            foreach (Item item in itemManager.InventoryList)
+            {
+                if (!item.bagRange && KeyMouseReader.LeftClick() && !item.equip)
+                {
+                    item.pos = player.playerPos;
+                    itemManager.ItemList.Add(item);
+                    itemManager.InventoryList.Remove(item);
+                    
+                    break;
+                }
+            }
+        }
+
+        public void detectEquip()
+        {
+       
+                foreach (Item item in itemManager.InventoryList)
+                {                    
+                    if (item.hitBox.Contains(KeyMouseReader.MousePos().X, KeyMouseReader.MousePos().Y) && KeyMouseReader.RightClick())
+                    {
+                        int statAdd = item.stat;
+
+                        if (item is Sword && item.equip == true && itemManager.swordEquip == true)
+                        {
+                            player.Str -= statAdd;
+                            itemManager.swordEquip = false;
+                            return;
+                        }
+                        if (item.equip == false && itemManager.swordEquip == false)
+                        {
+                            player.Str += statAdd;
+                            itemManager.swordEquip = true;
+                            return;
+                        }
+                        
+                    }                               
+            }
+            
+        }
+             
+
         private void detectEnemy()
         {
             foreach (Enemy enemy in enemyList)
@@ -170,8 +221,10 @@ namespace TCOBO
 
         public void Update(GameTime gameTime)
         {
+            detectEquip();
+            detectItem();
             ClickStats();
-            changeweaponColor();
+           // changeweaponColor();
             player.swordColor = newSwordColor;
             itemManager.Update(gameTime);
             krm.Update();
@@ -191,19 +244,19 @@ namespace TCOBO
         {     
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null,
                 camera.transform);
-            spriteBatch.Draw(TextureManager.bigtree, new Vector2(-750, 200), Color.White);
-            spriteBatch.Draw(TextureManager.smalltree, new Vector2(-700, 400), Color.White);
             testWorld.Draw(spriteBatch);           
             player.Draw(spriteBatch);
             enemy.Draw(spriteBatch);
+            
+            foreach (Item item in itemManager.ItemList)
+            {
+                item.Draw(spriteBatch);
+            }
+
             spriteBatch.End();
             spriteBatch.Begin();
             board.Draw(spriteBatch);
             itemManager.Draw(spriteBatch);
-           
-            
-
-
         }
 
         }        
