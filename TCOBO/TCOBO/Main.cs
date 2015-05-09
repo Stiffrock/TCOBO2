@@ -107,6 +107,8 @@ namespace TCOBO
                     if (KeyMouseReader.LeftClick())
                     {
                         player.Dex += 1;
+                        player.speed += 1;
+                        player.max_speed += 3;
                         player.newStat -= 1;
                     }
                 }

@@ -17,7 +17,7 @@ namespace TCOBO
         {
             this.itemTex = TextureManager.goldenSword;
             itemColor = Color.Gold;
-            swordColor = Color.Gold;
+            swordColor = Color.LightBlue;
             this.pos = new Vector2(300, 300);
             hitBox = new Rectangle((int)pos.X, (int)pos.Y, itemTex.Width, itemTex.Height);
 

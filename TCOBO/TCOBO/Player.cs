@@ -25,7 +25,7 @@ namespace TCOBO
             animaCount = 1, Level = 1, Str = 10, Dex = 10, 
             Vit = 10, Int = 10, maxLvl = 101, newStat = 0;
         private Color color;
-        float speed = 230f, max_speed = 130, slow_speed = 85, slow_speed_2 = 200;
+        public float speed = 230f, max_speed = 130, slow_speed = 85, slow_speed_2 = 200;
         bool swordEquipped = false;
         public Vector2 velocity, velocity2;
         private Vector2 acceleration;
