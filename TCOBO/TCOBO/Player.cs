@@ -100,24 +100,24 @@ namespace TCOBO
             sDamage = Int * 0.5f;
             HP = Vit;
 
-            if (newStat != 0)
+            if (newStat > 0)
             {
                 if (KeyMouseReader.KeyPressed(Keys.D1))
                 {
                     Str += 1;
                     newStat -= 1;
                 }
-                if (KeyMouseReader.KeyPressed(Keys.D2))
+                else if (KeyMouseReader.KeyPressed(Keys.D2))
                 {
                     Dex += 1;
                     newStat -= 1;
                 }
-                if (KeyMouseReader.KeyPressed(Keys.D3))
+                else if (KeyMouseReader.KeyPressed(Keys.D3))
                 {
                     Vit += 1;
                     newStat -= 1;
                 }
-                if (KeyMouseReader.KeyPressed(Keys.D4))
+                else if (KeyMouseReader.KeyPressed(Keys.D4))
                 {
                     Int += 1;
                     newStat -= 1;
@@ -374,10 +374,10 @@ namespace TCOBO
               spriteBatch.Draw(playerTex[animaCount], playerPos, null, color, rotation, origin, 1f, SpriteEffects.None, 0f);
               //spriteBatch.Draw(weaponPH, attackHitBox, Color.White); // Show attackHitBox
 
-              spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
-              spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);
-              spriteBatch.Draw(TextureManager.sand1, boundsLeft, Color.Black);
-              spriteBatch.Draw(TextureManager.sand1, boundsRight, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsTop, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsBot, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsLeft, Color.Black);
+              //spriteBatch.Draw(TextureManager.sand1, boundsRight, Color.Black);
         }
     }
 }

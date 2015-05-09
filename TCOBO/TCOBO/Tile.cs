@@ -34,7 +34,8 @@ namespace TCOBO
             {
                 msModifier = 0.7F;
               //  image = TextureManager.sand1;
-                image = TextureManager.sandtile1;
+              //  image = TextureManager.sandtile1;
+                image = TextureManager.watertile1;
                
             }
             else if (typeOfTile == "Sand2")
@@ -61,6 +62,18 @@ namespace TCOBO
                 //image = TextureManager.road1;
                 image = TextureManager.graveltile1;
           
+            }
+            else if (typeOfTile == "bigtree")
+            {
+                //image = TextureManager.road1;
+                image = TextureManager.bigtree;
+
+            }
+            else if (typeOfTile == "grass")
+            {
+                //image = TextureManager.road1;
+                image = TextureManager.grasstile1;
+
             }
         }
 
